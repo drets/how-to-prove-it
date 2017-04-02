@@ -1,0 +1,186 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{listings}
+\renewcommand{\baselinestretch}{1.5}
+\lstset{
+  frame=none,
+  xleftmargin=2pt,
+  stepnumber=1,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\ttfamily\tiny\color[gray]{0.3},
+  belowcaptionskip=\bigskipamount,
+  captionpos=b,
+  escapeinside={*'}{'*},
+  language=haskell,
+  tabsize=2,
+  emphstyle={\bf},
+  commentstyle=\it,
+  stringstyle=\mdseries\rmfamily,
+  showspaces=false,
+  keywordstyle=\bfseries\rmfamily,
+  columns=flexible,
+  basicstyle=\small\sffamily,
+  showstringspaces=false,
+  morecomment=[l]\%,
+}
+\begin{document}
+\topskip0pt
+\vspace*{\fill}
+\centerline{\sc \large Solutions for the exercises from "How to prove it" book }
+\vspace*{\fill}
+%
+\pagebreak
+\centerline{\sc \large 0. Inroduction}
+\vspace{50pt}
+
+1. (a) Factor $2^{15} - 1 = 32,767$ into a product of two smaller positive integers.
+
+\hspace{12pt}(b) Find an integer $x$ such that $1 < x < 2^{32767} − 1$ and $2^{32767} - 1$ is divisible by x.
+\vspace{20pt}
+
+
+(a) $n = 15$. Since $3 * 5 = 12$, we could use the values $a = 3$ and $b = 5$.
+$x = 2^b - 1 = 2^5 - 1 = 31$ and $y = 1 + 2^b + 2^{2*b} + \dotso + 2^{(a-1)b} = 1 + 2^5 + 2^{10} = 1 + 32 + 1024 = 1057$,
+so $1057 * 31 = 32,767$
+\vspace{10pt}
+
+(b) $n=32767$. Since $7 * 4681 = 32767$, we could use the values $a = 4681$ and $b = 7$.
+$x = 2^7 - 1 = 127$
+\vspace{40pt}
+
+2. Make some conjectures about the values of $n$ for which $3*n - 1$ is prime or
+the values of n for which $3*n - 2*n$ is prime. (You might start by making a
+table similar to Figure 1.)
+\vspace{20pt}
+
+The following simple Haskell program:
+\lstinputlisting[language=Haskell]{0-2.hs}
+gives the output:
+
+\begin{verbatim}
+"2. 3^n - 1: not prime | 3^n - 2^n: prime"
+"3. 3^n - 1: not prime | 3^n - 2^n: prime"
+"4. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"5. 3^n - 1: not prime | 3^n - 2^n: prime"
+"6. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"7. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"8. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"9. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"10. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"11. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"12. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"13. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"14. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"15. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"16. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"17. 3^n - 1: not prime | 3^n - 2^n: prime"
+"18. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"19. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"20. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"21. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"22. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"23. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"24. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"25. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"26. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"27. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"28. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"29. 3^n - 1: not prime | 3^n - 2^n: prime"
+"30. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"31. 3^n - 1: not prime | 3^n - 2^n: prime"
+"32. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"33. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"34. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"35. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"36. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"37. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"38. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"39. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"40. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"41. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"42. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"43. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"44. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"45. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"46. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"47. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"48. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"49. 3^n - 1: not prime | 3^n - 2^n: not prime"
+"50. 3^n - 1: not prime | 3^n - 2^n: not prime"
+\end{verbatim}
+Conjecture 1: $3^n - 1$ doesn't contain prime numbers.
+\vspace{40pt}
+
+3. The proof of Theorem 3 gives a method for finding a prime number different
+from any in a given list of prime numbers.
+
+(a) Use this method to find a prime different from $2$, $3$, $5$, and $7$.
+
+(b) Use this method to find a prime different from $2$, $5$, and $11$.
+\vspace{20pt}
+
+(a) $2*3*5*7+1 = 211$
+\vspace{10pt}
+
+(b) $$1*2+1=3$$
+    $$11*2+1=23$$
+\vspace{40pt}
+
+4. Find five consecutive integers that are not prime.
+\vspace{20pt}
+
+$764, 765, 766, 767, 768$
+\vspace{40pt}
+
+5. Use the table in Figure 1 and the discussion on p. 5 to find two more perfect
+numbers.
+\vspace{20pt}
+
+1) $n = 5$, $2^n-1 = 2^5-1=31$ (prime); Using the formula for perfect number $2^{n-1}*(2^n-1) = 2^4*(2^5-1) = 16*31 = 496$
+\vspace{10pt}
+
+2) $n = 7$, $2^7-1= 128 - 1 = 127$ (prime); Calculating prime: $2^6*(2^7-1) = 64*127 = 8128$
+\vspace{40pt}
+
+6. The sequence $3, 5, 7$ is a list of three prime numbers such that each pair of
+adjacent numbers in the list differ by two. Are there any more such “triplet
+primes”?
+\vspace{20pt}
+
+\lstinputlisting[language=Haskell]{0-6.hs}
+
+Using the program above I couldn't find another “triplet”. I alse tried the case when each pair of adjacent numbers in the list differ by three.
+\pagebreak
+
+\centerline{\sc \large 1. Sentential Logic}
+\vspace{50pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

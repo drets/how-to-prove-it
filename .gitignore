@@ -1,0 +1,8 @@
+*.pdf
+*.log
+*.aux
+*.o
+*.hi
+TAGS
+_
+auto
