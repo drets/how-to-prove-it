@@ -2,6 +2,7 @@
 \usepackage{mathtools}
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{amssymb}
 \renewcommand{\baselinestretch}{1.5}
 \lstset{
   frame=none,
@@ -157,7 +158,181 @@ Using the program above I couldn't find another “triplet”. I alse tried the 
 \centerline{\sc \large 1. Sentential Logic}
 \vspace{50pt}
 
+\textbf{1.1. Deductive Reasoning and Logical Connectives}
+\vspace{40pt}
 
+1. Analyze the logical forms of the following statements:
+
+\hspace{12pt}(a) We'll have either a reading assignment or homework problems, but we
+won't have both homework problems and a test.
+
+\hspace{12pt}(b) You won't go skiing, or you will and there won't be any snow.
+
+\hspace{12pt}(c) $\sqrt{7} \nleq 2$.
+\vspace{20pt}
+
+(a) Let P be "we have reading assignment" and Q be "we have homework problems", then
+
+$$(P \lor Q) \lor \neg (P \land Q)$$
+\vspace{10pt}
+
+(b) $$\neg Q \lor (Q \land \neg R)$$
+\vspace{10pt}
+
+(c) $$\neg [(\sqrt{7} < 2) \lor (\sqrt{7} = 2)]$$
+\vspace{40pt}
+
+2. Analyze the logical forms of the following statements:
+
+\hspace{12pt}(a) Either John and Bill are both telling the truth, or neither of them is.
+
+\hspace{12pt}(b) I’ll have either fish or chicken, but I won’t have both fish and mashed
+potatoes.
+
+\hspace{12pt}(c) 3 is a common divisor of 6, 9, and 15
+\vspace{20pt}
+
+(a) let A be "John tells the truth" and B be "Bill tells the truth"
+$$(A \land B) \lor \neg (A \land B)$$
+\vspace{10pt}
+
+(b) $$(A \lor B) \land \neg (A \land C)$$
+\vspace{10pt}
+
+(c) $$A \land B \land C$$
+\vspace{40pt}
+
+3. Analyze the logical forms of the following statements:
+
+\hspace{12pt}(a) Alice and Bob are not both in the room.
+
+\hspace{12pt}(b) Alice and Bob are both not in the room.
+
+\hspace{12pt}(c) Either Alice or Bob is not in the room.
+
+\hspace{12pt}(d) Neither Alice nor Bob is in the room.
+\vspace{20pt}
+
+(a) $$(\neg A \land B) \lor (A \land \neg B) \lor (\neg A \land \neg B)$$
+\vspace{10pt}
+
+(b) $$\neg (A \land B)$$
+\vspace{10pt}
+
+(c) $$(\neg A \land B) \lor (A \land \neg B)$$
+\vspace{10pt}
+
+(d) $$\neg A \land \neg B$$
+\vspace{40pt}
+
+4. Which of the following expressions are well-formed formulas?
+
+\hspace{12pt}(a) $\neg (\neg P \lor \neg \neg R)$
+
+\hspace{12pt}(b) $\neg (P, Q, \neg R)$
+
+\hspace{12pt}(c) $P \land \neg P$
+
+\hspace{12pt}(d) $(P \land Q)(P \lor R)$
+\vspace{20pt}
+
+\hspace{12pt}(c) is well-formed formula.
+\vspace{40pt}
+
+5. Let P stand for the statement "I will buy the pants" and S for the statement
+"I will buy the shirt." What English sentences are represented by the following
+expressions?
+
+\hspace{12pt}(a) $\neg (P \land \neg S)$
+
+\hspace{12pt}(b) $\neg P \land \neg S$.
+
+\hspace{12pt}(c) $\neg P \lor \neg S$
+\vspace{20pt}
+
+(a) I won't buy the pants without the shirt.
+\vspace{10pt}
+
+(b) Neither I will buy the pants nor I will buy the shirt.
+\vspace{10pt}
+
+(c) Either I won't buy the pants or I won't buy the shirt.
+\vspace{40pt}
+
+6. Let S stand for the statement "Steve is happy" and G for "George is happy."
+What English sentences are represented by the following expressions?
+
+\hspace{12pt}(a) $(S \lor G) \land (\neg S \lor \neg G)$.
+
+\hspace{12pt}(b) $[S \lor (G \land \neg S)] \lor \neg G$
+
+\hspace{12pt}(c) $S \lor [G \land (\neg S \lor \neg G)]$
+\vspace{20pt}
+
+(a) Steve or George are happy, but either Steve is not happy or George.
+
+(b) Steve is happy or George is happy, but Steve not; or George is not happy.
+
+(c) Either Steve is happy or George is happy, but Steve is not happy or George.
+\vspace{40pt}
+
+7. Identify the premises and conclusions of the following deductive arguments
+and analyze their logical forms. Do you think the reasoning is valid?
+(Although you will have only your intuition to guide you in answering
+this last question, in the next section we will develop some techniques for
+determining the validity of arguments.)
+
+\hspace{12pt}(a) Jane and Pete won’t both win the math prize. Pete will win either
+the math prize or the chemistry prize. Jane will win the math prize.
+Therefore, Pete will win the chemistry prize.
+
+\hspace{12pt}(b) The main course will be either beef or fish. The vegetable will be either
+peas or corn. We will not have both fish as a main course and corn as a
+vegetable. Therefore, we will not have both beef as a main course and
+peas as a vegetable.
+
+\hspace{12pt}(c) Either John or Bill is telling the truth. Either Sam or Bill is lying.
+Therefore, either John is telling the truth or Sam is lying.
+
+\hspace{12pt}(d) Either sales will go up and the boss will be happy, or expenses will go
+up and the boss won’t be happy. Therefore, sales and expenses will not
+both go up.
+\vspace{20pt}
+
+(a) $$(\neg J \land P) \lor (J \land \neg P)$$
+$$P \lor C$$
+$$J$$
+$$C$$
+
+Valid
+
+\vspace{20pt}
+
+(b) $$(B \land \neg F) \lor (\neg B \land F)$$
+$$(P \land \neg C) \lor (\neg P \land C)$$
+$$\neg (F \land C)$$
+$$\neg (B \land P)$$
+Invalid
+
+\vspace{20pt}
+
+(c) $$(J \land \neg B) \lor (\neg J \land B)$$
+$$\neg S \lor \neg B$$
+$$J \lor \neg S$$
+Valid
+
+\vspace{20pt}
+
+(d) $$(S \land H) \lor (E \land \neg H)$$
+$$\neg (S \land E)$$
+
+Valid
+
+\vspace{50pt}
+
+\textbf{1.2. Truth Tables}
+
+\vspace{40pt}
 
 
 
