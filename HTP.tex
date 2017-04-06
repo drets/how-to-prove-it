@@ -30,7 +30,7 @@
 \topskip0pt
 \vspace*{\fill}
 \centerline{\sc \large Solutions for the exercises from "How to prove it" book }
-\centerline{\sc \large (warn: contains errors) }
+\centerline{\textit{may contain various errors}}
 \vspace*{\fill}
 %
 \pagebreak
@@ -1308,17 +1308,203 @@ If one of the premises is a contradiction then the argument is invalid.
 \vspace{50pt}
 
 \textbf{1.3. Variables and Sets}
-
 \vspace{40pt}
 
+1. Analyze the logical forms of the following statements:
 
+\hspace{12pt}(a) 3 is a common divisor of 6, 9, and 15. (Note: You did this in exercise
+2 of Section 1.1, but you should be able to give a better answer now.)
 
+\hspace{12pt}(b) x is divisible by both 2 and 3 but not 4.
 
+\hspace{12pt}(c) x and y are natural numbers, and exactly one of them is prime.
+\vspace{20pt}
 
+(a) Let D(x) stand for "x is disible by 3" then
+$$D(6) \land D(9) \land D(15)$$
+\vspace{10pt}
 
+(b) Let D(y, x) stand for "x is divisible by y" then
+$$D(2, x) \land D(3, x) \land \neg D(4, x)$$
+\vspace{10pt}
 
+(c) Let N(x) stand for "x is natural" and P(x) stand for "x is prime".
+\vspace{10pt}
 
+$$N(x) \land N(y) \land [(P(x) \land \neg P(y)) \lor (\neg P(x) \land P(y))]$$
+\vspace{30pt}
 
+2.Analyze the logical forms of the following statements:
+
+\hspace{12pt}(a) x and y are men, and either x is taller than y or y is taller than x.
+
+\hspace{12pt}(b) Either x or y has brown eyes, and either x or y has red hair.
+
+\hspace{12pt}(c) Either x or y has both brown eyes and red hair.
+\vspace{20pt}
+
+(a) Let P(x) stand for "x is a man" and H(x, y) is "x is taller than y" then
+
+$$P(x) \land P(y) \land [H(x, y) \lor H(y, x)]$$
+\vspace{10pt}
+
+(b) Let P(x) stand for "x has brown eyes" and H(x) is "x has red hair" then
+
+$$[P(x) \lor P(y)] \lor [H(x) \lor H(y)]$$
+\vspace{10pt}
+
+(c) P(x) stand for "x has brown eyes and red hair" then
+
+$$P(x) \lor P(y)$$
+\vspace{30pt}
+
+3. Write definitions using elementhood tests for the following sets:
+
+\hspace{12pt}(a) \{Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune,
+Pluto\}.
+
+\hspace{12pt}(b) \{Brown, Columbia, Cornell, Dartmouth, Harvard, Princeton, University
+of Pennsylvania, Yale\}.
+
+\hspace{12pt}(c) \{Alabama, Alaska, Arizona, ... , Wisconsin, Wyoming\}.
+
+\hspace{12pt}(d) \{Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland
+and Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario,
+Prince Edward Island, Quebec, Saskatchewan, Yukon\}.
+\vspace{20pt}
+
+(a) $P = \{ p \mid \text{p is a planet} \}$
+\vspace{10pt}
+
+(b) $U = \{ p \mid \text{p is an Ivy League school} \}$
+\vspace{10pt}
+
+(c) $U = \{ p \mid \text{p is a state in the USA} \}$
+\vspace{10pt}
+
+(c) $C = \{ p \mid \text{p is a province of territory in Canada} \}$
+\vspace{30pt}
+
+4. Write definitions using elementhood tests for the following sets:
+
+\hspace{12pt}(a) \{1, 4, 9, 16, 25, 36, 49,...\}.
+
+\hspace{12pt}(b) \{1, 2, 4, 8, 16, 32, 64,...\}.
+
+\hspace{12pt}(c) \{10, 11, 12, 13, 14, 15, 16, 17, 18, 19\}.
+\vspace{20pt}
+
+(a) $$A = \{ x \in \mathbb{N} \mid x > 0 \}$$
+$$B = \{ y \mid y = x^2, x \in A \}$$
+\vspace{10pt}
+
+(b) $$A = \{ y \mid y = 2^n, n \in \mathbb{N}\}$$
+\vspace{10pt}
+
+(c) $$A = \{x \in \mathbb{N} \mid x >= 10 \}$$
+$$B = \{x \in A \mid x < 19 \}$$
+\vspace{30pt}
+
+5. Simplify the following statements. Which variables are free and which are
+bound? If the statement has no free variables, say whether it is true or
+false.
+
+\hspace{12pt}(a) $-3 \in \{x \in \mathbb{R} \mid 13 - 2x > 1 \}$
+
+\hspace{12pt}(b) $4 \in \{x \in \mathbb{R}^- \mid 13 - 2x > 1 \}$
+
+\hspace{12pt}(c) $5 \notin \{x \in \mathbb{R} \mid 13 - 2x > c\}$
+\vspace{20pt}
+
+(a) $(-3 \in \mathbb{R}) \land ((13+6) > 1)$ No free variables; x - bound; True.
+\vspace{10pt}
+
+(b) $(4 \in \mathbb{R}) \land (4 < 0) \land ((13 - 8) > 1)$ No free variables; x - bound; False.
+\vspace{10pt}
+
+(c) $\neg [(5 \in \mathbb{R}) \land ((13 - 10) > c)]$ c - free variable; x - bound.
+\vspace{30pt}
+
+6. Simplify the following statements. Which variables are free and which are
+bound? If the statement has no free variables, say whether it is true or
+false.
+
+\hspace{12pt}(a) $\omega \in \{x \in \mathbb{R} \mid 13 - 2x > c\}$
+
+\hspace{12pt}(b) $4 \in \{x \in \mathbb{R} \mid 13 - 2x \in \{y \mid y \text{ is a prime number}\}\}$. (It might make
+this statement easier to read if we let $P = \{y \mid y \text{ is a prime number}\}$;
+using this notation, we could rewrite the statement as $4 \in \{x \in \mathbb{R} \mid 13 - 2x \in P\}$.)
+
+\hspace{12pt}(c) $4 \in \{x \in \{y \mid y \text{ is a prime number}\} \mid 13 - 2x > 1\}$. (Using the same notation
+as in part (b), we could write this as $4 \in \{x \in P \mid 13 - 2x > 1\}$.)
+\vspace{20pt}
+
+(a) $(\omega \in \mathbb{R}) \land (13 - 2\omega > c)$ x - bound; $\omega$ and c are free variables.
+\vspace{10pt}
+
+(b) $(4 \in \mathbb{R}) \land ((13 - 8) \text{ is prime})$ True; no free variables; x, y - bound variables.
+\vspace{10pt}
+
+(c) $(4 \text{ is prime}) \land (5 > 1)$ False; no free variables; x, y - bound variables.
+\vspace{30pt}
+
+7. What are the truth sets of the following statements? List a few elements of
+the truth set if you can.
+
+\hspace{12pt}(a) Elizabeth Taylor was once married to x.
+
+\hspace{12pt}(b) x is a logical connective studied in Section 1.1.
+
+\hspace{12pt}(c) x is the author of this book.
+\vspace{20pt}
+
+(a) $\{x \mid \text{Elizabeth Taylor was once married on x}\}$ = \{Conrad Hilton, Michael Wilding, Mike Todd ...\}
+\vspace{10pt}
+
+(b) $\{x \mid x \text{ is logical connective studied in Section 1.1}\} = \{\lor, \land \neg\}$
+
+(c) $\{x \mid x \text{ is author of this book}\}$ = \{Daniel J. Velleman\}
+\vspace{30pt}
+
+8. What are the truth sets of the following statements? List a few elements of
+the truth set if you can.
+
+\hspace{12pt}(a) $x$ is a real number and $x^2 - 4x + 3 = 0$.
+
+\hspace{12pt}(b) $x$ is a real number and $x^2 - 2x + 3 = 0$.
+
+\hspace{12pt}(c) $x$ is a real number and $5 \in \{y \in \mathbb{R} \mid x^2 + y^2 < 50\}$.
+\vspace{20pt}
+
+(a)
+
+Vieta's formulas
+
+$$x * y = 3$$
+$$x + y = -4/1$$
+
+$$\therefore \{1, 3\}$$
+
+\vspace{10pt}
+
+(b)
+
+$$D = b^2 - 4ac = (-2)^2 - 4*1*3 = 4 - 12 = -8$$
+
+$$\therefore \emptyset$$
+
+\vspace{10pt}
+
+(c)
+
+$$(5 \in \mathbb{R}) \land (x^2 + 25 < 50)$$
+$$x^2 < 25$$
+$$\therefore \{x \in \mathbb{R} \mid x^2 < 25\}$$
+$$e.g \{-4.9, -3, 0, 3, 4.9, \dots\}$$
+\vspace{50pt}
+
+\textbf{1.4. Operations on Sets}
+\vspace{40pt}
 
 
 
