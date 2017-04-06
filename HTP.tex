@@ -30,6 +30,7 @@
 \topskip0pt
 \vspace*{\fill}
 \centerline{\sc \large Solutions for the exercises from "How to prove it" book }
+\centerline{\sc \large (warn: contains errors) }
 \vspace*{\fill}
 %
 \pagebreak
@@ -294,8 +295,7 @@ peas as a vegetable.
 \hspace{12pt}(c) Either John or Bill is telling the truth. Either Sam or Bill is lying.
 Therefore, either John is telling the truth or Sam is lying.
 
-\hspace{12pt}(d) Either sales will go up and the boss will be happy, or expenses will go
-up and the boss won’t be happy. Therefore, sales and expenses will not
+\hspace{12pt}(d) Either sales will go up and the boss will be happy, or expenses will go up and the boss won’t be happy. Therefore, sales and expenses will not
 both go up.
 \vspace{20pt}
 
@@ -333,6 +333,990 @@ Valid
 \textbf{1.2. Truth Tables}
 
 \vspace{40pt}
+
+\centerline{
+  \begin{tabular}{c c l c c}
+  S & L & $(\neg S \land L) \lor S$ & S & $\neg L$ \\
+  \hline
+  F & F & T F F F \textbf{F} F & F & T \\
+  F & T & T F T T \textbf{T} F & F & F \\
+  T & F & F T F F \textbf{T} T & T & T \\
+  T & T & F T F T \textbf{T} T & T & F \\
+  \end{tabular}}
+\vspace{20pt}
+
+\centerline{
+  \begin{tabular}{c c l l l}
+  P & Q & $\neg (P \land Q)$ & $\neg P \land \neg Q $ & $\neg P \lor \neg Q$ \\
+  \hline
+  F & F & \textbf{T} F F F & T F \textbf{T} T F & T F \textbf{T} T F \\
+  F & T & \textbf{T} F F T & T F \textbf{F} F T & T F \textbf{T} F T \\
+  T & F & \textbf{T} T F F & F T \textbf{F} T F & F T \textbf{T} T F \\
+  T & T & \textbf{F} T T T & F T \textbf{F} F T & F T \textbf{F} F T \\
+  \end{tabular}}
+\vspace{20pt}
+
+\textbf{DeMorgan's laws}
+\vspace{20pt}
+
+$\neg (P \land Q)$ is equivalent to $\neg P \lor \neg Q$
+
+\centerline{
+  \begin{tabular}{c c l l}
+  P & Q & $\neg (P \land Q)$ & $\neg P \lor \neg Q$ \\
+  \hline
+  F & F & \textbf{T} F F F & T F \textbf{T} T F \\
+  F & T & \textbf{T} F F T & T F \textbf{T} F T \\
+  T & F & \textbf{T} T F F & F T \textbf{T} T F \\
+  T & T & \textbf{F} T T T & F T \textbf{F} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+Let P stand for "Alice is smart" and P stand for "Bob is smart"
+
+Alice and Bob aren't both smart
+
+Either Alice or Bob aren't smart.
+\vspace{20pt}
+
+$\neg (P \lor Q)$ is equivalent to $\neg P \land \neg Q$
+
+\centerline{
+  \begin{tabular}{c c l l }
+  P & Q & $\neg (P \lor Q)$ & $\neg P \land \neg Q $ \\
+  \hline
+  F & F & \textbf{T} F F F & T F \textbf{T} T F \\
+  F & T & \textbf{F} F T T & T F \textbf{F} F T \\
+  T & F & \textbf{F} T T F & F T \textbf{F} T F \\
+  T & T & \textbf{F} T T T & F T \textbf{F} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+Let P stand for "Alice is smart" and P stand for "Bob is smart"
+
+Both Alice or Bob aren't smart.
+
+Alice isn't smart and Bob isn't smart.
+\vspace{20pt}
+
+\textbf{Commutative laws}
+\vspace{20pt}
+
+$P \land Q$ is equivalent to $Q \land P$
+
+\centerline{
+  \begin{tabular}{c c l l }
+  P & Q & $P \land Q$ & $Q \land P$ \\
+  \hline
+  F & F & F \textbf{F} F & F \textbf{F} F \\
+  F & T & F \textbf{F} T & T \textbf{F} F \\
+  T & F & T \textbf{F} F & F \textbf{F} T \\
+  T & T & T \textbf{T} T & T \textbf{T} T \\
+  \end{tabular}}
+\vspace{10pt}
+
+Alice is smart and Bob is smart
+
+Bob is smart and Alice is smart
+\vspace{20pt}
+
+$P \lor Q$ is equivalent to $Q \lor P$
+
+\centerline{
+  \begin{tabular}{c c l l }
+  P & Q & $P \lor Q$ & $Q \lor P$ \\
+  \hline
+  F & F & F \textbf{F} F & F \textbf{F} F \\
+  F & T & F \textbf{T} T & T \textbf{T} F \\
+  T & F & T \textbf{T} F & F \textbf{T} T \\
+  T & T & T \textbf{T} T & T \textbf{T} T \\
+  \end{tabular}}
+\vspace{10pt}
+
+Alice is smart or Bob is smart
+
+Bob is smart or Alice is smart
+\vspace{20pt}
+
+\textbf{Associative laws}
+\vspace{20pt}
+
+$P \land (Q \land R)$ is equivalent to $(P \land Q) \land R$
+
+\centerline{
+  \begin{tabular}{c c c l l}
+  P & Q & R & $P \land (Q \land R)$ & $(P \land Q) \land R$ \\
+  \hline
+  F & F & F & F \textbf{F} F F F & F F F \textbf{F} F \\
+  F & T & F & F \textbf{F} T F F & F F T \textbf{F} F \\
+  F & F & T & F \textbf{F} F F T & F F F \textbf{F} T \\
+  F & T & T & F \textbf{F} T T T & F F T \textbf{F} T \\
+  T & F & F & T \textbf{F} F F F & T F F \textbf{F} F \\
+  T & T & F & T \textbf{F} T F F & T T T \textbf{F} F \\
+  T & F & T & T \textbf{F} F F T & T F F \textbf{F} T \\
+  T & T & T & T \textbf{T} T T T & T T T \textbf{T} T \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Q: Bob is smart
+
+R: Eve is smart
+
+Bob and Eve are both smart and Alice is smart
+
+Alice and Bob are both smart and Eve is smart
+\vspace{20pt}
+
+$P \lor (Q \lor R)$ is equivalent to $(P \lor Q) \lor R$
+
+\centerline{
+  \begin{tabular}{c c c l l}
+  P & Q & R & $P \lor (Q \lor R)$ & $(P \lor Q) \lor R$ \\
+  \hline
+  F & F & F & F \textbf{F} F F F & F F F \textbf{F} F \\
+  F & T & F & F \textbf{T} T T F & F T T \textbf{T} F \\
+  F & F & T & F \textbf{T} F T T & F F F \textbf{T} T \\
+  F & T & T & F \textbf{T} T T T & F T T \textbf{T} T \\
+  T & F & F & T \textbf{T} F F F & T T F \textbf{T} F \\
+  T & T & F & T \textbf{T} T T F & T T T \textbf{T} F \\
+  T & F & T & T \textbf{T} F T T & T T F \textbf{T} T \\
+  T & T & T & T \textbf{T} T T T & T T T \textbf{T} T \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Q: Bob is smart
+
+R: Eve is smart
+
+Bob or Eve are smart, or Alice is smart
+
+Either Alice or Bob are smart, or Eve is smart
+\vspace{20pt}
+
+\textbf{Idemponent laws}
+\vspace{20pt}
+
+$P \land P$ is equivalent to P
+
+\centerline{
+  \begin{tabular}{c l}
+  P & $P \land P$ \\
+  \hline
+  T & T \textbf{T} T \\
+  F & F \textbf{F} F \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Alice is smart and Alice is smart.
+
+Alice is smart.
+\vspace{20pt}
+
+$P \lor P$ is equivalent to P
+
+\centerline{
+  \begin{tabular}{c l}
+  P & $P \lor P$ \\
+  \hline
+  T & T \textbf{T} T \\
+  F & F \textbf{F} F \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Alice is smart or Alice is smart.
+
+Alice is smart.
+\vspace{20pt}
+
+\textbf{Distributive laws}
+\vspace{20pt}
+
+$P \land (Q \lor R)$ is equivalent to $(P \land Q) \lor (P \land R)$
+
+\centerline{
+  \begin{tabular}{c c c l l}
+  P & Q & R & $P \land (Q \lor R)$ & $(P \land Q) \lor (P \land R)$ \\
+  \hline
+  F & F & F & F \textbf{F} F F F & F F F \textbf{F} F F F \\
+  F & T & F & F \textbf{F} T T F & F F T \textbf{F} F F F \\
+  F & F & T & F \textbf{F} F T T & F F F \textbf{F} F F T \\
+  F & T & T & F \textbf{F} T T T & F F T \textbf{F} F F T \\
+  T & F & F & T \textbf{F} F F F & T F F \textbf{F} T F F \\
+  T & T & F & T \textbf{T} T T F & T T T \textbf{T} T F F \\
+  T & F & T & T \textbf{T} F T T & T F F \textbf{T} T T T \\
+  T & T & T & T \textbf{T} T T T & T T T \textbf{T} T T T \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Q: Bob is smart
+
+R: Eve is smart
+
+Bob and Eve are both smart, and Alice is smart.
+
+Either Alice and Bob are both smart or Alice and Eve are both smart.
+\vspace{20pt}
+
+$P \lor (Q \land R)$ is equivalent to $(P \lor Q) \land (P \lor R)$
+
+\centerline{
+  \begin{tabular}{c c c l l}
+  P & Q & R & $P \lor (Q \land R)$ & $(P \lor Q) \land (P \lor R)$ \\
+  \hline
+  F & F & F & F \textbf{F} F F F & F F F \textbf{F} F F F \\
+  F & T & F & F \textbf{F} T F F & F T T \textbf{F} F F F \\
+  F & F & T & F \textbf{F} F F T & F F F \textbf{F} F T T \\
+  F & T & T & F \textbf{T} T T T & F T T \textbf{T} F T T \\
+  T & F & F & T \textbf{T} F F F & T T F \textbf{T} T T F \\
+  T & T & F & T \textbf{T} T F F & T T T \textbf{T} T T F \\
+  T & F & T & T \textbf{T} F F T & T T F \textbf{T} T T T \\
+  T & T & T & T \textbf{T} T T T & T T T \textbf{T} T T T \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Q: Bob is smart
+
+R: Eve is smart
+
+Bob and Eve are both smart or Alice is smart.
+
+Either Alice or Bob are smart and either Alice and Eve are smart.
+\vspace{20pt}
+
+\textbf{Absorption laws}
+\vspace{20pt}
+
+$P \lor (P \land Q)$ is equivalent to P
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $P \lor (P \land Q)$ \\
+  \hline
+  F & F & F \textbf{F} F F F \\
+  F & T & F \textbf{F} F F T \\
+  T & F & T \textbf{T} T F F \\
+  T & T & T \textbf{T} T T T \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Q: Bob is smart
+
+Alice is smart or Alice and Bob are both smart.
+
+Alice is smart.
+\vspace{20pt}
+
+$P \land (P \lor Q)$ is equivalent to P
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $P \land (P \lor Q)$ \\
+  \hline
+  F & F & F \textbf{F} F F F \\
+  F & T & F \textbf{F} F T T \\
+  T & F & T \textbf{T} T T F \\
+  T & T & T \textbf{T} T T T \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Q: Bob is smart
+
+Alice is smart and either Alice or Bob are smart.
+
+Alice is smart.
+\vspace{20pt}
+
+\textbf{Double Negation laws}
+\vspace{20pt}
+
+$\neg \neg P$ is equivalent to P
+
+\centerline{
+  \begin{tabular}{c l}
+  P & $\neg \neg P$ \\
+  \hline
+  T & \textbf{T} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+P: Alice is smart
+
+Alice isn't stupid.
+\vspace{40pt}
+
+1. Make truth tables for the following formulas:
+
+\hspace{12pt}(a) $\neg P \lor Q$.
+
+\hspace{12pt}(b) $(S \lor G) \land (\neg S \lor \neg G)$.
+\vspace{20pt}
+
+(a)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $\neg P \lor Q$ \\
+  \hline
+  F & F & T F \textbf{T} F \\
+  F & T & T F \textbf{T} T \\
+  T & F & F T \textbf{F} F \\
+  T & T & F T \textbf{T} T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(b)
+
+\centerline{
+  \begin{tabular}{c c l}
+  S & G & $(S \lor G) \land (\neg S \lor \neg G)$ \\
+  \hline
+  F & F & F F F \textbf{F} T F T T F \\
+  F & T & F T T \textbf{T} T F T F T \\
+  T & F & T T F \textbf{T} F T T T F \\
+  T & T & T T T \textbf{F} F T F F T \\
+  \end{tabular}}
+\vspace{30pt}
+
+2. Make truth tables for the following formulas:
+
+\hspace{12pt}(a) $\neg [P \land (Q \lor \neg P)]$
+
+\hspace{12pt}(b) $(P \lor Q) \land (\neg P \lor R)$
+\vspace{20pt}
+
+(a)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $\neg [P \land (Q \lor \neg P)]$ \\
+  \hline
+  F & F & \textbf{T} F F F T T F \\
+  F & T & \textbf{T} F F T T T F \\
+  T & F & \textbf{T} T F F F F T \\
+  T & T & \textbf{F} T T T T F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(b)
+
+\centerline{
+  \begin{tabular}{c c c l l c}
+  P & Q & R & $(P \lor Q)$ & $(\neg P \lor R)$ &  $(P \lor Q) \land (\neg P \lor R)$ \\
+  \hline
+  F & F & F & F \textbf{F} F & T F \textbf{T} F & F \\
+  F & T & F & F \textbf{T} T & T F \textbf{T} F & T \\
+  F & F & T & F \textbf{F} F & T F \textbf{T} T & F \\
+  F & T & T & F \textbf{T} T & T F \textbf{T} T & T \\
+  T & F & F & T \textbf{T} F & F T \textbf{F} F & F \\
+  T & T & F & T \textbf{T} T & F T \textbf{F} F & F \\
+  T & F & T & T \textbf{T} F & F T \textbf{T} T & T \\
+  T & T & T & T \textbf{T} T & F T \textbf{T} T & T \\
+  \end{tabular}}
+\vspace{30pt}
+
+3. In this exercise we will use the symbol $+$ to mean exclusive or. In other
+words, P $+$ Q means "P or Q, but not both."
+
+\hspace{12pt}(a) Make a truth table for P $+$ Q.
+
+\hspace{12pt}(b) Find a formula using only the connectives $\land$, $\lor$, and $\neg$ that is equivalent
+to P $+$ Q. Justify your answer with a truth table.
+\vspace{20pt}
+
+(a)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $+$ \\
+  \hline
+  F & F & F \\
+  F & T & T \\
+  T & F & T \\
+  T & T & F \\
+  \end{tabular}}
+\vspace{10pt}
+
+(b) $$P \land Q \lor \neg P$$
+
+\centerline{
+  \begin{tabular}{c c l l c}
+  P & Q & $\neg P \land \neg Q$ & $P \land Q$ & $\neg [(\neg P \land \neg Q) \lor (P \land Q)]$\\
+  \hline
+  F & F & T F \textbf{T} T F & F \textbf{F} F & F \\
+  F & T & T F \textbf{F} F T & F \textbf{F} T & T \\
+  T & F & F T \textbf{F} T F & T \textbf{F} F & T \\
+  T & T & F T \textbf{F} F T & T \textbf{T} T & F \\
+  \end{tabular}}
+\vspace{40pt}
+
+4. Find a formula using only the connectives $\land$ and $\neg$ that is equivalent to
+$P \lor Q$. Justify your answer with a truth table.
+\vspace{30pt}
+
+\centerline{
+  \begin{tabular}{c c l l}
+  P & Q & $P \lor Q$ & $\neg (\neg P \land \neg Q)$ \\
+  \hline
+  F & F & F & \textbf{F} T F T T F\\
+  F & T & T & \textbf{T} T F F F T\\
+  T & F & T & \textbf{T} F T F T F\\
+  T & T & T & \textbf{T} F T F F T\\
+  \end{tabular}}
+\vspace{40pt}
+
+5. Some mathematicians use the symbol $\downarrow$ to mean nor.
+
+In other words, P $\downarrow$ Q means "neither P nor Q."
+
+\hspace{12pt}(a) Make a truth table for P $\downarrow$ Q.
+
+\hspace{12pt}(b) Find a formula using only the connectives $\land$, $\lor$, and $\neg$ that is equivalent
+to P $\downarrow$ Q.
+
+\hspace{12pt}(c) Find formulas using only the connective $\downarrow$ that are equivalent to $\neg P$,
+$P \lor Q$, and $P \land Q$.
+\vspace{20pt}
+
+(a)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $\downarrow$ \\
+  \hline
+  F & F & T \\
+  F & T & F \\
+  T & F & F \\
+  T & T & F \\
+  \end{tabular}}
+\vspace{10pt}
+
+(b)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $\neg P \land \neg Q$ \\
+  \hline
+  F & F & T F \textbf{T} T F \\
+  F & T & T F \textbf{F} F T \\
+  T & F & F T \textbf{F} T F \\
+  T & T & F T \textbf{F} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(c)
+
+\centerline{
+  \begin{tabular}{c c c}
+  P & $\neg P$ & $P \downarrow P$ \\
+  \hline
+  T & F & F \\
+  F & T & T \\
+  \end{tabular}}
+\vspace{10pt}
+
+\centerline{
+  \begin{tabular}{c c c c}
+  P & Q & $P \lor Q$ & $(P \downarrow Q) \downarrow (P \downarrow Q)$ \\
+  \hline
+  F & F & F & F \\
+  F & T & T & T \\
+  T & F & T & T \\
+  T & T & T & T \\
+  \end{tabular}}
+\vspace{10pt}
+
+\centerline{
+  \begin{tabular}{c c c c}
+  P & Q & $P \land Q$ & $(P \downarrow P) \downarrow (Q \downarrow Q)$ \\
+  \hline
+  F & F & F & F \\
+  F & T & F & F \\
+  T & F & F & F \\
+  T & T & T & T \\
+  \end{tabular}}
+\vspace{40pt}
+
+6. Some mathematicians write $P | Q$ to mean "P and Q are not both true."
+(This connective is called nand, and is used in the study of circuits in
+computer science.)
+
+\hspace{12pt}(a) Make a truth table for $P | Q$.
+
+\hspace{12pt}(b) Find a formula using only the connectives $\land$, $\lor$, and $\neg$ that is equivalent
+to $P | Q$.
+
+\hspace{12pt}(c) Find formulas using only the connective $|$ that are equivalent to $\neg P$,
+$P \lor Q$, and $P \land Q$.
+\vspace{20pt}
+
+(a)
+
+\centerline{
+  \begin{tabular}{c c c}
+  P & Q & $P | Q$ \\
+  \hline
+  F & F & T \\
+  F & T & T \\
+  T & F & T \\
+  T & T & F \\
+  \end{tabular}}
+\vspace{10pt}
+
+(b)
+
+\centerline{
+  \begin{tabular}{c c c}
+  P & Q & $\neg (P \land Q$) \\
+  \hline
+  F & F & T \\
+  F & T & T \\
+  T & F & T \\
+  T & T & F \\
+  \end{tabular}}
+\vspace{10pt}
+
+(c)
+
+\centerline{
+  \begin{tabular}{c c c}
+  P & $\neg P$ & $P | P$ \\
+  \hline
+  T & F & F \\
+  F & T & T \\
+  \end{tabular}}
+\vspace{10pt}
+
+\centerline{
+  \begin{tabular}{c c c l}
+  P & Q & $P \land Q$ & $(P | Q) | (P | Q)$ \\
+  \hline
+  F & F & F & F T F \textbf{F} F T F \\
+  F & T & F & F T T \textbf{F} F T T \\
+  T & F & F & T T F \textbf{F} T T F \\
+  T & T & T & T F T \textbf{T} T F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+\centerline{
+  \begin{tabular}{c c c c}
+  P & Q & $P \lor Q$ & $(P | P) | (Q | Q)$ \\
+  \hline
+  F & F & F & F T F \textbf{F} F T F \\
+  F & T & T & F T F \textbf{T} T F T \\
+  T & F & T & T F T \textbf{T} F T F \\
+  T & T & T & T F T \textbf{T} T F T \\
+  \end{tabular}}
+\vspace{40pt}
+
+7. Use truth tables to determine whether or not the arguments in exercise 7 of Section 1.1 are valid.
+\vspace{20pt}
+
+(a) $$\neg (J \land P)$$
+$$P \lor C$$
+$$J$$
+$$\therefore C$$
+
+\centerline{
+  \begin{tabular}{c c c l c c c}
+  J & P & C & $\neg (J \land P)$ & $P \lor C$ &  $J$ & $C$ \\
+  \hline
+  F & F & F & \textbf{T} F F F & F \textbf{F} F & F & F \\
+  F & T & F & \textbf{T} F F T & T \textbf{T} F & F & F \\
+  F & F & T & \textbf{T} F F F & F \textbf{T} T & F & T \\
+  F & T & T & \textbf{T} F F T & T \textbf{T} T & F & T \\
+  T & F & F & \textbf{T} T F F & F \textbf{F} F & T & F \\
+  T & T & F & \textbf{F} T T T & T \textbf{T} F & T & F \\
+  T & F & T & \textbf{T} T F F & F \textbf{T} T & T & T \\
+  T & T & T & \textbf{F} T T T & T \textbf{T} T & T & T \\
+  \end{tabular}}
+\vspace{10pt}
+
+All premises are true only in 7 row and conclusion is true as well. Therefore, the argument is valid.
+\vspace{10pt}
+
+(c) $$\neg (B \land F)$$
+$$\neg (P \land C)$$
+$$\neg F \land \neg C$$
+$$\therefore \neg B \land \neg P$$
+
+
+\centerline{
+  \begin{tabular}{c c c c l l l l}
+  B & F & P & C & $\neg (B \land F)$ & $\neg (P \land C)$ &  $\neg F \land \neg C$ & $\neg B \land \neg P$ \\
+  \hline
+  F & F & F & F & \textbf{T} F F F & \textbf{T} F F F & T F \textbf{T} T F & T F \textbf{T} T F \\
+  F & F & F & T & \textbf{T} F F F & \textbf{T} F F T & T F \textbf{F} F T & T F \textbf{T} T F \\
+  F & F & T & F & \textbf{T} F F F & \textbf{T} T F F & T F \textbf{T} T F & T F \textbf{F} F T \\
+  F & F & T & T & \textbf{T} F F F & \textbf{F} T T T & T F \textbf{F} F T & T F \textbf{F} F T \\
+  F & T & F & F & \textbf{T} F F T & \textbf{T} F F F & F T \textbf{F} T F & T F \textbf{T} T F \\
+  F & T & F & T & \textbf{T} F F T & \textbf{T} F F T & F T \textbf{F} F T & T F \textbf{T} T F \\
+  F & T & T & F & \textbf{T} F F T & \textbf{T} T F F & F T \textbf{F} T F & T F \textbf{F} F T \\
+  F & T & T & T & \textbf{T} F F T & \textbf{F} T T T & F T \textbf{F} F T & T F \textbf{F} F T \\
+  T & F & F & F & \textbf{T} T F F & \textbf{T} F F F & T F \textbf{T} T F & F T \textbf{F} T F \\
+  T & F & F & T & \textbf{T} T F F & \textbf{T} F F T & T F \textbf{F} F T & F T \textbf{F} T F \\
+  T & F & T & F & \textbf{T} T F F & \textbf{T} T F F & T F \textbf{T} T F & F T \textbf{F} F T \\
+  T & F & T & T & \textbf{T} T F F & \textbf{F} T T T & T F \textbf{F} F T & F T \textbf{F} F T \\
+  T & T & F & F & \textbf{F} T T T & \textbf{T} F F F & F T \textbf{F} T F & F T \textbf{F} T F \\
+  T & T & F & T & \textbf{F} T T T & \textbf{T} F F T & F T \textbf{F} F T & F T \textbf{F} T F \\
+  T & T & T & F & \textbf{F} T T T & \textbf{T} T F F & F T \textbf{F} T F & F T \textbf{F} F T \\
+  T & T & T & T & \textbf{F} T T T & \textbf{F} T T T & F T \textbf{F} F T & F T \textbf{T} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+3rd row: $T T T \therefore F$. Therefore, the argument is invalid.
+\vspace{10pt}
+
+(c) $$J \lor B$$
+$$\neg (S \land B)$$
+$$J \lor \neg S$$
+
+\centerline{
+  \begin{tabular}{c c c l l l}
+  J & B & S & $J \land B$ & $\neg (S \land B)$ &  $J \lor \neg S$ \\
+  \hline
+  F & F & F & F \textbf{F} F & \textbf{T} F F F & F \textbf{T} T F \\
+  F & T & F & F \textbf{F} T & \textbf{T} F F T & F \textbf{T} T F \\
+  F & F & T & F \textbf{F} F & \textbf{T} T F F & F \textbf{F} F T \\
+  F & T & T & F \textbf{F} T & \textbf{F} T T T & F \textbf{F} F T \\
+  T & F & F & T \textbf{F} F & \textbf{T} F F F & T \textbf{T} T F \\
+  T & T & F & T \textbf{T} T & \textbf{T} F F T & T \textbf{T} T F \\
+  T & F & T & T \textbf{F} F & \textbf{T} T F F & T \textbf{T} F T \\
+  T & T & T & T \textbf{T} T & \textbf{F} T T T & T \textbf{T} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+All premises are true only in 6 row and conclusion is true as well. Therefore, the argument is valid.
+
+(d) $$(S \land H) \lor (E \land \neg H)$$
+$$\neg (S \land E)$$
+
+\centerline{
+  \begin{tabular}{c c c l l}
+  S & H & E & $(S \land H) \lor (E \land \neg H)$ & $\neg (S \land E)$ \\
+  \hline
+  F & F & F & F F F \textbf{F} F F T F & \textbf{T} F F F \\
+  F & T & F & F F T \textbf{F} F F F T & \textbf{T} F F F \\
+  F & F & T & F F F \textbf{T} T T T F & \textbf{T} F F T \\
+  F & T & T & F F T \textbf{F} T F F T & \textbf{T} F F T \\
+  T & F & F & T F F \textbf{F} F F T F & \textbf{T} T F F \\
+  T & T & F & T T T \textbf{T} F F F T & \textbf{T} T F F \\
+  T & F & T & T F F \textbf{T} T T T F & \textbf{F} T T T \\
+  T & T & T & T T T \textbf{T} T F F T & \textbf{F} T T T \\
+  \end{tabular}}
+\vspace{10pt}
+
+7th row: $T \therefore F$. Therefore, the argument is invalid.
+\vspace{30pt}
+
+8. Use truth tables to determine which of the following formulas are equivalent
+to each other:
+
+\hspace{12pt}(a) $(P \land Q) \lor (\neg P \land \neg Q)$
+
+\hspace{12pt}(b) $\neg P \lor Q$
+
+\hspace{12pt}(c) $(P \lor \neg Q) \land (Q \lor \neg P)$
+
+\hspace{12pt}(d) $\neg (P \lor Q)$
+
+\hspace{12pt}(e) $(Q \land P) \lor \neg P$
+\vspace{20pt}
+
+(a)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $(P \land Q) \lor (\neg P \land \neg Q)$ \\
+  \hline
+  F & F & F \textbf{F} F \textbf{T} T F \textbf{T} T F \\
+  F & T & F \textbf{F} T \textbf{F} T F \textbf{F} F T \\
+  T & F & T \textbf{F} F \textbf{F} F T \textbf{F} T F \\
+  T & T & T \textbf{T} T \textbf{T} F T \textbf{F} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(b)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $\neg P \lor Q$ \\
+  \hline
+  F & F & T F \textbf{T} F \\
+  F & T & T F \textbf{T} T \\
+  T & F & F T \textbf{F} F \\
+  T & T & F T \textbf{T} T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(c)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $(P \lor \neg Q) \land (Q \lor \neg P)$ \\
+  \hline
+  F & F & F \textbf{T} T F \textbf{T} F \textbf{T} T F \\
+  F & T & F \textbf{F} F T \textbf{F} T \textbf{T} T F \\
+  T & F & T \textbf{T} T F \textbf{F} F \textbf{F} F T \\
+  T & T & T \textbf{T} F T \textbf{T} T \textbf{T} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(d)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $(Q \land P) \lor \neg P$ \\
+  \hline
+  F & F & F \textbf{F} F \textbf{T} T F \\
+  F & T & T \textbf{F} F \textbf{T} T F \\
+  T & F & F \textbf{F} T \textbf{F} F T \\
+  T & T & T \textbf{T} T \textbf{T} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+
+(a) is equivalent to (d) and (b) is equivalent to (d).
+\vspace{30pt}
+
+9.  Use truth tables to determine which of these statements are tautologies,
+which are contradictions, and which are neither:
+
+\hspace{12pt}(a) $(P \lor Q) \land (\neg P \lor \neg Q)$
+
+\hspace{12pt}(b) $(P \lor Q) \land (\neg P \land \neg Q)$
+
+\hspace{12pt}(c) $(P \lor Q) \lor (\neg P \lor \neg Q)$
+
+\hspace{12pt}(d) $[P \land (Q \lor \neg R)] \lor (\neg P \lor R)$
+\vspace{20pt}
+
+(a)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $(P \lor Q) \land (\neg P \lor \neg Q)$ \\
+  \hline
+  F & F & F \textbf{F} F \textbf{F} T F \textbf{T} T F \\
+  F & T & F \textbf{T} T \textbf{T} T F \textbf{T} F T \\
+  T & F & T \textbf{T} F \textbf{T} F T \textbf{T} T F \\
+  T & T & T \textbf{T} T \textbf{F} F T \textbf{F} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(b)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $(P \lor Q) \land (\neg P \land \neg Q)$ \\
+  \hline
+  F & F & F \textbf{F} F \textbf{F} T F \textbf{T} T F \\
+  F & T & F \textbf{T} T \textbf{F} T F \textbf{F} F T \\
+  T & F & T \textbf{T} F \textbf{F} F T \textbf{F} T F \\
+  T & T & T \textbf{T} T \textbf{F} F T \textbf{F} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(c)
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $(P \lor Q) \lor (\neg P \lor \neg Q)$ \\
+  \hline
+  F & F & F \textbf{F} F \textbf{T} T F \textbf{T} T F \\
+  F & T & F \textbf{T} T \textbf{T} T F \textbf{T} F T \\
+  T & F & T \textbf{T} F \textbf{T} F T \textbf{T} T F \\
+  T & T & T \textbf{T} T \textbf{T} F T \textbf{F} F T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(d)
+
+\centerline{
+  \begin{tabular}{c c c l}
+  P & Q & R & $[P \land (Q \lor \neg R)] \lor (\neg P \lor R)$ \\
+  \hline
+  F & F & F & F \textbf{F} F T T F \textbf{T} T F \textbf{T} F \\
+  F & T & F & F \textbf{F} T T T F \textbf{T} T F \textbf{T} F \\
+  F & F & T & F \textbf{F} F F F T \textbf{T} T F \textbf{T} T \\
+  F & T & T & F \textbf{F} T T F T \textbf{T} T F \textbf{T} T \\
+  T & F & F & T \textbf{T} F T T F \textbf{T} F T \textbf{F} F \\
+  T & T & F & T \textbf{T} T T T F \textbf{T} F T \textbf{F} F \\
+  T & F & T & T \textbf{F} F F F T \textbf{T} F T \textbf{T} T \\
+  T & T & T & T \textbf{T} T T F T \textbf{T} F T \textbf{T} T \\
+  \end{tabular}}
+\vspace{10pt}
+
+(b) is contradiction and (c), (d) are tautologies.
+
+\vspace{30pt}
+
+10. Use truth tables to check these laws:
+
+\hspace{12pt}(a) The second DeMorgan’s law. (The first was checked in the text.)
+
+\hspace{12pt}(b) The distributive laws.
+
+Done, at the beginning of chapter.
+
+\vspace{30pt}
+
+11. Use the laws stated in the text to find simpler formulas equivalent to these
+formulas. (See Examples 1.2.5 and 1.2.7.)
+
+\hspace{12pt}(a) $\neg(\neg P \land \neg Q)$
+
+\hspace{12pt}(b) $(P \land Q) \lor (P \land \neg Q)$
+
+\hspace{12pt}(c) $\neg (P \land \neg Q) \lor (\neg P \land Q)$
+\vspace{20pt}
+
+(a) $$\neg(\neg P \land \neg Q)$$
+DeMorgan's law: $$\neg \neg P \lor \neg \neg Q$$
+Double Negation law: $$P \lor Q$$
+\vspace{10pt}
+
+(b) $$(P \land Q) \lor (P \land \neg Q)$$
+Distributive law: $$P \land (Q \lor \neg Q)$$
+\centerline{$P \land$ (a tautology)}
+
+Tautology law: $$P$$
+\vspace{10pt}
+
+(c) $$\neg (P \land \neg Q) \lor (\neg P \land Q)$$
+DeMorgan's law: $$(\neg P \lor \neg \neg Q) \lor (\neg P \land Q)$$
+Double Negation law: $$(\neg P \lor Q) \lor (\neg P \land Q)$$
+$$\neg P \lor Q \lor (\neg P \land Q)$$
+Commutative law: $$\neg P \lor Q \lor (Q \land \neg P)$$
+Absoption law: $$\neg P \lor Q$$
+
+\vspace{30pt}
+
+12. Use the laws stated in the text to find simpler formulas equivalent to these
+formulas. (See Examples 1.2.5 and 1.2.7.)
+
+\hspace{12pt}(a) $\neg (\neg P \lor Q) \lor (P \land \neg R)$
+
+\hspace{12pt}(b) $\neg (\neg P \land Q) \lor (P \land \neg R)$
+
+\hspace{12pt}(c) $(P \land R) \lor [\neg R \land (P \lor Q)]$
+\vspace{10pt}
+
+(a) $$\neg (\neg P \lor Q) \lor (P \land \neg R)$$
+DeMorgan's law: $$(P \land \neg Q) \lor (P \land \neg R)$$
+Distributive law: $$P \land (\neg Q \lor \neg R)$$
+DeMorgan's law: $$P \land \neg (Q \land R)$$
+\vspace{10pt}
+
+(b) $$\neg (\neg P \land Q) \lor (P \land \neg R)$$
+DeMorgan's law: $$P \lor \neg Q \lor (P \land \neg R)$$
+Commutative law: $$\neg Q \lor P \lor (P \land \neg R)$$
+Absoption law: $$\neg Q \lor P$$
+\vspace{10pt}
+
+(c) $$(P \land R) \lor [\neg R \land (P \lor Q)]$$
+Distributive law: $$(P \land R) \lor [(\neg R \land P) \lor (\neg R \land Q)]$$
+Associative law and Commutative law: $$(P \land R) \lor (P \land \neg R) \lor (Q \land \neg R)$$
+Distributive law: $$P \land (R \lor \neg R) \lor (Q \land \neg R)$$
+Tautology law: $$P \lor (Q \land \neg R)$$
+\vspace{30pt}
+
+13. Use the first DeMorgan’s law and the double negation law to derive the
+second DeMorgan’s law.
+
+1st: $$\neg (P \land Q) = \neg P \lor \neg Q$$
+
+2st: $$\neg (P \lor Q) = \neg P \land \neg Q$$
+Add negation 2 both parts: $$\neg \neg (P \lor Q) = \neg (\neg P \land \neg Q)$$
+Use double negation law: $$P \lor Q = \neg (\neg P \land \neg Q)$$
+Use 1st DeMorgan's law: $$P \lor Q = \neg \neg P \lor \neg \neg Q$$
+Use double negation law: $$P \lor Q = P \lor Q$$
+
+
+\vspace{30pt}
+
+14. Note that the associative laws say only that parentheses are unnecessary
+when combining three statements with $\land$ or $\lor$. In fact, these laws can be
+used to justify leaving parentheses out when more than three statements
+are combined. Use associative laws to show that $[P \land (Q \land R)] \land S$ is
+equivalent to $(P \land Q) \land (R \land S)$
+
+$[P \land (Q \land R)] \land S = [(P \land Q) \land R] \land S = (P \land Q) \land (R \land S)$
+
+\vspace{30pt}
+
+15. How many lines will there be in the truth table for a statement containing
+n letters?
+
+$2^n$ lines
+
+\vspace{30pt}
+
+16. Find a formula involving the connectives $\land$, $\lor$, and $\neg$ that has the following
+truth table:
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $ P \lor \neg Q$ \\
+  \hline
+  F & F & T \\
+  F & T & F \\
+  T & F & T \\
+  T & T & T \\
+  \end{tabular}}
+\vspace{30pt}
+
+17. Find a formula involving the connectives $\land$, $\lor$, and $\neg$ that has the following
+truth table:
+
+\centerline{
+  \begin{tabular}{c c l}
+  P & Q & $\neg (P \land Q) \land (P \lor Q)$ \\
+  \hline
+  F & F & F \\
+  F & T & T \\
+  T & F & T \\
+  T & T & F \\
+  \end{tabular}}
+\vspace{30pt}
+
+18. Suppose the conclusion of an argument is a tautology. What can you
+conclude about the validity of the argument? What if the conclusion is
+a contradiction? What if one of the premises is either a tautology or a
+contradiction?
+\vspace{20pt}
+
+If a conclusion is a tautology then the argument is always valid.
+If a conclusion is a contradiction then the argument is always invalid.
+If one of the premises is a tautology then this premise may be ignored.
+If one of the premises is a contradiction then the argument is invalid.
+\vspace{50pt}
+
+\textbf{1.3. Variables and Sets}
+
+\vspace{40pt}
+
+
+
+
+
+
+
 
 
 
