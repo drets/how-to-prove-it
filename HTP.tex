@@ -3,6 +3,8 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
 \renewcommand{\baselinestretch}{1.5}
 \lstset{
   frame=none,
@@ -30,7 +32,8 @@
 \topskip0pt
 \vspace*{\fill}
 \centerline{\sc \large Solutions for the exercises from "How to prove it" book }
-\centerline{\textit{may contain various errors}}
+\centerline{by drets}
+\centerline{\textit{(may contain various errors)}}
 \vspace*{\fill}
 %
 \pagebreak
@@ -1504,7 +1507,2064 @@ $$e.g \{-4.9, -3, 0, 3, 4.9, \dots\}$$
 \vspace{50pt}
 
 \textbf{1.4. Operations on Sets}
+\vspace{30pt}
+
+\def\firstcircle{(0,0) circle (1.5cm)}
+\def\secondcircle{(45:2cm) circle (1.5cm)}
+\def\thirdcircle{(0:2cm) circle (1.5cm)}
+
+$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
+
+$$B \cap C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$A \cup (B \cap C)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
 \vspace{40pt}
+
+$$A \cup B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$A \cup C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$(A \cup B) \cap (A \cup C)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+\vspace{40pt}
+
+$$A \setminus (B \cap C) = (A \setminus B) \cup (A \setminus C)$$
+
+$$B \cap C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$A$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$A \setminus (B \cap C)$$
+
+\centerline{\begin{tikzpicture}
+  \begin{scope}[shift={(6cm,0cm)}]
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[white] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node {$A$};
+    \draw \secondcircle node {$B$};
+    \draw \thirdcircle node {$C$};
+  \end{scope}
+\end{tikzpicture}}
+\vspace{40pt}
+
+$$(A \setminus B) \cup (A \setminus C)$$
+
+$$A \setminus B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$A \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \setminus B) \cup (A \setminus C)$$
+
+
+\centerline{\begin{tikzpicture}
+  \begin{scope}[shift={(6cm,0cm)}]
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[white] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node {$A$};
+    \draw \secondcircle node {$B$};
+    \draw \thirdcircle node {$C$};
+  \end{scope}
+\end{tikzpicture}}
+\vspace{40pt}
+
+1. Let A = \{1, 3, 12, 35\}, B = \{3, 7, 12, 20\}, and C = $\{x \mid x \text{ is a prime
+number}\}$. List the elements of the following sets. Are any of the sets
+below disjoint from any of the others? Are any of the sets below subsets
+of any others?
+
+\hspace{12pt}(a) $A \cap B$.
+
+\hspace{12pt}(b) $(A \cup B) \setminus C$.
+
+\hspace{12pt}(c) $A \cup (B \setminus C)$.
+\vspace{20pt}
+
+(a) $P = A \cap B = \{1, 3, 12, 35\} \cap \{3, 7, 12, 20\} = \{3, 12\}$
+\vspace{10pt}
+
+(b) $$A \cup B = \{1, 3, 12, 35\} \cup \{3, 7, 12, 20\} = \{1, 3, 7, 12, 20, 35\}$$
+$$Q = (A \cup B) \setminus C = \{1, 12, 20, 35\}$$
+\vspace{10pt}
+
+(c)  $$B \setminus C = \{12, 20\}$$
+$$R = A \cup (B \setminus C) = \{1, 3, 12, 20, 35\}$$
+\vspace{10pt}
+
+No disjonts; $P \subseteq R$ and $Q \subseteq R$
+
+2. Let A = \{United States, Germany, China, Australia\}, B = \{Germany,
+France, India, Brazil\}, and $C = \{x \mid x \text { is a country in Europe}\}$. List the
+elements of the following sets. Are any of the sets below disjoint from
+any of the others? Are any of the sets below subsets of any others?
+
+\hspace{12pt}(a) $A \cup B$.
+
+\hspace{12pt}(b) $(A \cap B) \setminus C$.
+
+\hspace{12pt}(c) $(B \cap C) \setminus A$.
+\vspace{20pt}
+
+(a) P = \{United States, Germany, China, Australia, France, India, Brazil\}
+\vspace{10pt}
+
+(b) $A \cap B$ = \{Germany\}
+
+$Q = (A \cap B) \setminus C = \emptyset$
+\vspace{10pt}
+
+(c) $(B \cap C)$ = \{Germany, France\}
+
+$R = (B \cap C) \setminus A$ = \{France\}.
+\vspace{10pt}
+
+$$Q \subseteq P \text{ and } Q \subseteq R$$
+$$R \subseteq P$$
+\vspace{30pt}
+
+3. Verify that the Venn diagrams for $(A \cup B) \setminus (A \cap B)$ and $(A \setminus B) \cup
+(B \setminus A)$ both look like Figure 5, as stated in this section.
+
+$$(A \cup B) \setminus (A \cap B)$$
+
+$$A \cup B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+  \end{tikzpicture}}
+
+$$A \cap B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+  \end{tikzpicture}}
+
+$$(A \cup B) \setminus (A \cap B)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+$$(A \setminus B) \cup (B \setminus A)$$
+
+$$A \setminus B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$B \setminus A$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \setminus B) \cup (B \setminus A)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+4. Use Venn diagrams to verify the following identities:
+
+\hspace{12pt}(a) $A \setminus (A \cap B) = A \setminus B$.
+
+\hspace{12pt}(b) $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+\vspace{20pt}
+
+(a) $$A \setminus (A \cap B) = A \setminus B$$
+
+$$A \cap B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+  \end{tikzpicture}}
+
+$$A$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+  \end{tikzpicture}}
+
+$$A \setminus (A \cap B) = A \setminus B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+    \end{scope}
+  \end{tikzpicture}}
+
+
+
+
+\vspace{10pt}
+
+(b) $$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
+
+\centerline{Done at the beginning of the section.}
+
+\vspace{30pt}
+
+5. Verify the identities in exercise 4 by writing out (using logical symbols)
+what it means for an object x to be an element of each set and then using
+logical equivalences.
+\vspace{30pt}
+
+(a) $$A \setminus (A \cap B) = A \setminus B$$
+
+$$A \setminus (A \cap B) = x \in A \land \neg (x \in A \land x \in B)$$
+DeMorgan's law: $$x \in A \land (x \notin A \lor x \notin B)$$
+Distributive law: $$(x \in A \land x \notin A) \lor (x \in A \land x \notin B)$$
+\centerline{(a contradiction) $\lor (x \in A \land x \notin B)$}
+Contradiction law: $$x \in A \land x \notin B$$
+
+$$A \setminus B = x \in A \land x \notin B$$
+\vspace{10pt}
+
+(b) $$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
+$$x \in A \lor x \in (B \cap C)$$
+$$x \in A \lor (x \in B \land x \in C)$$
+Distributive law: $$(x \in A \lor x \in B) \land (x \in A \lor x \in C)$$
+
+$$(A \cup B) \cap (A \cup C)$$
+$$(x \in A \lor x \in B) \land (x \in A \lor x \in C)$$
+\vspace{30pt}
+
+6. Use Venn diagrams to verify the following identities:
+
+\hspace{12pt}(a) $(A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C)$.
+
+\hspace{12pt}(b) $A \cup (B \setminus C) = (A \cup B) \setminus (C \setminus A)$.
+\vspace{30pt}
+
+(a) $$(A \cup B) \setminus C$$
+
+$$(A \cup B)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$(A \cup B) \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{10pt}
+
+$$(A \setminus C) \cup (B \setminus C)$$
+
+$$A \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$B \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \setminus C) \cup (B \setminus C)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{20pt}
+
+(b) $A \cup (B \setminus C) = (A \cup B) \setminus (C \setminus A)$
+
+$A \cup (B \setminus C)$
+
+$$B \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$A \cup (B \setminus C)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \cup B) \setminus (C \setminus A)$$
+
+$$A \cup B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$C \setminus A$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-5,-5) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \cup B) \setminus (C \setminus A)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+7. Verify the identities in exercise 6 by writing out (using logical symbols)
+what it means for an object x to be an element of each set and then using
+logical equivalences.
+
+\hspace{12pt}(a) $(A \cup B) \setminus C = (A \setminus C) \cup (B \setminus C)$.
+
+\hspace{12pt}(b) $A \cup (B \setminus C) = (A \cup B) \setminus (C \setminus A)$.
+\vspace{30pt}
+
+(a) $$(A \cup B) \setminus C$$
+$$(x \in A \lor x \in B) \land \neg (x \in C)$$
+Distributive law: $$(x \in A \land \neg (x \in C)) \lor (x \in B \land \neg (x \in C))$$
+$$(x \in A \land x \notin C) \lor (x \in B \land x \notin C)$$
+
+$$(A \setminus C) \cup (B \setminus C)$$
+$$(x \in A \land x \notin C) \lor (x \in B \land x \notin C)$$
+\vspace{10pt}
+
+(b) $$A \cup (B \setminus C)$$
+$$x \in A \lor (x \in B \land x \notin C)$$
+
+$$(A \cup B) \setminus (C \setminus A)$$
+$$(x \in A \lor x \in B) \land \neg (x \in C \land \neg (x \in A))$$
+DeMorgan's law: $$(x \in A \lor x \in B) \land (x \notin C \lor x \in A)$$
+Commutative law: $$(x \in A \lor x \in B) \land (x \in A \lor x \notin C)$$
+Distributive law: $$x \in A \lor (x \in B \land x \notin C)$$
+\vspace{30pt}
+
+8. For each of the following sets, write out (using logical symbols) what it
+means for an object x to be an element of the set. Then determine which
+of these sets must be equal to each other by determining which statements
+are equivalent.
+
+\hspace{12pt}(a) $(A \setminus B) \setminus C$.
+
+\hspace{12pt}(b) $A \setminus (B \setminus C)$.
+
+\hspace{12pt}(c) $(A \setminus B) \cup (A \cap C)$.
+
+\hspace{12pt}(d) $(A \setminus B) \cap (A \setminus C)$.
+
+\hspace{12pt}(e) $A \setminus (B \cup C)$
+\vspace{30pt}
+
+(a) $$(x \in A \land x \notin B) \land x \notin C$$
+$$x \in A \land x \notin B \land x \notin C$$
+\vspace{10pt}
+
+(b) $$x \in A \land \neg (x \in B \land \neg (x \in C))$$
+$$x \in A \land (x \notin B \lor x \in C)$$
+\vspace{10pt}
+
+(c) $$(A \setminus B) \cup (A \cap C)$$
+$$(x \in A \land x \notin B) \lor (x \in A \land x \in C)$$
+$$x \in A \land (x \notin B \lor x \in C)$$
+\vspace{10pt}
+
+(d) $$(A \setminus B) \cap (A \setminus C)$$
+$$(x \in A \land x \notin B) \land (x \in A \land x \notin C)$$
+$$x \in A \land x \in A \land x \notin B \land x \notin C$$
+$$x \in A \land x \notin B \land x \notin C$$
+\vspace{10pt}
+
+(e) $$A \setminus (B \cup C)$$
+$$x \in A \land \neg (x \in B \lor x \in C)$$
+$$x \in A \land x \notin B \land \notin C$$
+\vspace{10pt}
+
+Set (a) equals to set (d) and (e).
+
+Set (b) equals to set (c).
+\vspace{30pt}
+
+9. It was shown in this section that for any sets A and B, $(A \cup B) \setminus B \subseteq A$.
+Give an example of two sets A and B for which $(A \cup B) \setminus B \neq A$
+\vspace{30pt}
+
+$$A = \{1,2,3\}$$
+$$B = \{3\}$$
+$$A \cup B = \{1,2,3\}$$
+$$(A \cup B) \setminus B = \{1, 2\}$$
+$$\{1,2\} \neq \{1,2,3\}$$
+\vspace{30pt}
+
+10. It is claimed in this section that you cannot make a Venn diagram for four sets using overlapping circles.
+
+\hspace{12pt}(a) What’s wrong with the following diagram? (Hint: Where’s the set $(A \cap D) \setminus (B \cup C)$?)
+
+\def\firstcircle2{(0,0) circle (1.5cm)}
+\def\secondcircle2{(0:1cm) circle (1.5cm)}
+\def\thirdcircle2{(90:1cm) circle (1.5cm)}
+\def\fourthcircle2{(45:1.4cm) circle (1.5cm)}
+
+
+\centerline{$A$\hspace{50pt}$B$}
+
+\centerline{\begin{tikzpicture}
+    \draw \firstcircle2 node[text=black,below left] {};
+    \draw \secondcircle2 node [text=black,above left] {};
+    \draw \thirdcircle2 node [text=black,below right] {};
+    \draw \fourthcircle2 node [text=black,above right] {};
+  \end{tikzpicture}}
+
+\centerline{$C$\hspace{50pt}$D$}
+
+\hspace{12pt}(b) Can you make a Venn diagram for four sets using shapes other than
+circles?
+\vspace{30pt}
+
+(a) $$A \cap D$$
+
+\centerline{$A$\hspace{50pt}$B$}
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \thirdcircle2;
+      \fill[cyan] \secondcircle2;
+    \end{scope}
+    \draw \firstcircle2 node[text=black,below left] {};
+    \draw \secondcircle2 node [text=black,above left] {};
+    \draw \thirdcircle2 node [text=black,below right] {};
+    \draw \fourthcircle2 node [text=black,above right] {};
+  \end{tikzpicture}}
+
+\centerline{$C$\hspace{50pt}$D$}
+\vspace{30pt}
+$$B \cup C$$
+
+\centerline{$A$\hspace{50pt}$B$}
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle2;
+      \fill[cyan] \fourthcircle2;
+    \end{scope}
+    \draw \firstcircle2 node[text=black,below left] {};
+    \draw \secondcircle2 node [text=black,above left] {};
+    \draw \thirdcircle2 node [text=black,below right] {};
+    \draw \fourthcircle2 node [text=black,above right] {};
+  \end{tikzpicture}}
+
+\centerline{$C$\hspace{50pt}$D$}
+
+There's no region corresponding to set $(A \cap D) \setminus (B \cup C)$, but this set could have elements. (hmm)
+
+\vspace{30pt}
+
+
+(b)
+
+\def\thirdellipse2{(90:1cm) ellipse (1.5cm and 2cm)}
+
+\centerline{$A$\hspace{50pt}$B$}
+
+\centerline{\begin{tikzpicture}
+    \draw \firstcircle2 node[text=black,below left] {};
+    \draw \secondcircle2 node [text=black,above left] {};
+    \draw \thirdellipse2 node [text=black,below right] {};
+    \draw \fourthcircle2 node [text=black,above right] {};
+  \end{tikzpicture}}
+
+\centerline{$C$\hspace{50pt}$D$}
+
+\vspace{30pt}
+
+11. (a) Make Venn diagrams for the sets $(A \cup B) \setminus C$ and $A \cup (B \setminus C)$. What
+can you conclude about whether one of these sets is necessarily a
+subset of the other?
+
+\hspace{12pt}(b) Give an example of sets A, B, and C for which $(A \cup B) \setminus C \neq A \cup
+(B \setminus C)$.
+
+\vspace{30pt}
+
+(a) $$Q = (A \cup B) \setminus C$$
+
+\def\firstcircle{(0,0) circle (1.5cm)}
+\def\secondcircle{(45:2cm) circle (1.5cm)}
+\def\thirdcircle{(0:2cm) circle (1.5cm)}
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{10pt}
+
+$$A \cup (B \setminus C)$$
+
+$$B \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P = A \cup (B \setminus C)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$Q \subseteq P$$
+\vspace{30pt}
+
+(b) $$A = \{1,2,3\}$$
+$$B = \{4, 5\}$$
+$$C = \{1\}$$
+
+$$(A \cup B) \setminus C$$
+$$\{1,2,3,4,5\} \setminus \{1\}$$
+$$Q = \{2,3,4,5\}$$
+
+$$A \cup (B \setminus C)$$
+$$(\{4,5\} \setminus {1}) \cup {1, 2, 3}$$
+$$\{4,5\} \cup {1, 2, 3}$$
+$$P = \{1,2,3,4,5\}$$
+
+$$Q \neq P$$
+\vspace{30pt}
+
+12. Use Venn diagrams to show that the associative law holds for symmetric
+difference; that is, for any sets A, B, and C, $A \triangle (B \triangle C) = (A \triangle B) \triangle C$.
+\vspace{30pt}
+
+$$A \triangle (B \triangle C)$$
+
+$$P = B \triangle C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$A \cup P$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$A \cap P$$
+
+\centerline{\begin{tikzpicture}
+  \begin{scope}[shift={(6cm,0cm)}]
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[white] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node {$A$};
+    \draw \secondcircle node {$B$};
+    \draw \thirdcircle node {$C$};
+  \end{scope}
+\end{tikzpicture}}
+
+$$A \triangle (B \triangle C)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[white] \secondcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+$$(A \triangle B) \triangle C$$
+
+$$Q = A \triangle B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$Q \cup C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$Q \cap C$$
+
+\centerline{\begin{tikzpicture}
+  \begin{scope}[shift={(6cm,0cm)}]
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[white] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node {$A$};
+    \draw \secondcircle node {$B$};
+    \draw \thirdcircle node {$C$};
+  \end{scope}
+\end{tikzpicture}}
+
+$$(A \triangle B) \triangle C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[white] \secondcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+13. Use any method you wish to verify the following identities:
+
+\hspace{12pt}(a) $(A \triangle B) \cup C = (A \cup C) \triangle (B \setminus C)$.
+
+\hspace{12pt}(b) $(A \triangle B) \cap C = (A \cap C) \triangle (B \cap C)$.
+
+\hspace{12pt}(c) $(A \triangle B) \setminus C = (A \setminus C) \triangle (B \setminus C)$.
+\vspace{30pt}
+
+(a) $$(A \triangle B) \cup C = (A \cup C) \triangle (B \setminus C)$$
+
+$$A \triangle B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \triangle B) \cup C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P = A \cup C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$Q = B \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P \cap Q$$
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P \cup Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+      \fill[cyan] \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$(P \cup Q) \setminus (P \cap Q) = (A \cup C) \triangle (B \setminus C)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+(b) $$(A \triangle B) \cap C = (A \cap C) \triangle (B \cap C)$$
+
+$$(A \triangle B) \cap C$$
+
+\centerline{\begin{tikzpicture}
+  \begin{scope}[shift={(6cm,0cm)}]
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[white] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node {$A$};
+    \draw \secondcircle node {$B$};
+    \draw \thirdcircle node {$C$};
+  \end{scope}
+\end{tikzpicture}}
+
+$$P = B \cap C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$Q = A \cap C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$P \cap Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[white] \secondcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+$$P \cup Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$(P \cup Q) \setminus (P \cap Q) = (A \cap C) \triangle (B \cap C)$$
+
+\centerline{\begin{tikzpicture}
+  \begin{scope}[shift={(6cm,0cm)}]
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[white] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node {$A$};
+    \draw \secondcircle node {$B$};
+    \draw \thirdcircle node {$C$};
+  \end{scope}
+\end{tikzpicture}}
+
+\vspace{30pt}
+
+(c) $$(A \triangle B) \setminus C = (A \setminus C) \triangle (B \setminus C)$$
+
+$$(A \triangle B) \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \setminus C) \triangle (B \setminus C)$$
+
+$$P = A \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$Q = B \setminus C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P \cap Q$$
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P \cup Q$$
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(P \cup Q) \setminus (P \cap Q) = (A \setminus C) \triangle (B \setminus C)$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+14. Use any method you wish to verify the following identities:
+
+\hspace{12pt}(a) $(A \cup B) \triangle C = (A \triangle C) \triangle (B \setminus A)$.
+
+\hspace{12pt}(b) $(A \cap B) \triangle C = (A \triangle C) \triangle (A \setminus B)$.
+
+\hspace{12pt}(c) $(A \setminus B) \triangle C = (A \triangle C) \triangle (A \cap B)$.
+
+\vspace{30pt}
+
+(a) $$(A \cup B) \triangle C$$
+
+$$A \cup B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \fill[cyan] \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$(A \cup B) \triangle C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+$$(A \triangle C) \triangle (B \setminus A)$$
+
+$$P = A \triangle C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$Q = B \setminus A$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P \cap Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \clip \secondcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \secondcircle;
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P \cup Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P \triangle Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+(c) $(A \setminus B) \triangle C = (A \triangle C) \triangle (A \cap B)$
+
+$$A \setminus B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \setminus B) \triangle C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+\vspace{30pt}
+
+$$(A \triangle C) \triangle (A \cap B)$$
+
+$$P = A \triangle C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$Q = A \cap B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \secondcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below left] {$C$};
+  \end{tikzpicture}}
+
+$$P \cup Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$P \cap Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+\vspace{30pt}
+
+$$P \triangle Q$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+15. Fill in the blanks to make true identities:
+
+\hspace{12pt}(a) $(A \triangle B) \cap C = (C \setminus A) \triangle \dots$
+
+\hspace{12pt}(b) $C \setminus (A \triangle B) = (A \cap C) \triangle \dots$
+
+\hspace{12pt}(c) $(B \setminus A) \triangle C = (A \triangle C) \triangle \dots$
+
+\vspace{30pt}
+
+(a) $(A \triangle B) \cap C = (C \setminus A) \triangle \dots$
+
+$$(A \triangle B) \cap C$$
+
+\centerline{\begin{tikzpicture}
+  \begin{scope}[shift={(6cm,0cm)}]
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[white] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node {$A$};
+    \draw \secondcircle node {$B$};
+    \draw \thirdcircle node {$C$};
+  \end{scope}
+\end{tikzpicture}}
+
+
+$$C \setminus A$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-5,-5) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$C \setminus B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \secondcircle (-5,-5) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(A \triangle B) \cap C = (C \setminus A) \triangle (C \setminus B)$$
+\vspace{10pt}
+
+(b) $C \setminus (A \triangle B) = (A \cap C) \triangle \dots$
+
+
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \thirdcircle;
+        \fill[white] \firstcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$A \cap C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$B \cap C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+    \end{scope}
+    \draw \firstcircle node[text=black,above] {$A$};
+    \draw \secondcircle node [text=black,below left] {$B$};
+    \draw \thirdcircle node [text=black,below right] {$C$};
+  \end{tikzpicture}}
+
+$$(A \cap C) \triangle (B \cap C)$$
+
+\centerline{\begin{tikzpicture}
+  \begin{scope}[shift={(6cm,0cm)}]
+    \begin{scope}
+      \clip \secondcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \fill[cyan] \thirdcircle;
+    \end{scope}
+    \begin{scope}
+      \clip \firstcircle;
+      \clip \secondcircle;
+      \fill[white] \thirdcircle;
+    \end{scope}
+    \draw \firstcircle node {$A$};
+    \draw \secondcircle node {$B$};
+    \draw \thirdcircle node {$C$};
+  \end{scope}
+\end{tikzpicture}}
+
+
+$$C \setminus (A \triangle B) = (A \cap C) \triangle (B \cap C) \triangle C$$
+\vspace{30pt}
+
+(c) $$(B \setminus A) \triangle C = (A \triangle C) \triangle \dots$$
+
+$$B \setminus A$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(B \setminus A) \triangle C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (3,3);
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \secondcircle;
+        \fill[white] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[white] \secondcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \clip \secondcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}
+        \clip \firstcircle;
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+\vspace{30pt}
+
+$$A \triangle C$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \clip \firstcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \thirdcircle;
+      \end{scope}
+      \begin{scope}[even odd rule]
+        \clip \thirdcircle (-3,-3) rectangle (5,5);
+        \fill[cyan] \firstcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$A \cup B$$
+
+\centerline{\begin{tikzpicture}
+    \begin{scope}[shift={(6cm,0cm)}]
+      \begin{scope}[even odd rule]
+        \fill[cyan] \firstcircle;
+        \fill[cyan] \secondcircle;
+      \end{scope}
+      \draw \firstcircle node {$A$};
+      \draw \secondcircle node {$B$};
+      \draw \thirdcircle node {$C$};
+    \end{scope}
+  \end{tikzpicture}}
+
+$$(B \setminus A) \triangle C = (A \triangle C) \triangle (A \cup B)$$
+
+
+\vspace{50pt}
+
+\textbf{1.5. The Conditional and Biconditional Connectives}
+\vspace{30pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
