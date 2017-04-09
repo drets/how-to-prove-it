@@ -4,6 +4,7 @@
 \usepackage{listings}
 \usepackage{amssymb}
 \usepackage{tikz}
+\usepackage{soul}
 \usetikzlibrary{shapes,backgrounds}
 \renewcommand{\baselinestretch}{1.5}
 \lstset{
@@ -31,7 +32,7 @@
 \begin{document}
 \topskip0pt
 \vspace*{\fill}
-\centerline{\sc \large Solutions for the exercises from "How to prove it" book }
+\centerline{\sc \large Solutions of the exercises for "How to prove it" book }
 \centerline{by drets}
 \centerline{\textit{(may contain various errors)}}
 \vspace*{\fill}
@@ -3476,23 +3477,547 @@ $$(B \setminus A) \triangle C = (A \triangle C) \triangle (A \cup B)$$
 \textbf{1.5. The Conditional and Biconditional Connectives}
 \vspace{30pt}
 
+$$P \to Q = \neg P \lor Q$$
+Converse of $P \to Q$:
+$$Q \to P = \neg Q \lor P$$
+Contrapositive of $P \to Q$:
+$$\neg Q \to \neg P = \neg \neg Q \lor \neg P = Q \lor \neg P =  P \to Q$$
+
+\centerline{
+  \begin{tabular}{c c c c}
+  P & Q & $\neg P \lor Q$ & $\neg Q \lor P$ \\
+  \hline
+  F & F & T & T \\
+  F & T & T & F \\
+  T & F & F & T \\
+  T & T & T & T \\
+  \end{tabular}}
+\vspace{20pt}
+
+Biconditional statement: $$P \leftrightarrow Q = (P \to Q) \land (Q \to P)$$
+\vspace{30pt}
+
+Exercises:
+
+1. Analyze the logical forms of the following statements:
+
+\hspace{12pt}(a) If this gas either has an unpleasant smell or is not explosive, then it
+isn’t hydrogen.
+
+\hspace{12pt}(b) Having both a fever and a headache is a sufficient condition for George
+to go to the doctor.
+
+\hspace{12pt}(c) Both having a fever and having a headache are sufficient conditions
+for George to go to the doctor.
+
+\hspace{12pt}(d) If $x \neq 2$, then a necessary condition for x to be prime is that x be odd.
+\vspace{30pt}
+
+(a) P stand for "Gas has pleasant smell"
+
+G stand for "Gas is explosive"
+
+Q stand for "Gas is hydrogen"
+
+$$(\neg P \lor \neg G) \to \neg Q$$
+DeMorgan's law: $$\neg (P \land G) \to \neg Q$$
+Contrapositive law: $$Q \to (P \land G)$$
+\vspace{20pt}
+
+(b) P stand for "To have a fever"
+
+G stand for "To have a headache"
+
+Q stand for "George goes to the doctor"
+
+$$(P \land G) \to Q$$
+\vspace{20pt}
+
+(c) P stand for "To have a fever"
+
+G stand for "To have a headache"
+
+Q stand for "George goes to the doctor"
+
+$$(P \lor G) \to Q$$
+$$\neg (P \lor G) \lor Q$$
+$$(\neg P \land \neg G) \lor Q$$
+$$(\neg P \lor Q) \land (\neg G \lor Q)$$
+$$(P \to Q) \land (G \to Q)$$
+
+\vspace{20pt}
+
+(d) P stand for "$x = 2$"
+
+R stand for "x is odd"
+
+Q stand for "x is prime"
+
+$$\neg P \to (Q \to R)$$
+
+or
+
+$$(x \neq 2) \to (Q(x) \to R(x))$$
+
+2. Analyze the logical forms of the following statements:
+
+\hspace{12pt}(a) Mary will sell her house only if she can get a good price and find a
+nice apartment.
+
+\hspace{12pt}(b) Having both a good credit history and an adequate down payment is a
+necessary condition for getting a mortgage.
+
+\hspace{12pt}(c) John will kill himself, unless someone stops him. (Hint: First try to
+rephrase this using the words if and then instead of unless.)
+
+\hspace{12pt}(d) If x is divisible by either 4 or 6, then it isn't prime
+\vspace{30pt}
+
+(a) P is "Mary will sell her house"
+
+Q is "Mary can get a good price"
+
+R is "Mary can find a nice apartment"
+
+$$P \to (Q \land R)$$
+\vspace{20pt}
+
+(b) Q is "to have a good credit history"
+
+R is "to have an adequate down payment"
+
+P is "to get a mortgage"
+
+$$(Q \land R) \to P$$
+\vspace{20pt}
+
+(c) If someone doesn't stop John then he will kill himself.
+
+P is "Someone stops John"
+
+Q is "John will kill himself"
+
+$$\neg P \to Q$$
+\vspace{20pt}
+
+(d) P(x) is "x is divisible by 4"
+
+R(x) is "x is divisible by 6"
+
+Q(x) is "x is prime"
+
+$$(P(x) \lor R(x)) \to \neg Q(x)$$
+\vspace{20pt}
+
+3. Analyze the logical form of the following statement:
+
+\hspace{12pt}(a) If it is raining, then it is windy and the sun is not shining.
+
+Now analyze the following statements. Also, for each statement determine
+whether the statement is equivalent to either statement (a) or its converse.
+
+\hspace{12pt}(b) It is windy and not sunny only if it is raining.
+
+\hspace{12pt}(c) Rain is a sufficient condition for wind with no sunshine.
+
+\hspace{12pt}(d) Rain is a necessary condition for wind with no sunshine.
+
+\hspace{12pt}(e) It’s not raining, if either the sun is shining or it’s not windy.
+
+\hspace{12pt}(f) Wind is a necessary condition for it to be rainy, and so is a lack of
+sunshine.
+
+\hspace{12pt}(g) Either it is windy only if it is raining, or it is not sunny only if it is
+raining.
+\vspace{30pt}
+
+(a) R: "It's raining"
+
+W: "It's windy"
+
+S: "Sun is shining"
+
+$$R \to (W \land \neg S)$$
+\vspace{20pt}
+
+(b) $$(W \land \neg S) \to R$$
+
+Equivalent to converse of (a).
+
+(c) $$R \to (W \land \neg S)$$
+
+Equivalent to (a).
+\vspace{20pt}
+
+(d) $$(W \land \neg S) \to R$$
+
+Equivalent to converse of (a).
+\vspace{20pt}
+
+(e) $$(S \lor \neg W) \to \neg R$$
+
+$$\neg (W \land \neg S) \to \neg R$$
+
+$$R \to (W \land \neg S)$$
+
+Equivalent to (a).
+\vspace{20pt}
+
+(f) $$R \to (W \land \neg S)$$
+
+Equivalent to (a).
+\vspace{20pt}
+
+(g) $$(W \to R) \lor (\neg S \to R)$$
+
+$$(\neg W \lor R) \lor (S \lor R)$$
+$$(\neg W \lor S) \lor R$$
+$$\neg (W \land \neg S) \lor R$$
+$$(W \land \neg S) \to R$$
+
+Equivalent to converse of (a).
+\vspace{30pt}
+
+4. Use truth tables to determine whether or not the following arguments are
+valid:
+
+\hspace{12pt}(a) Either sales or expenses will go up. If sales go up, then the boss will
+be happy. If expenses go up, then the boss will be unhappy. Therefore,
+sales and expenses will not both go up.
+
+\hspace{12pt}(b) If the tax rate and the unemployment rate both go up, then there will
+be a recession. If the GNP goes up, then there will not be a recession.
+The GNP and taxes are both going up. Therefore, the unemployment
+rate is not going up.
+
+\hspace{12pt}(c) The warning light will come on if and only if the pressure is too high and
+the relief valve is clogged. The relief valve is not clogged. Therefore,
+the warning light will come on if and only if the pressure is too high.
+\vspace{30pt}
+
+(a)
+$$S \lor E$$
+$$S \to B$$
+$$E \to \neg B$$
+$$\therefore (\neg S \land E) \lor (S \land \neg E)$$
+
+\centerline{
+  \begin{tabular}{c c c c c c c}
+  S & E & B & $S \lor E$ & $\neg S \lor B$ & $\neg E \lor \neg B$ & $(\neg S \land E) \lor (S \land \neg E)$ \\
+  \hline
+  F & F & F & F & T & T & F \\
+  F & F & T & F & T & T & F \\
+  F & T & F & T & T & T & T \\
+  F & T & T & T & T & F & T \\
+  T & F & F & T & F & T & T \\
+  T & F & T & T & T & T & T \\
+  T & T & F & T & F & T & F \\
+  T & T & T & T & T & F & F \\
+  \end{tabular}}
+\vspace{20pt}
+
+3 and 6 row: all arguments are true and conclusion is true as well, therefore arguments are valid.
+\vspace{20pt}
+
+(b) T: "Tax rate goes up"
+
+U: "Unemployment rate goes up"
+
+R: "Recession will be"
+
+G: "GNP goes up"
+
+$$(T \land U) \to R$$
+$$G \to \neg R$$
+$$G \land T$$
+$$\therefore \neg U$$
+
+\centerline{
+  \begin{tabular}{c c c c l l l l}
+  T & U & R & G & $\neg (T \land U) \lor R$ & $\neg (G \land R)$ &  $G \land T$ & $\neg U$ \\
+  \hline
+  F & F & F & F & \textbf{T} F F F & \textbf{T} F F F & F \textbf{F} F & \textbf{T} F \\
+  F & F & F & T & \textbf{T} F F F & \textbf{T} T F F & T \textbf{F} F & \textbf{T} F \\
+  F & F & T & F & \textbf{T} F F F & \textbf{T} F F T & F \textbf{F} F & \textbf{T} F \\
+  F & F & T & T & \textbf{T} F F F & \textbf{F} T T T & T \textbf{F} F & \textbf{T} F \\
+  F & T & F & F & \textbf{T} F F T & \textbf{T} F F F & F \textbf{F} F & \textbf{F} T \\
+  F & T & F & T & \textbf{T} F F T & \textbf{T} T F F & T \textbf{F} F & \textbf{F} T \\
+  F & T & T & F & \textbf{T} F F T & \textbf{T} F F T & F \textbf{F} F & \textbf{F} T \\
+  F & T & T & T & \textbf{T} F F T & \textbf{F} T T T & T \textbf{F} F & \textbf{F} T \\
+  T & F & F & F & \textbf{T} T F F & \textbf{T} F F F & F \textbf{F} T & \textbf{T} F \\
+  T & F & F & T & \textbf{T} T F F & \textbf{T} T F F & T \textbf{T} T & \textbf{T} F \\
+  T & F & T & F & \textbf{T} T F F & \textbf{T} F F T & F \textbf{F} T & \textbf{T} F \\
+  T & F & T & T & \textbf{T} T F F & \textbf{F} T T T & T \textbf{T} T & \textbf{T} F \\
+  T & T & F & F & \textbf{F} T T T & \textbf{T} F F F & F \textbf{F} T & \textbf{F} T \\
+  T & T & F & T & \textbf{F} T T T & \textbf{T} T F F & T \textbf{T} T & \textbf{F} T \\
+  T & T & T & F & \textbf{F} T T T & \textbf{T} F F T & F \textbf{F} T & \textbf{F} T \\
+  T & T & T & T & \textbf{F} T T T & \textbf{F} T T T & T \textbf{T} T & \textbf{F} T \\
+  \end{tabular}}
+\vspace{20pt}
+
+All arguments are true only in 10th row and conclusion is true as well, therefore arguments are valid.
+\vspace{20pt}
+
+(c) L: "Warning light will come on"
+
+P: "Pressure is too high"
+
+R: "Relief valve is clogged"
+
+$$L \leftrightarrow (P \land R) = (L \to (P \land R)) \land ((P \land R) \to L) = (\neg L \lor (P \land R)) \land (\neg (P \land R) \lor L)$$
+$$\neg R$$
+$$\therefore L \leftrightarrow P = (\neg L \lor P) \land (\neg P \lor L)$$
+
+\centerline{
+  \begin{tabular}{c c c l l l}
+  P & R & L & $(\neg L \lor (P \land R)) \land (\neg (P \land R) \lor L)$ & $\neg R$ & $(\neg L \lor P) \land (\neg P \lor L)$ \\
+  \hline
+  F & F & F & T F  T  F F F \textbf{T} T F F F  T  F & \textbf{T} F & T F T F \textbf{T} T F T F \\
+  F & F & T & F T  F  F F F \textbf{F} T F F F  T  T & \textbf{T} F & F T F F \textbf{F} T F T T \\
+  F & T & F & T F  T  F F T \textbf{T} T F F T  T  F & \textbf{F} T & T F T F \textbf{T} T F T F \\
+  F & T & T & F T  F  F F T \textbf{F} T F F T  T  T & \textbf{F} T & F T F F \textbf{F} T F T T \\
+  T & F & F & T F  T  T F F \textbf{T} T T F F  T  F & \textbf{T} F & T F T T \textbf{F} F T F F \\
+  T & F & T & F T  F  T F F \textbf{F} T T F F  T  T & \textbf{T} F & F T T T \textbf{T} F T T T \\
+  T & T & F & T F  T  T T T \textbf{F} F T T T  F  F & \textbf{F} T & T F T T \textbf{F} F T F F \\
+  T & T & T & F T  T  T T T \textbf{T} F T T T  T  T & \textbf{F} T & F T T T \textbf{T} F T T T \\
+  \end{tabular}}
+\vspace{20pt}
+
+All arguments are true only in 5th row but conclusion is false, therefore arguments are invalid.
+\vspace{30pt}
+
+5. (a) Show that $P \leftrightarrow Q$ is equivalent to $(P \land Q) \lor (\neg P \land \neg Q)$.
+
+\hspace{12pt}(b) Show that $(P \to Q) \lor (P \to R)$ is equivalent to $P \to (Q \lor R)$.
+\vspace{30pt}
+
+(a) Definition of biconditional statement: $P \leftrightarrow Q = (P \to Q) \land (Q \to P)$
+
+Contrapositive law: $(P \to Q) \land (\neg P \to \neg Q)$
+
+Conditional law: $(\neg P \lor Q) \land (\neg \neg P \lor \neg Q)$
+
+Distributive law: $((\neg P \lor Q ) \land \neg \neg P) \lor ((\neg P \lor Q) \land \neg Q)$
+
+Distributive law: $((\neg P \land P) \lor (P \land Q)) \lor ((\neg P \land \neg Q) \lor (Q \land \neg Q))$
+
+$((contradiction) \lor (P \land Q)) \lor ((\neg P \land \neg Q) \lor (contradiction))$
+
+Contradiction law: $(P \land Q) \lor (\neg P \land \neg Q)$
+\vspace{30pt}
+
+(b) $(P \to Q) \lor (P \to R)$
+
+Conditional law: $(\neg P \lor Q) \lor (\neg P \lor R)$
+
+Associative law: $(\neg P \lor \neg P) \lor (Q \lor R)$
+
+Idemponent law: $\neg P \lor (Q \lor R)$
+
+Conditional law: $P \to (Q \lor R)$
+\vspace{30pt}
+
+6. (a) Show that $(P \to R) \land (Q \to R)$ is equivalent to $(P \lor Q) \to R$.
+
+\hspace{12pt}(b) Formulate and verify a similar equivalence involving $(P \to R) \lor (Q \to R)$.
+\vspace{20pt}
+
+(a) $(P \to R) \land (Q \to R)$
+
+Conditional law $(\neg P \lor R) \land (\neg Q \lor R)$
+
+Distributive law: $(\neg P \land \neg Q) \lor R$
+
+DeMorgan's law: $\neg (P \lor Q) \lor R$
+
+Conditional law: $(P \lor Q) \to R$
+\vspace{10pt}
+
+(b) $(P \to R) \lor (Q \to R)$
+
+Conditional law: $(\neg P \lor R) \lor (\neg Q \lor R)$
+
+Associative law: $(\neg P \lor \neg Q) \lor (R \lor R)$
+
+Idemponent law: $(\neg P \lor \neg Q) \lor R$
+
+DeMorgan's law: $\neg (P \land Q) \lor R$
+
+Conditional law: $(P \land Q) \to R$
+
+\vspace{30pt}
+
+7. (a) Show that $(P \to Q) \land (Q \to R)$ is equivalent to $(P \to R) \land [(P \leftrightarrow Q) \lor (R \leftrightarrow Q)]$.
+
+\hspace{12pt}(b) Show that $(P \to Q) \lor (Q \to R)$ is a tautology.
+\vspace{20pt}
+
+(a)
+
+$$(P \to Q) \land (Q \to R)$$
+
+\centerline{
+  \begin{tabular}{c c c l l c}
+  P & Q & R & $(P \to Q)$ & $(Q \to R)$ & $(P \to Q) \land (Q \to R)$ \\
+  \hline
+  F & F & F & T T F & T T F & T \\
+  F & F & T & T T F & T T T & T \\
+  F & T & F & T T T & F F F & F \\
+  F & T & T & T T T & F T T & T \\
+  T & F & F & F F F & T T F & F \\
+  T & F & T & F F F & T T T & F \\
+  T & T & F & F T T & F F F & F \\
+  T & T & T & F T T & F T T & T \\
+  \end{tabular}}
+\vspace{20pt}
+
+$$N = P \to R$$
+
+\centerline{
+  \begin{tabular}{c c c l}
+  P & Q & R & $P \to R$ \\
+  \hline
+  F & F & F & T \textbf{T} F \\
+  F & F & T & T \textbf{T} T \\
+  F & T & F & T \textbf{T} F \\
+  F & T & T & T \textbf{T} T \\
+  T & F & F & F \textbf{F} F \\
+  T & F & T & F \textbf{T} T \\
+  T & T & F & F \textbf{F} F \\
+  T & T & T & F \textbf{T} T \\
+  \end{tabular}}
+\vspace{20pt}
+
+$$M = P \leftrightarrow Q = (P \to Q) \land (Q \to P)$$
+
+\centerline{
+  \begin{tabular}{c c c l l c}
+  P & Q & R & $(P \to Q)$ & $(Q \to P)$ & $(P \to Q) \land (Q \to P)$ \\
+  \hline
+  F & F & F & T T F & T T F & T \\
+  F & F & T & T T F & T T F & T \\
+  F & T & F & T T T & F F F & F \\
+  F & T & T & T T T & F F F & F \\
+  T & F & F & F F F & T T T & F \\
+  T & F & T & F F F & T T T & F \\
+  T & T & F & F T T & F T T & T \\
+  T & T & T & F T T & F T T & T \\
+  \end{tabular}}
+\vspace{20pt}
+
+$$Y = R \leftrightarrow Q = (R \to Q) \land (Q \to R)$$
+
+\centerline{
+  \begin{tabular}{c c c l l c}
+  P & Q & R & $(R \to Q)$ & $(Q \to R)$ & $(R \to Q) \land (Q \to R)$ \\
+  \hline
+  F & F & F & T T F & T T F & T \\
+  F & F & T & F F F & T T T & F \\
+  F & T & F & T T T & F F F & F \\
+  F & T & T & F T T & F T T & T \\
+  T & F & F & T T F & T T F & T \\
+  T & F & T & F F F & T T T & F \\
+  T & T & F & T T T & F F F & F \\
+  T & T & T & F T T & F T T & T \\
+  \end{tabular}}
+\vspace{20pt}
+
+$$(P \to R) \land [(P \leftrightarrow Q) \lor (R \leftrightarrow Q)] = N \land (M \lor Y)$$
+
+\centerline{
+  \begin{tabular}{c c c c}
+  N & M & Y & $(P \to R) \land [(P \leftrightarrow Q) \lor (R \leftrightarrow Q)]$ \\
+  \hline
+  T & T & T & T \\
+  T & T & F & T \\
+  T & F & F & F \\
+  T & F & T & T \\
+  F & F & T & F \\
+  T & F & F & F \\
+  F & T & F & F \\
+  T & T & T & T \\
+  \end{tabular}}
+\vspace{20pt}
+
+Truth table for $(P \to Q) \land (Q \to R)$ is equivalent to $(P \to R) \land [(P \leftrightarrow Q) \lor (R \leftrightarrow Q)]$ truth table.
+
+Therefore $(P \to Q) \land (Q \to R)$ is equivalent to $(P \to R) \land [(P \leftrightarrow Q) \lor (R \leftrightarrow Q)]$.
+
+\vspace{20pt}
+
+(b) $(P \to Q) \lor (Q \to R)$
+
+Conditional law: $(\neg P \lor Q) \lor (\neg Q \lor R)$
+
+Associative law: $(\neg P \lor R) \lor (Q \lor \neg Q)$
+
+$(\neg P \lor R) \lor (tautology)$
+
+Tautology law: $(tautology)$
+
+\vspace{30pt}
+
+8. Find a formula involving only the connectives $\neg$ and $\to$ that is equivalent to $P \land Q$.
+\vspace{20pt}
+
+$$P \land Q$$
+$$\neg \neg P \land \neg \neg Q$$
+$$\neg (\neg P \lor \neg Q)$$
+$$\neg (P \to \neg Q)$$
+
+\vspace{30pt}
+
+9. Find a formula involving only the connectives $\neg$ and $\to$ that is equivalent to $P \leftrightarrow Q$.
+\vspace{20pt}
+
+$$P \leftrightarrow Q$$
+$$(P \to Q) \land (Q \to P)$$
+
+Using results from ex. 8:
+
+$$\neg ((P \to Q) \to \neg (Q \to P))$$
 
 
+\vspace{30pt}
 
+10. Which of the following formulas are equivalent?
 
+\hspace{12pt}(a) $P \to (Q \to R)$.
 
+\hspace{12pt}(b) $Q \to (P \to R)$.
 
+\hspace{12pt}(c) $(P \to Q) \land (P \to R)$.
 
+\hspace{12pt}(d) $(P \land Q) \to R$.
 
+\hspace{12pt}(e) $P \to (Q \land R)$.
+\vspace{20pt}
 
+(a) $$P \to (Q \to R)$$
+$$\neg P \lor (Q \to R)$$
+$$\neg P \lor \neg Q \lor R$$
+\vspace{10pt}
 
+(b) $$Q \to (P \to R)$$
+$$\neg Q \lor (P \to R)$$
+$$\neg Q \lor \neg P \lor R$$
+$$\neg P \lor \neg Q \lor R$$
 
+(c) $$(P \to Q) \land (P \to R)$$
+$$(\neg P \lor Q) \land (\neg P \lor R)$$
+$$\neg P \lor (Q \land R)$$
 
+(d) $$(P \land Q) \to R$$
+$$\neg (P \land Q) \lor R$$
+$$\neg P \lor \neg Q \lor R$$
 
+(e) $$P \to (Q \land R)$$
+$$\neg P \lor (Q \land R)$$
+\vspace{20pt}
 
+(c) is equivalent to (e)
 
-
-
+(a) is equivalent to (b) and (d)
 
 
 
