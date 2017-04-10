@@ -1,0 +1,448 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{soul}
+\usetikzlibrary{shapes,backgrounds}
+\renewcommand{\baselinestretch}{1.5}
+\lstset{
+  frame=none,
+  xleftmargin=2pt,
+  stepnumber=1,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\ttfamily\tiny\color[gray]{0.3},
+  belowcaptionskip=\bigskipamount,
+  captionpos=b,
+  escapeinside={*'}{'*},
+  language=haskell,
+  tabsize=2,
+  emphstyle={\bf},
+  commentstyle=\it,
+  stringstyle=\mdseries\rmfamily,
+  showspaces=false,
+  keywordstyle=\bfseries\rmfamily,
+  columns=flexible,
+  basicstyle=\small\sffamily,
+  showstringspaces=false,
+  morecomment=[l]\%,
+}
+\begin{document}
+\topskip0pt
+\vspace*{\fill}
+\centerline{\sc \large Solutions of the exercises for "How to prove it" book }
+\centerline{by drets}
+\centerline{\textit{(may contain various errors)}}
+\vspace*{\fill}
+%
+\pagebreak
+\centerline{\sc \large 2. Quantificational Logic}
+\vspace{50pt}
+
+\textbf{2.1. Quantifiers}
+
+\vspace{40pt}
+
+$$\forall x (\neg L(x, j) \to L(s, x))$$
+
+\centerline{
+  \begin{tabular}{c c c}
+  L(x, j) & L(s, x) & $\neg L(x, j) \to L(s, x)$ \\
+  \hline
+  F & F & F \\
+  F & T & T \\
+  T & F & T \\
+  T & T & T \\
+  \end{tabular}}
+\vspace{30pt}
+
+Exercises:
+\vspace{30pt}
+
+1. Analyze the logical forms of the following statements.
+
+\hspace{12pt}(a) Anyone who has forgiven at least one person is a saint.
+
+\hspace{12pt}(b) Nobody in the calculus class is smarter than everybody in the discrete
+math class.
+
+\hspace{12pt}(c) Everyone likes Mary, except Mary herself.
+
+\hspace{12pt}(d) Jane saw a police officer, and Roger saw one too.
+
+\hspace{12pt}(e) Jane saw a police officer, and Roger saw him too.
+\vspace{30pt}
+
+(a) $\forall x$ (x has forgiven at least one person is a saint)
+
+$\exists y F(x, y)$
+
+F(x, y) stand for "x has forgiven y"
+
+$\forall x (\exists y F(x, y) \to S(x))$
+
+S(x) stand for "x is a saint"
+\vspace{20pt}
+
+(b) $\neg \exists x [C(x) \land \forall y (D(y) \to S(x, y))]$
+
+S(x, y) is "x is smarter y"
+
+C(x) is "x is in calculus class"
+
+D(x) is "x is in discrete class"
+\vspace{20pt}
+
+(c) $\forall x (\neg L(m, m) \to L(x, m))$
+
+m is "Mary"
+
+L(x, y) is "x likes y"
+\vspace{20pt}
+
+(d) $\exists x (P(x) \land S(j, x)) \land \exists y (P(y) \land S(r, y))$
+
+S(x, y) is "x saw y"
+
+j is Jane
+
+r is Roger
+
+P(x) is "x is a police officer"
+
+\vspace{20pt}
+
+(e) $\exists x (P(x) \land S(j, x) \land S(r, x))$
+
+S(x, y) is "x saw y"
+
+j is Jane
+
+r is Roger
+
+P(x) is "x is a police officer"
+
+\vspace{30pt}
+
+2. Analyze the logical forms of the following statements.
+
+\hspace{12pt}(a) Anyone who has bought a Rolls Royce with cash must have a rich
+uncle.
+
+\hspace{12pt}(b) If anyone in the dorm has the measles, then everyone who has a friend
+in the dorm will have to be quarantined.
+
+\hspace{12pt}(c) If nobody failed the test, then everybody who got an A will tutor
+someone who got a D.
+
+\hspace{12pt}(d) If anyone can do it, Jones can.
+
+\hspace{12pt}(e) If Jones can do it, anyone can
+\vspace{30pt}
+
+(a) $\forall x (C(x) \to \exists y (R(y) \land U(y, x)))$
+
+C(x) is "x has bought a Rolls Royce with cash"
+
+R(x) is "x is rich"
+
+U(x, y) is "x is uncle of y"
+
+\vspace{20pt}
+
+(b) $\exists x [(D(x) \land M(x)) \to \forall y (F(x, y) \land Q(y))]$
+
+$\exists x [(D(x) \land M(x)) \to \exists z \forall y (D(z) \land F(z, y) \land Q(y))]$
+
+M(x) is "x has the measles"
+
+D(x) is "x is in the dorm"
+
+F(x, y) is "x is a friend of y"
+
+Q(x) is "x will have to be quarantined"
+
+\vspace{20pt}
+
+(c) $\neg \exists x (F(x) \to \forall y \exists z(A(y) \land D(z) \land T(y, z)))$
+
+T(x, y) is "x will tutor y"
+
+F(x) is "x failed the test"
+
+A(x) is "x got an A"
+
+D(x) is "x got a D"
+
+\vspace{20pt}
+
+(d) $\exists x (D(x) \to D(j))$
+
+D(x) is "x can do it"
+
+j is Jones
+
+\vspace{20pt}
+
+(e) $\forall x (D(j) \to D(x))$
+
+D(x) is "x can do it"
+
+j is Jones
+
+\vspace{30pt}
+
+3. Analyze the logical forms of the following statements. The universe of
+discourse is $\mathbb{R}$. What are the free variables in each statement?
+
+\hspace{12pt}(a) Every number that is larger than $x$ is larger than $y$.
+
+\hspace{12pt}(b) For every number $a$, the equation $ax^2 + 4x - 2 = 0$ has at least one
+solution iff $a \geq −2$
+
+\hspace{12pt}(c) All solutions of the inequality $x^3 - 3x < 3$ are smaller than $10$.
+
+\hspace{12pt}(d) If there is a number $x$ such that $x^2 + 5x = w$ and there is a number $y$
+such that $4 - y^2 = w$, then $w$ is between -10 and 10.
+\vspace{30pt}
+
+(a) $\forall n (n > x \to n > y)$
+
+x and y are free variables.
+
+\vspace{20pt}
+
+(b) $\forall a \exists x (a > 2 \leftrightarrow ax^2 + 4x - 2 = 0)$
+
+no free variables.
+
+\vspace{20pt}
+
+(c) $\forall x (x^3 - 3x < 3 \to x < 10)$
+
+no free variables.
+
+\vspace{20pt}
+
+(d) $\forall w [(\exists x (x^2 + 5x = w) \land \exists y (4 - y^2 = w) \to (-10 < w < 10)]$
+
+no free variables.
+
+\vspace{30pt}
+
+4. Translate the following statements into idiomatic English.
+
+\hspace{12pt}(a) $\forall x[(H(x) \land \neg \exists y M(x, y)) \to U(x)]$, where H(x) means "x is a man,"
+M(x, y) means "x is married to y," and U(x) means "x is unhappy."
+
+\hspace{12pt}(b) $\exists z(P(z, x) \land S(z, y) \land W(y))$, where P(z, x) means "z is a parent of
+x," S(z, y)  means "z and y are siblings," and W(y) means "y is a
+woman."
+\vspace{30pt}
+
+(a) All unmarried men are unhappy
+\vspace{20pt}
+
+(b) y is a sister of one of x's parents.
+
+\vspace{30pt}
+
+5. Translate the following statements into idiomatic mathematical English.
+
+\hspace{12pt}(a) $\forall x[(P(x) \land \neg (x = 2)) \to O(x)]$, where P(x) means "x is a prime
+number" and O(x) means "x is odd."
+
+\hspace{12pt}(b) $\exists x[P(x) \land \forall y(P(y) \to y \leq x)]$, where P(x) means "x is a perfect
+number."
+\vspace{30pt}
+
+(a) All x which are prime numbers and not equal to 2 should be odd.
+\vspace{20pt}
+
+(b) There is at least one perfect number $x$ such that all perfect numbers are less or equal to $x$.
+
+\vspace{30pt}
+
+6. Are these statements true or false? The universe of discourse is the set of
+all people, and P(x, y) means "x is a parent of y."
+
+\hspace{12pt}(a) $\exists x \forall y P(x, y)$.
+
+\hspace{12pt}(b) $\forall x \exists y P(x, y)$.
+
+\hspace{12pt}(c) $\neg \exists x \exists y P(x, y)$.
+
+\hspace{12pt}(d) $\exists x \neg \exists y P(x, y)$.
+
+\hspace{12pt}(e) $\exists x \exists y \neg P(x, y)$.
+
+\vspace{30pt}
+
+(a) false
+
+(there exists person x such that x is a parent of all people)
+\vspace{30pt}
+
+(b) false
+
+(all people have child)
+\vspace{30pt}
+
+(c) false
+
+(nobody has a child)
+\vspace{30pt}
+
+(d) true
+
+(there exists a person without kids)
+\vspace{30pt}
+
+(e) true
+
+(there exist person x and person y such that x is not a parent of y)
+
+\vspace{30pt}
+
+7. Are these statements true or false? The universe of discourse is $\mathbb{N}$.
+
+\hspace{12pt}(a) $\forall x \exists y (2x - y = 0)$.
+
+\hspace{12pt}(b) $\exists y \forall x (2x - y = 0)$.
+
+\hspace{12pt}(c) $\forall x \exists y (x - 2y = 0)$.
+
+\hspace{12pt}(d) $\forall x (x < 10 \to \forall y(y < x \to y < 9))$.
+
+\hspace{12pt}(e) $\exists y \exists z (y + z = 100)$.
+
+\hspace{12pt}(f) $\forall x \exists y (y > x \land \exists z (y + z = 100))$.
+\vspace{30pt}
+
+(a) true
+
+\vspace{20pt}
+
+(b) false
+
+\vspace{20pt}
+
+(c) false
+
+\vspace{20pt}
+
+(d) true
+
+\vspace{20pt}
+
+(e) true
+
+\vspace{20pt}
+
+(f) false
+
+\vspace{30pt}
+
+8. Same as exercise 7 but with $\mathbb{R}$ as the universe of discourse.
+\vspace{30pt}
+
+(a) true
+
+\vspace{20pt}
+
+(b) false
+
+\vspace{20pt}
+
+(c) true
+
+\vspace{20pt}
+
+(d) false
+
+\vspace{20pt}
+
+(e) true
+
+\vspace{20pt}
+
+(f) true
+
+\vspace{30pt}
+
+9. Same as exercise 7 but with $\mathbb{Z}$ as the universe of discourse
+\vspace{30pt}
+
+(a) true
+
+\vspace{20pt}
+
+(b) false
+
+\vspace{20pt}
+
+(c) false
+
+\vspace{20pt}
+
+(d) true
+
+\vspace{20pt}
+
+(e) true
+
+\vspace{20pt}
+
+(f) true
+
+\vspace{30pt}
+
+\textbf{2.2. Equivalences Involving Quantifiers}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
