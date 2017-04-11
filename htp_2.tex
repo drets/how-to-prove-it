@@ -401,8 +401,498 @@ all people, and P(x, y) means "x is a parent of y."
 
 \textbf{2.2. Equivalences Involving Quantifiers}
 
+Quantifier Negation laws:
+
+$\neg \exists x P(x)$ is equivalent to $\forall x \neg P(x)$
+
+$\neg \forall x P(x)$ is equivalent to $\exists x \neg P(x)$
+\vspace{30pt}
+
+$\exists !x P(x) = \exists x (P(x) \land \neg \exists y (P(y) \land x \neq y))$
+
+Abbreviations:
+
+$\exists x \in A P(x) = \exists x (x \in A \land P(x))$
+
+$\forall x \in A P(x) = \forall x (x \in A \to P(x))$
+
+Universal quantifier distibutes over conjunction:
+
+$\forall x (E(x) \land T(x)) = \forall x E(x) \land \forall x T(x)$
+
+\vspace{50pt}
+
+Exercises:
+
+1. Negate these statements and then reexpress the results as equivalent positive statements. (See Example 2.2.1.)
+
+\hspace{12pt}(a) Everyone who is majoring in math has a friend who needs help with his homework.
+
+\hspace{12pt}(b) Everyone has a roommate who dislikes everyone.
+
+\hspace{12pt}(c) $A \cup B \subseteq C \setminus D$.
+
+\hspace{12pt}(d) $\exists x \forall y [y > x \to \exists z (z^2 + 5z = y)]$.
+\vspace{30pt}
+
+(a) $\forall x \exists y (M(x) \land F(x, y) \land H(y) \land x \neq y)$
+
+M(x) is "x is majoring in math"
+
+F(x, y) is "x has a friend y"
+
+H(x) is "x needs help with his homework"
+
+Negating:
+
+$\neg \forall x \exists y (M(x) \land F(x, y) \land H(y) \land x \neq y)$
+
+Quantifier negation law: $\exists x \neg \exists y (M(x) \land F(x, y) \land H(y) \land x \neq y)$
+
+Quantifier negation law: $\exists x \forall y \neg (M(x) \land F(x,y) \land H(y) \land x \neq y)$
+
+DeMorgan's law: $\exists x \forall y (\neg (M(x) \land F(x, y)) \lor \neg (H(y) \land x \neq y))$
+
+Conditional law: $\exists x \forall y ((M(x) \land F(x, y)) \to \neg (H(y) \land x \neq y))$
+
+Someone who is majoring in math doesn't have friends who are needs help with their homeworks.
+
+\vspace{20pt}
+
+(b) $\forall x \exists y (R(x, y) \land \forall z (\neg L(y, z)))$
+
+R(x, y) is "x a roommate y"
+
+L(x, y) is "x likes y"
+
+Negating:
+
+$\neg \forall x \exists y (R(x, y) \land \forall z (\neg L(y, z))$
+
+Quantifier negation law: $\exists x \neg \exists y (R(x, y) \land \forall z (\neg L(y, z)))$
+
+Quantifier negation law: $\exists x \forall y \neg (R(x, y) \land \forall z (\neg L(y, z)))$
+
+DeMorgan's law: $\exists x \forall y (\neg R(x, y) \lor \neg \forall z (\neg L(y, z))$
+
+Conditional law: $\exists x \forall y (R(x, y) \to \neg \forall z (\neg L(y, z)))$
+
+$\exists x \forall y (R(x, y) \to \exists z (L(y, z)))$
+
+There is someone all of whose roommates like at least one person.
+
+\vspace{20pt}
+
+(c) $\forall x (x \in (A \cup B) \to x \in (C \setminus D))$
+
+$\forall x (\neg (x \in A \lor x \in B) \lor (x \in C \land x \notin D))$
+
+Nagating:
+
+$\neg \forall x (\neg (x \in A \lor x \in B) \lor (x \in C \land x \notin D))$
+
+Quantifier negation law: $\exists x \neg (\neg (x \in A \lor x \in B) \lor (x \in C \land x \notin D))$
+
+DeMorgan's law: $\exists x [(x \in A \lor x \in B) \land (x \notin C \lor x \in D)]$
+
+\vspace{20pt}
+
+(d) $\exists x \forall y [y > x \to \exists z (z^2 + 5z = y)]$
+
+Negating:
+
+$\neg \exists x \forall y [y > x \to \exists z (z^2 + 5z = y)]$
+
+$\forall x \neg \forall y [y > x \to \exists z (z^2 + 5z = y)]$ (quantifier negation law)
+
+$\forall x \exists y \neg [y > x \to \exists z (z^2 + 5z = y)]$ (quantifier negation law)
+
+$\forall x \exists y \neg [\neg (y > x) \lor \exists z (z^2 + 5z = y)]$ (conditional law)
+
+$\forall x \exists y [(y > x) \land \neg \exists z (z^2 + 5z = y)]$ (DeMorgan's law)
+
+$\forall x \exists y [(y > x) \land \forall z \neg (z^2 + 5z = y)]$ (quantifier negation law)
+
+$\forall x \exists y [y > x \land \forall z (z^2 + 5z \neq y)]$
+
+\vspace{30pt}
+
+2. Negate these statements and then reexpress the results as equivalent positive statements. (See Example 2.2.1.)
+
+\hspace{12pt}(a) There is someone in the freshman class who doesn't have a roommate.
+
+\hspace{12pt}(b) Everyone likes someone, but no one likes everyone.
+
+\hspace{12pt}(c) $\forall a \in A \exists b \in B(a \in C \leftrightarrow b \in C)$.
+
+\hspace{12pt}(d) $\forall y > 0 \exists x(ax^2 + bx + c = y)$.
+\vspace{30pt}
+
+(a) $\exists x [F(x) \land \neg \exists y(R(x, y))]$
+
+F(x) is "x is freshman"
+
+R(x, y) is "x has a roommate y"
+
+Negating:
+
+$\neg \exists x [F(x) \land \neg \exists y(R(x, y))]$
+
+$\forall x \neg [F(x) \land \neg \exists y(R(x, y))]$ (quantifier negation law)
+
+$\forall x [\neg F(x) \lor \exists y(R(x,y))]$ (DeMorgan's law)
+
+$\forall x [F(x) \to \exists y(R(x, y))]$ (conditional law)
+
+All freshman have a roommate
+
+\vspace{20pt}
+
+(b) $\forall x \exists y (L(x,y)) \land \neg \exists z \forall w (L(z, w))$
+
+L(x, y) is "x likes y"
+
+Negating:
+
+$\neg \forall x \exists y (L(x, y)) \lor \neg \neg \exists z \forall w (L(z, w))$
+
+$\exists x \forall y \neg L(x, y) \lor \exists z \forall w L(z, w)$
+
+There exist someone who doesn't like everybody or someone who likes everybody.
+
+\vspace{20pt}
+
+(c) $\neg \forall a \in A \exists b \in B(a \in C \leftrightarrow b \in C)$
+
+$\exists a \in A \forall b \in B \neg (a \in C \leftrightarrow b \in C)$
+
+$\exists a \in A \forall b \in B \neg ((a \in C \to b \in C) \land (b \in C \to a \in C))$
+
+$\exists a \in A \forall b \in B (\neg (a \in C \to b \in C) \lor \neg (b \in C \to a \in C))$
+
+$\exists a \in A \forall b \in B (\neg (\neg (a \in C) \lor b \in C) \lor \neg (\neg (b \in C) \lor a \in C))$
+
+$\exists a \in A \forall b \in B ((a \in C) \land \neg (b \in C)) \lor ((b \in C) \land \neg (a \in C))$
+
+$\exists a \forall b [(a \in B \land b \in B) \land (a \in C \land b \notin C) \lor (b \in C \land a \notin C)]$
+
+\vspace{20pt}
+
+(d) $\neg \forall y > 0 \exists x(ax^2 + bx + c = y)$
+
+$\exists y > 0 \neg \exists x (ax^2 + bx + c = y)$
+
+$\exists y > 0 \forall x \neg (ax^2 + bx + c = y)$
+
+$\exists y > 0 \forall x (ax^2 + bx + c \neq y)$
+
+$\exists y \forall x (y > 0 \land ax^2 + bx + c \neq y)$
+
+\vspace{30pt}
+
+3. Are these statements true or false? The universe of discourse is $\mathbb{N}$.
+
+\hspace{12pt}(a) $\forall x (x < 7 \to \exists a \exists b \exists c(a^2 + b^2 + c^2 = x))$.
+
+\hspace{12pt}(b) $\exists ! x ((x - 4)^2 = 9)$.
+
+\hspace{12pt}(c) $\exists ! x ((x - 4)^2 = 25)$.
+
+\hspace{12pt}(d) $\exists x \exists y ((x - 4)^2 = 25 \land (y - 4)^2 = 25)$.
+\vspace{30pt}
+
+(a) true
+
+$0 \leq x \leq 6$
+
+\vspace{20pt}
+
+(b) false
+
+x = 7
+
+x = 1
+
+\vspace{20pt}
+
+(c) false
+
+x = 9
+
+x = -1
+
+\vspace{20pt}
+
+(d) true
+
+\vspace{30pt}
+
+4. Show that the second quantifier negation law, which says that $\neg \forall x P(x)$
+is equivalent to $\exists x \neg P(x)$, can be derived from the first, which says that
+$\neg \exists x P(x)$ is equivalent to $\forall x \neg P(x)$. (Hint: Use the double negation law.)
+\vspace{30pt}
+
+Using $\neg \exists x P(x) =  \forall x \neg P(x)$
+
+prove $\neg \forall x P(x) = \exists x \neg P(x)$
+
+$\neg \neg \forall x P(x) = \neg \exists x \neg P(x)$
+
+$\forall x P(x) = \forall x \neg \neg P(x)$
+
+$\forall x P(x) = \forall x P(x)$
+
+or
+
+$\neg \exists x \neg P(x) =  \forall x \neg \neg P(x)$
+
+$\neg \exists x \neg P(x) = \forall x P(x)$
+
+$\exists x \neg P(x) = \neg \forall x P(x)$
+
+\vspace{30pt}
+
+5. Show that $\neg \exists x \in A P(x)$ is equivalent to $\forall x \in A \neg P(x)$.
+\vspace{30pt}
+
+$\neg \exists x \in A P(x)$
+
+$\neg \exists x (x \in A \land P(x))$ (expanding abbreviation)
+
+$\forall x \neg (x \in A \land P(x))$ (quantifier negation law)
+
+$\forall x (\neg x \in A \lor \neg P(x))$ (DeMorgan's law)
+
+$\forall x (x \in A \to \neg P(x))$ (conditional law)
+
+$\forall x \in A \neg P(x)$ (abbreviation)
+
+\vspace{30pt}
+
+6. Show that the existential quantifier distributes over disjunction. In other
+words, show that $\exists x (P(x) \lor Q(x))$ is equivalent to $\exists x P(x) \lor \exists x Q(x)$.
+(Hint: Use the fact, discussed in this section, that the universal quantifier distributes over conjunction.)
+\vspace{30pt}
+
+$\exists x (P(x) \lor Q(x))$
+
+$\neg \forall x \neg (P(x) \lor Q(x))$
+
+$\neg \forall x (\neg P(x) \land \neg Q(x))$
+
+$\neg (\forall x \neg P(x) \land \forall x \neg Q(x))$
+
+$\neg \forall x \neg P(x) \lor \neg \forall x \neg Q(x)$
+
+$\exists x \neg \neg P(x) \lor \exists x \neg \neg Q(x)$
+
+$\exists x P(x) \lor \exists x Q(x)$
+
+\vspace{30pt}
+
+7. Show that $\exists x (P(x) \to Q(x))$ is equivalent to $\forall x P(x) \to \exists x Q(x)$.
+\vspace{30pt}
+
+$\exists x (P(x) \to Q(x))$
+
+$\neg \neg \exists x (P(x) \to Q(x))$ (double negation law)
+
+$\neg \forall x \neg (P(x) \to Q(x))$ (quantifier negation law)
+
+$\neg \forall x \neg (\neg P(x) \lor Q(x))$ (conditional law)
+
+$\neg \forall x (P(x) \land \neg Q(x))$ (DeMorgan's law)
+
+$\neg (\forall x P(x) \land \forall x \neg Q(x))$ (universal quantifier distribution law)
+
+$\neg \forall x P(x) \lor \neg \forall x \neg Q(x)$ (DeMorgan's law)
+
+$\neg \forall x P(x) \lor \exists x \neg \neg Q(x)$ (quantifier negation law)
+
+$\neg \forall x P(x) \lor \exists x Q(x)$ (double negation law)
+
+$\forall x P(x) \to \exists x Q(x)$ (conditional law)
+
+\vspace{30pt}
+
+8. Show that $(\forall x \in A \, P(x)) \land (\forall x \in B \, P(x))$ is equivalent to
+$\forall x \in (A \cup B) \, P(x)$. (Hint: Start by writing out the meanings of the bounded
+quantifiers in terms of unbounded quantifiers.)
+\vspace{30pt}
+
+$(\forall x (x \in A \to P(x))) \land (\forall x (x \in B \to P(x)))$ (expanding abbreviation)
+
+$\forall x ((x \in A \to P(x)) \land (x \in B \to P(x)))$ (universal quantifiers distribution law)
+
+$\forall x ((\neg (x \in A) \lor P(x)) \land (\neg (x \in B) \lor P(x)))$ (conditional law)
+
+$\forall x ((\neg (x \in A) \land \neg (x \in B)) \lor P(x))$ (distribution law)
+
+$\forall x (\neg (x \in A \lor x \in B) \lor P(x))$ (DeMorgan's law)
+
+$\forall x ((x \in A \lor x \in B) \to P(x))$ (conditional law)
+
+$\forall x (x \in (A \cup B) \to P(x))$
+
+$\forall x \in (A \cup B) \, P(x)$
+
+\vspace{30pt}
+
+9. Is $\forall x (P(x) \lor Q(x))$ equivalent to $\forall x P(x) \lor \forall x Q(x)$?
+Explain. (Hint: Try assigning meanings to P(x) and Q(x).)
+\vspace{30pt}
+
+$\forall x (P(x) \lor Q(x))$
+
+P(x) "x is tall"
+
+Q(x) "x is smart"
+
+All people are either tall or smart.
+\vspace{20pt}
+
+$\forall x P(x) \lor \forall x Q(x)$
+
+All people are tall or all people are smart.
+
+$\forall x (P(x) \land Q(x)) \neq \forall x P(x) \lor \forall x Q(x)$
+
+\vspace{30pt}
+
+10. (a) Show that $\exists x \in A \, P(x) \lor \exists x \in B \, P(x)$ is equivalent to $\exists x \in (A \cup B) \, P(x)$.
+
+\hspace{12pt}(b) Is $\exists x \in A \, P(x) \land \exists x \in B \, P(x)$ equivalent to $\exists x \in (A \cap B) \, P(x)$?
+Explain.
+\vspace{30pt}
+
+(a) $\exists x \in A \, P(x) \lor \exists x \in B \, P(x)$
+
+$\exists x [(x \in A) \land P(x)) \lor \exists ((x \in B) \land P(x)]$
+
+$\exists x [((x \in A) \land P(x)) \lor ((x \in B) \land P(x))]$
+
+$\exists x [((x \in A) \lor (x \in B)) \land P(x)]$
+
+$\exists x (x \in (A \cup B) \land P(x))$
+
+$\exists x \in (A \cup B) \, P(x)$
+
+\vspace{20pt}
+
+(b) $\exists x \in A \, P(x) \land \exists x \in B \, P(x)$
+
+$\exists x ((x \in A) \land P(x)) \land \exists x ((x \in B) \land P(x))$
+\vspace{20pt}
+
+$\exists x \in (A \cap B) P(x)$
+
+$\exists x (x \in (A \cap B) \land P(x))$
+
+$\exists x ((x \in A) \land (x \in B) \land P(x))$
+\vspace{20pt}
+
+A is \{1,2,3\}
+
+B is \{4,5,7\}
+
+P(x) is "$x < 6$"
+
+$\exists x ((x \in A) \land P(x)) \land \exists x ((x \in B) \land P(x))$
+
+$\exists x ((x \in \{1,2,3\}) \land x < 6) \land \exists x ((x \in \{4,5,7\}) \land x < 6)$
+
+$true \land true = true$
+\vspace{20pt}
+
+$\exists x ((x \in \{1,2,3\} \land x \in \{4,5,7\} \land x < 6))$
+
+$\exists x (x \in \varnothing \land x < 6)$ is false
+
+So $\exists x \in A \, P(x) \land \exists x \in B \, P(x)$ is not equivalent to $\exists x \in (A \cap B) \, P(x)$.
+
+\vspace{30pt}
+
+11. Show that the statements $A \subseteq B$ and $A \setminus B = \varnothing$ are equivalent by writing
+each in logical symbols and then showing that the resulting formulas are equivalent.
+\vspace{30pt}
+
+$A \subseteq B$ means $\forall x (x \in A \to x \in B)$
+
+$A \setminus B = \varnothing$ means $\neg \exists x (x \in A \land x \notin B)$
+
+$\forall x \neg (x \in A \land x \notin B)$
+
+$\forall x (\neg x \in A \lor x \in B)$
+
+$\forall x (x \in A \to x \in B)$
+
+$A \subseteq B$
+
+\vspace{30pt}
+
+12. Let T(x, y) mean "x is a teacher of y."
+What do the following statements mean?
+Under what circumstances would each one be true?
+Are any of them equivalent to each other?
+
+\hspace{12pt}(a) $\exists !y T(x, y)$.
+
+\hspace{12pt}(b) $\exists x \exists ! y T(x, y)$.
+
+\hspace{12pt}(c) $\exists ! x \exists y T(x, y)$.
+
+\hspace{12pt}(d) $\exists y \exists ! x T(x, y)$.
+
+\hspace{12pt}(e) $\exists ! x \exists ! y T(x, y)$.
+
+\hspace{12pt}(f) $\exists x \exists y [T (x, y) \land \neg \exists u \exists v (T(u, v) \land (u \neq  x \lor v \neq y))]$.
+\vspace{20pt}
+
+(a) There is exactly one student who has $x$ teacher.
+
+Statement will be true if we choose instead of $x$ a teacher who has exactly one student.
+\vspace{20pt}
+
+(b) There is at least one teacher who has exactly one student.
+
+Statement will be true if universe of discourse has at least one teacher who has exactly one student.
+\vspace{20pt}
+
+(c) There is exactly one teacher who has at least one student.
+
+Statement will be true if universe of discourse has exactly one teacher who has at least one student.
+\vspace{20pt}
+
+(d) There is exactly one teacher who has at least one student
+
+$\exists y \exists ! x T(x, y)$ is equivalent to $\exists ! x \exists ! y T(x, y)$
+
+Statement will be true if universe of discourse has exactly one teacher who has at least one student.
+\vspace{20pt}
+
+(e) There is exactly one teacher who has exactly one student.
+
+Statement will be true if universe of discourse has exactly one teacher who has exactly one student.
+\vspace{20pt}
+
+(f) There is exactly one teacher who has exactly one student.
+
+$\exists x \exists y [T (x, y) \land \neg \exists u \exists v (T(u, v) \land (u \neq  x \lor v \neq y))]$ is equivalent to
+
+$\exists ! x \exists ! y T(x, y)$
+
+Statement will be true if universe of discourse has exactly one teacher who has exactly one student.
+\vspace{20pt}
 
 
+(c) equivalent to (d)
+
+(e) equivalent to (f)
+
+\vspace{50pt}
+
+
+\textbf{2.3. More Operations on Sets}
 
 
 
