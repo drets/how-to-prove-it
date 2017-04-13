@@ -894,12 +894,557 @@ Statement will be true if universe of discourse has exactly one teacher who has 
 
 \textbf{2.3. More Operations on Sets}
 
+$x \in \{n^2 \mid n \in \mathbb{N}\}$ means the same thing as $\exists n \in \mathbb{N}(x = n^2)$
+
+$\mathcal{P}(A) = \{x \mid x \subseteq A\}$
+
+$\cup$ − union
+
+$\cap$ − intersection
+
+$\cap \mathcal{F} = \{x \mid \forall A \in \mathcal{F}(x \in A)\} = \{x \mid \forall A (A \in F \to x \in A)\}$
+
+$\cup \mathcal{F} = \{x \mid \exists A \in \mathcal{F}(x \in A)\} = \{x \mid \exists A (A \in \mathcal{F} \land x \in A)$
+
+$\cap \mathcal{F} = \cap_{i \in I}A_i = \{ x \mid \forall i \in I (x \in A_i)\}$
+
+$\cup \mathcal{F} = \cup_{i \in I}A_i = \{ x \mid \exists i \in I (x \in A_i)\}$
+
+\vspace{30pt}
+Exercises:
+\vspace{30pt}
+
+∗1. Analyze the logical forms of the following statements. You may use the
+symbols $\in , \notin, =, \neq, \land, \lor, \to, \leftrightarrow, \forall,$ and $\exists$ in your answers, but not
+$\subseteq, \nsubseteq, \mathcal{P}, \cap, \cup, \, \{, \}, $ or $\neg$. (Thus, you must write out the definitions
+of some set theory notation, and you must use equivalences to get rid of
+any occurrences of $\neg$.)
+
+\hspace{12pt}(a) $\mathcal{F} \subseteq \mathcal{P} (A)$.
+
+\hspace{12pt}(b) $A \subseteq \{2n + 1 \mid n \in \mathbb{N}\}$.
+
+\hspace{12pt}(c) $\{n^2 + n + 1 \mid n \in \mathbb{N}\} \subseteq \{2n + 1 \mid n \in \mathbb{N}\}$.
+
+\hspace{12pt}(d) $\mathcal{P} (\cup_{i \in I} A_i) \nsubseteq \cup_{i \in I} \mathcal{P} (A_i)$.
+\vspace{30pt}
+
+(a) $\forall x (x \in \mathcal{F} \to x \in \mathcal{P}(A))$
+
+$\forall x (x \in \mathcal{F} \to x \subseteq A)$
+
+$\forall x (x \in \mathcal{F} \to \forall y (y \in x \to y \in A))$
+
+\vspace{20pt}
+
+(b) $\forall x (x \in A \to x \in \{2n + 1 \mid n \in \mathbb{N}\})$
+
+$\forall x (x \in A \to \exists n \in \mathbb{N} (x = 2n + 1))$
+
+\vspace{20pt}
+
+(c) $\forall x (x \in \{n^2 + n + 1 \mid n \in \mathbb{N})\} \to x \in \{2n + 1 \mid n \in \mathbb{N}\})$
+
+$\forall x (\exists n \in \mathbb{N} (x = n^2 + n + 1) \to \exists n \in \mathbb{N} (x = 2n + 1))$
+
+or better version:
+
+$\forall n \in \mathbb{N} \exists m \in \mathbb{N}(n^2 + n + 1 = 2m + 1)$
+
+\vspace{20pt}
+
+(d) $\exists x (x \in \mathcal{P}(\cup_{i \in I} A_i) \land x \notin \cup_{i \in I} \mathcal{P} (A_i))$
+
+$\exists x (\forall y (y  \in x \to y \in \cup_{i \in I} A_i) \land \neg \exists i \in I(x \in \mathcal{P} (A_i)))$
+
+$\exists x (\forall y (y \in x \to \exists i \in I (y \in A_i)) \land \neg \exists i \in I \forall y (y \in x \to y \in A_i))$
+
+$\exists x (\forall y (y \in x \to \exists i \in I (y \in A_i)) \land \forall i \in I \exists y (y \in x \land y \notin A_i))$
+
+\vspace{30pt}
+
+2. Analyze the logical forms of the following statements. You may use the
+symbols $\in , \notin, =, \neq, \land, \lor, \to, \leftrightarrow, \forall,$ and $\exists$ in your answers, but not
+$\subseteq, \nsubseteq, \mathcal{P}, \cap, \cup, \, \{, \},$ or $\neg$. (Thus, you must write out the definitions
+of some set theory notation, and you must use equivalences to get rid of
+any occurrences of $\neg$.)
+
+\hspace{12pt}(a) $x \in \cup \mathcal{F} \setminus \cup \mathcal{G}$.
+
+\hspace{12pt}(b) $\{x \in B \mid x \notin C\} \in \mathcal{P}(A)$.
+
+\hspace{12pt}(c) $x \in \cap_{i \in I} (A_i \cup B_i)$.
+
+\hspace{12pt}(d) $x \in (\cap_{i \in I} A_i) \cup (\cap_{i \in I} B_i)$.
+\vspace{30pt}
+
+(a) $x \in \cup \mathcal{F} \land x \notin \cup \mathcal{G}$
+
+$\exists A (A \in \mathcal{F} \land x \in A) \land \forall A \in \mathcal{G} (x \notin A)$
+
+\vspace{20pt}
+
+(b) $\forall y (y \in \{x \in B \mid x \notin C\} \to y \in A)$
+
+$\forall y (\exists x \notin C (y = x \in B) \to y \in A)$
 
 
+\vspace{20pt}
+
+(c) $\forall i \in I (x \in (A_i \cup B_i))$
+
+$\forall i \in I (x \in A_i \lor x \in B_i)$
+
+\vspace{20pt}
+
+(d) $(x \in (\cap_{i \in I} A_i)) \lor (x \in (\cap_{i \in I} B_i))$
+
+$\forall i \in I (x \in A_i) \lor \forall i \in I (x \in B_i)$
+
+\vspace{30pt}
+
+3. We've seen that $\mathcal{P} (\varnothing) = \{\varnothing\}$, and $\{\varnothing\} \neq \varnothing$. What is $\mathcal{P} (\{\varnothing\})$?
+\vspace{30pt}
+
+$\mathcal{P} (\{\varnothing\})$
+
+$\{x \mid x \subseteq \{\varnothing\}\} = \{\varnothing, \{\varnothing\}\}$
+
+\vspace{30pt}
+
+∗4. Suppose $\mathcal{F} = \{\{red, green, blue\}, \{orange, red, blue\}, \{purple, red, green, blue\}\}$. Find $\cap \mathcal{F}$ and $\cup \mathcal{F}$.
+\vspace{30pt}
+
+$\cap \mathcal{F} = \{red, blue\}$
+
+$\cup \mathcal{F} = \{red, green, blue, orange, purple\}$
+
+\vspace{30pt}
+
+5. Suppose $\mathcal{F} = \{\{3, 7, 12\},\{5, 7, 16\},\{5, 12, 23\}\}$. Find $\cap \mathcal{F}$ and $\cup \mathcal{F}$.
+\vspace{30pt}
+
+$\cap \mathcal{F} = \varnothing$
+
+$\cup \mathcal{F} = \{3,5,7,12,16,23\}$
+
+\vspace{30pt}
+
+6. Let $I = \{2, 3, 4, 5\}$, and for each $i \in I$ let $A_i = \{i,i + 1,i - 1, 2i\}$.
+
+\hspace{12pt}(a) List the elements of all the sets $A_i$ , for $i \in I$.
+
+\hspace{12pt}(b) Find $\cap_{i \in I} A_i$ and $\cup_{i \in I} A_i$ .
+\vspace{30pt}
+
+(a) $A_2 = \{2, 3, 1, 4\}$
+
+$A_3 = \{3, 4, 2, 6\}$
+
+$A_4 = \{4, 5, 3, 8\}$
+
+$A_5 = \{5, 6, 4, 10\}$
+
+\vspace{20pt}
+
+(b) $\cap_{i \in I} A_i = \{4\}$
+
+$\cup_{i \in I} A_i = \{1,2,3,4,5,6,8,10\} $
+
+\vspace{30pt}
+
+7. Let P = \{Johann Sebastian Bach, Napoleon Bonaparte, Johann
+Wolfgang von Goethe, David Hume, Wolfgang Amadeus Mozart, Isaac
+Newton, George Washington\} and let $Y = \{1750, 1751, 1752, \dots, 1759\}$
+For each $y \in Y$ , let $A_y = \{p \in P \mid \text{ the person p was alive at some time during the year y}\}$.
+Find $\cup_{y\in Y} A_y$ and $\cap_{y \in Y} A_y$ .
+\vspace{30pt}
+
+B = Johann Sebastian Bach: 1685 - 1750
+
+X = Napoleon Bonaparte: 1769 - 1821
+
+G = Johann Wolfgang von Goethe: 1749 - 1832
+
+D = David Hume: 1711 - 1776
+
+M = Wolfgang Amadeus Mozart: 1756 - 1791
+
+N = Isaac Newton: 1642 - 1726
+
+W = George Washington: 1732 - 1799
+
+$A_{1750}$ = \{B, G, D, W\}
+
+$A_{1751}$ = \{G, D, W\}
+
+$A_{1752}$ = \{G, D, W\}
+
+$A_{1753}$ = \{G, D, W\}
+
+$A_{1754}$ = \{G, D, W\}
+
+$A_{1755}$ = \{G, D, W\}
+
+$A_{1756}$ = \{G, D, M, W\}
+
+$A_{1757}$ = \{G, D, M, W\}
+
+$A_{1758}$ = \{G, D, M, W\}
+
+$A_{1759}$ = \{G, D, M, W\}
+
+$\cup_{y\in Y} A_y$ = \{B, G, D, W, M\} = \{Johann Sebastian Bach, Johann Wolfgang von Goethe, David Hume, George Washington, Wolfgang Amadeus Mozart\}
+
+$\cap_{y \in Y} A_y$ = \{G,D\} = \{Johann Wolfgang von Goethe, David Hume\}
 
 
+\vspace{30pt}
+
+∗8. Let I = \{2, 3\}, and for each $i \in I$ let $A_i = \{i, 2i\}$ and $B_i = \{i,i + 1\}$.
+
+\hspace{12pt}(a) List the elements of the sets $A_i$ and $B_i$ for $i \in I$.
+
+\hspace{12pt}(b) Find $\cap_{i \in I} (A_i \cup B_i)$ and $(\cap_{i \in I} A_i) \cup (\cap_{i \in I} B_i)$. Are they the same?
+
+\hspace{12pt}(c) In parts (c) and (d) of exercise 2 you analyzed the statements $x \in \cap_{i \in I} (A_i \cup B_i)$ and
+$x \in (\cap_{i \in I} A_i) \cup (\cap_{i \in I} B_i)$.
+What can you conclude from your answer to part (b) about whether or not these statements are equivalent?
+\vspace{30pt}
+
+(a) $A_2 = \{2, 4\}$ $B_2 = \{2, 3\}$
+
+$A_3 = \{3, 6\}$ $B_3 = \{3, 4\}$
+
+\vspace{20pt}
+
+(b) $\cap_{i \in I} (A_i \cup B_i)$
+
+$(A_2 \cup B_2) \cap (A_3 \cup B_3)$
+
+$\{2,3,4\} \cap \{3,4,6\}$
+
+$\{3,4\}$
+
+\vspace{10pt}
+
+$(\cap_{i \in I} A_i) \cup (\cap_{i \in I} B_i)$
+
+$(A_2 \cap A_3) \cup (B_2 \cap B_3)$
+
+$\varnothing \cup \{3\}$
+
+$\{3\}$
+
+$\therefore \cap_{i \in I} (A_i \cup B_i) \neq (\cap_{i \in I} A_i) \cup (\cap_{i \in I} B_i)$
+
+\vspace{20pt}
+
+(c) $x \in \cap_{i \in I} (A_i \cup B_i) \neq x \in (\cap_{i \in I} A_i) \cup (\cap_{i \in I} B_i)$
+
+\vspace{30pt}
+
+9. Give an example of an index set $I$ and indexed families of sets $\{A_i \mid i \in I\}$
+and $\{B_i \mid i \in I\}$ such that $\cup_{i \in I} (A_i \cap B_i) \neq (\cup_{i \in I} A_i) \cap (\cup_{i \in I} B_i)$.
+\vspace{30pt}
+
+Let I = \{2, 3\}, and for each $i \in I$ let $A_i = \{i, 2i\}$ and $B_i = \{i,i + 1\}$.
 
 
+$A_2 = \{2, 4\}$ $B_2 = \{2, 3\}$
+
+$A_3 = \{3, 6\}$ $B_3 = \{3, 4\}$
+
+$\cup_{i \in I} (A_i \cap B_i) = (A_2 \cap B_2) \cup (A_3 \cap B_3)$
+
+$\{2\} \cup \{3\} = \{2, 3\}$
+
+$(\cup_{i \in I} A_i) \cap (\cup_{i \in I} B_i) = (A_2 \cup A_3) \cap (B_2 \cup B_3)$
+
+$\{2,3,4\} \cap \{3,4,6\} = \{3,4\}$
+
+$\therefore \cup_{i \in I} (A_i \cap B_i) \neq (\cup_{i \in I} A_i) \cap (\cup_{i \in I} B_i)$
+
+\vspace{30pt}
+
+10. Show that for any sets $A$ and $B$, $\mathcal{P} (A \cap B) = \mathcal{P}(A) \cap \mathcal{P}(B)$, by showing
+that the statements $x \in \mathcal{P} (A \cap B)$ and $x \in \mathcal{P}(A) \cap \mathcal{P}(B)$ are equivalent.
+(See Example 2.3.3.)
+\vspace{30pt}
+
+Logical form of $x \in \mathcal{P} (A \cap B)$ is $\forall y (y \in x \to (y \in A \land y \in B))$
+
+Logical form of $x \in \mathcal{P}(A) \cap \mathcal{P}(B)$ is $\forall y (y \in x \to y \in A) \land \forall y (y \in x \to y \in B)$
+
+We just need to prove that logical forms are equivalent.
+
+$\forall y (y \in x \to y \in A) \land \forall y (y \in x \to y \in B)$
+
+Since universal quantifier distributes over conjunction:
+
+$\forall y ((y \in x \to y \in A) \land (y \in x \to y \in B))$
+
+Using conditional law:
+
+$\forall y ((\neg (y \in x) \lor y \in A) \land (\neg (y \in x) \lor y \in B))$
+
+Using distribution law:
+
+$\forall y ((\neg (y \in x) \lor (y \in A \land y \in B))$
+
+Using conditional law:
+
+$\forall y (y \in x \to (y \in A \land y \in B))$
+
+
+\vspace{30pt}
+
+∗11. Give examples of sets $A$ and $B$ for which $\mathcal{P}(A \cup B) \neq \mathcal{P}(A) \cup \mathcal{P}(B)$.
+\vspace{30pt}
+
+A = \{7\}
+
+B = \{12\}
+
+$\mathcal{P}(A \cup B) = \mathcal{P}(\{7, 12\}) = \{\varnothing, \{7\}, \{12\}, \{7, 12\}\}$
+
+$\mathcal{P}(A) = \mathcal{P}(\{7\}) = \{\varnothing, \{7\}\}$
+
+$\mathcal{P}(B) = \mathcal{P}(\{12\}) = \{\varnothing, \{12\}\}$
+
+$\mathcal{P}(A) \cup \mathcal{P}(B) = \{\varnothing, \{7\}\} \cup \{\varnothing, \{12\}\}$
+
+$\mathcal{P}(A) \cup \mathcal{P}(B) = \{\varnothing, \{7\},\{12\}\}$
+
+$\therefore \mathcal{P}(A \cup B) \neq \mathcal{P}(A) \cup \mathcal{P}(B)$
+
+\vspace{30pt}
+
+12. Verify the following identities by writing out (using logical symbols)
+what it means for an object x to be an element of each set and then using logical equivalences.
+
+\hspace{12pt}(a) $\cup_{i \in I} (A_i \cup B_i) = (\cup_{i \in I} A_i) \cup (\cup_{i \in I} B_i)$.
+
+\hspace{12pt}(b) $(\cap \mathcal{F}) \cap (\cap \mathcal{G}) = \cap (\mathcal{F} \cup \mathcal{G})$.
+
+\hspace{12pt}(c) $\cap_{i \in I} (A_i \setminus B_i) = (\cap_{i \in I} A_i) \setminus (\cup_{i \in I} B_i)$.
+\vspace{30pt}
+
+(a)
+
+Logical form of $x \in \cup_{i \in I} (A_i \cup B_i)$ is $\exists i \in I (x \in (A_i \cup B_i))$
+
+Logical form of $x \in ((\cup_{i \in I} A_i) \cup (\cup_{i \in I} B_i))$ is $\exists i \in I (x \in A_i) \lor \exists i \in I (x \in B_i)$
+
+$\exists i \in I (x \in (A_i \cup B_i))$
+
+Since existential quantifier distributes over disjunction:
+
+$\exists i \in I (x \in A_i \lor x \in B_i))$
+
+$\exists i \in I (x \in A_i) \lor \exists i \in I (x \in B_i)$
+
+\vspace{20pt}
+
+(b) $(\cap \mathcal{F}) \cap (\cap \mathcal{G})$
+
+Logical form of $x \in \cap \mathcal{F}$ is $\forall A(A \in \mathcal{F} \to x \in A)$
+
+Logical form of $x \in \cap \mathcal{G}$ is $\forall A(A \in \mathcal{G} \to x \in A)$
+
+$\forall A(A \in \mathcal{F} \to x \in A) \land \forall A(A \in \mathcal{G} \to x \in A)$
+
+Since universal quantifier distributes over conjunction:
+
+$\forall A[(A \in \mathcal{F} \to x \in A) \land (A \in \mathcal{G} \to x \in A)]$
+
+Conditional law:
+
+$\forall A[(\neg (A \in \mathcal{F}) \lor x \in A)) \land (\neg (A \in \mathcal{G} \lor x \in A))]$
+
+Distribution law:
+
+$\forall A[(\neg (A \in \mathcal{F}) \land \neg (A \in \mathcal{G})) \lor x \in A]$
+
+DeMorgan's law:
+
+$\forall A[\neg ((A \in \mathcal{F}) \lor (A \in \mathcal{G})) \lor x \in A]$
+
+Conditional law:
+
+$\forall A (((A \in \mathcal{F}) \lor (A \in \mathcal{G})) \to x \in A)$
+
+\vspace{10pt}
+
+$\cap (\mathcal{F} \cup \mathcal{G})$
+
+Logical form of $x \in \cap (\mathcal{F} \cup \mathcal{G})$ is $\forall A (A \in (\mathcal{F} \cup \mathcal{G}) \to x \in A)$
+
+$\forall A (((A \in \mathcal{F}) \lor (A \in \mathcal{G})) \to x \in A)$
+
+\vspace{20pt}
+
+(c) $\cap_{i \in I} (A_i \setminus B_i)$
+
+Logical form of $x \in \cap_{i \in I} (A_i \setminus B_i)$ is $\forall i \in I (x \in (A_i \setminus B_i))$
+
+$\forall i \in I (x \in A_i \land x \notin B_i)$
+
+$\forall i \in I (x \in A_i) \land \forall i \in I (x \notin B_i)$
+
+\vspace{10pt}
+
+$(\cap_{i \in I} A_i) \setminus (\cup_{i \in I} B_i)$
+
+Logical form of $x \in (\cap_{i \in I} A_i) \setminus (\cup_{i \in I} B_i)$ is $\forall i \in I (x \in A_i) \land \neg \exists i \in I (x \in B_i)$
+
+$\forall i \in I (x \in A_i) \land \forall i \in I \neg (x \in B_i)$
+
+$\forall i \in I (x \in A_i) \land \forall i \in I (x \notin B_i)$
+
+\vspace{30pt}
+
+∗13. Sometimes each set in an indexed family of sets has two indices. For
+this problem, use the following definitions: I = \{1, 2\}, J = \{3, 4\}. For
+each $i \in I$ and $j \in J$ , let $A_{i,j} = \{i, j,i + j\}$. Thus, for example,
+$A_{2,3} = \{2, 3, 5\}$.
+
+\hspace{12pt}(a) For each $j \in J$ let $B_j = \cup_{i \in I} A_{i,j} = A_{1,j} \cup A_{2,j}$ . Find $B_3$ and $B_4$.
+
+\hspace{12pt}(b) Find $\cap_{j \in J} B_j$ . (Note that, replacing $B_j$ with its definition, we could
+
+\hspace{12pt}say that $\cap_{j \in J} B_j = \cap_{j \in J} (\cup_{i \in I} A_{i,j})$.)
+
+\hspace{12pt}(c) Find $\cup_{i \in I} (\cap_{j \in J} A_{i,j})$. (Hint: You may want to do this in two
+steps, corresponding to parts (a) and (b).) Are $\cap_{j \in J} (\cup_{i \in I} A_{i,j})$ and $\cup_{i \in I} (\cap_{j \in J} A_{i,j})$ equal?
+
+\hspace{12pt}(d) Analyze the logical forms of the statements $x \in \cap_{j \in J} (\cup_{i \in I} A_{i,j})$ and
+$x \in \cup_{i \in I} (\cap_{j \in J} A_{i,j})$. Are they equivalent?
+\vspace{30pt}
+
+(a) $A_{1,3} = \{1, 3, 4\}$ $A_{2,3} = \{2, 3, 5\}$
+
+$B_3 = \{1, 2, 3, 4, 5\}$
+
+$A_{1,4} = \{1, 4, 5\}$ $A_{2,4} = \{2, 4, 6\}$
+
+$B_4 = \{1,2,4,5,6\}$
+
+\vspace{20pt}
+
+(b) $\{1, 2, 3, 4, 5\} \cap \{1,2,4,5,6\} = \{1,2,4,5\}$
+
+\vspace{20pt}
+
+(c) $B_1 = \{1,4\}$
+
+$B_2 = \{2\}$
+
+$\{1, 4\} \cup \{2\} = \{1, 2, 4\}$
+
+$\cap_{j \in J} (\cup_{i \in I} A_{i,j}) \neq \cup_{i \in I} (\cap_{j \in J} A_{i,j})$
+
+\vspace{20pt}
+
+(d) $x \in \cap_{j \in J} (\cup_{i \in I} A_{i,j})$
+
+$\forall j \in J (x \in \cup_{i \in I} A_{i,j})$
+
+$\forall j \in J (x \in \exists i \in I (x \in A_{i, j}))$
+
+$\forall j \in J \exists i \in I (x \in A_{i, j})$
+
+\vspace{10pt}
+
+$x \in \cup_{i \in I} (\cap_{j \in J} A_{i,j})$
+
+$\exists i \in I \forall j \in J (x \in A_{i, j})$
+
+\vspace{10pt}
+
+$\exists i \in I \forall j \in J (x \in A_{i, j}) \neq \forall j \in J \exists i \in I (x \in A_{i, j})$
+
+\vspace{30pt}
+
+14. (a) Show that if $\mathcal{F} = \varnothing$, then the statement $x \in \cup \mathcal{F}$ will be false no
+matter what $x$ is. It follows that $\cup \varnothing = \varnothing$.
+
+\hspace{12pt}(b) Show that if $\mathcal{F} = \varnothing$, then the statement $x \in \cap \mathcal{F}$ will be true no
+matter what $x$ is. In a context in which it is clear what the universe
+of discourse $U$ is, we might therefore want to say that $\cap \varnothing = U$.
+However, this has the unfortunate consequence that the notation $\cap \varnothing$
+will mean different things in different contexts. Furthermore, when
+working with sets whose elements are sets, mathematicians often
+do not use a universe of discourse at all. (For more on this, see the
+next exercise.) For these reasons, some mathematicians consider the
+notation $\cap \varnothing$ to be meaningless. We will avoid this problem in this
+book by using the notation $\cap \mathcal{F}$ only in contexts in which we can be
+sure that $\mathcal{F} \neq \varnothing$.
+\vspace{30pt}
+
+(a) $x \in \cup \mathcal{F}$
+
+$\exists A \in \mathcal{F}(x \in A)$
+
+$\exists A (A \in \mathcal{F} \land x \in A)$
+
+$\exists A (A \in \varnothing \land x \in A)$
+
+$\exists A (A \in \varnothing)$ is always false.
+
+$\therefore \cup \varnothing = \varnothing$
+
+\vspace{20pt}
+
+(b) $x \in \cap \mathcal{F}$
+
+$\forall A \in \mathcal{F}(x \in A)$
+
+$\forall A (A \in \mathcal{F} \to x \in A)$
+
+$\forall A (\neg A \in \mathcal{F} \lor x \in A)$
+
+$\forall A (A \notin \mathcal{F} \lor x \in A)$
+
+$\forall A (A \notin \varnothing \lor x \in A)$
+
+$\forall A (true \lor x \in A)$ is always true.
+
+$\therefore \cap \varnothing = U$
+
+
+\vspace{30pt}
+
+15. In Section 2.3 we saw that a set can have other sets as elements. When
+discussing sets whose elements are sets, it might seem most natural to
+consider the universe of discourse to be the collection of all sets. However,
+as we will see in this problem, assuming that there is such a universe leads
+to contradictions.
+Suppose $U$ were the collection of all sets. Note that in particular $U$ is
+a set, so we would have $U \in U$. This is not yet a contradiction; although
+most sets are not elements of themselves, perhaps some sets are elements
+of themselves. But it suggests that the sets in the universe $U$ could be
+split into two categories: the unusual sets that, like $U$ itself, are elements
+of themselves, and the more typical sets that are not. Let $R$ be the set of
+sets in the second category. In other words, $R = \{A \in U \mid A \notin A\}$. This
+means that for any set $A$ in the universe $U$, $A$ will be an element of $R$ iff
+$A \notin A$. In other words, we have $\forall A \in U(A \in R \leftrightarrow A \notin A)$.
+
+\hspace{12pt}(a) Show that applying this last fact to the set $R$ itself (in other words,
+plugging in $R$ for $A$) leads to a contradiction. This contradiction was
+discovered by Bertrand Russell in 1901, and is known as \textit{Russell's Paradox}.
+
+\hspace{12pt}(b) Think some more about the paradox in part (a). What do you think it
+tells us about sets?
+\vspace{30pt}
+
+(a) $\forall A \in U(A \in R \leftrightarrow A \notin A)$
+
+$R \in R \leftrightarrow R \notin R$
+
+\vspace{20pt}
+
+(b) it's not clear in which situation we may define a set.
 
 
 
