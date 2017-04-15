@@ -1,0 +1,410 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{soul}
+\usetikzlibrary{shapes,backgrounds}
+\renewcommand{\baselinestretch}{1.5}
+\lstset{
+  frame=none,
+  xleftmargin=2pt,
+  stepnumber=1,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\ttfamily\tiny\color[gray]{0.3},
+  belowcaptionskip=\bigskipamount,
+  captionpos=b,
+  escapeinside={*'}{'*},
+  language=haskell,
+  tabsize=2,
+  emphstyle={\bf},
+  commentstyle=\it,
+  stringstyle=\mdseries\rmfamily,
+  showspaces=false,
+  keywordstyle=\bfseries\rmfamily,
+  columns=flexible,
+  basicstyle=\small\sffamily,
+  showstringspaces=false,
+  morecomment=[l]\%,
+}
+\begin{document}
+\topskip0pt
+\vspace*{\fill}
+\centerline{\sc \large Solutions of the exercises for "How to prove it" book }
+\centerline{by drets}
+\centerline{\textit{(may contain various errors)}}
+\vspace*{\fill}
+%
+\pagebreak
+\centerline{\sc \large 3. Proofs}
+\vspace{50pt}
+
+\textbf{3.1. Proof Strategies}
+
+\vspace{40pt}
+
+To prove a goal of the form $P \to Q$
+
+Assume $P$ is true and then prove $Q$.
+\vspace{20pt}
+
+To prove a goal of the form $P \to Q$
+
+Assume $Q$ is false and prove that $P$ is false
+
+\vspace{30pt}
+
+Exercises:
+
+\vspace{30pt}
+
+∗1. Consider the following theorem. (This theorem was proven in the introduction.)
+
+\textbf{Theorem}. \textit{Suppose n is an integer larger than 1 and n is not prime. Then
+$2^n - 1$ is not prime.}
+
+\hspace{12pt}(a) Identify the hypotheses and conclusion of the theorem. Are the hypotheses
+true when $n = 6$? What does the theorem tell you in this instance? Is it right?
+
+\hspace{12pt}(b) What can you conclude from the theorem in the case $n = 15$? Check
+directly that this conclusion is correct.
+
+\hspace{12pt}(c) What can you conclude from the theorem in the case $n = 11$?
+
+\vspace{20pt}
+
+(a) Hypotheses: $n \in \mathbb{Q}$ and $n > 1$, and n is not prime.
+
+Conclusion: $2^n - 1$ is not prime
+
+When $n = 6$ hypotheses are true.
+
+$2^6-1 = 63$ is not prime, theorem is right.
+
+\vspace{20pt}
+
+(b) $2^{15}-1 = 32767 = 7*4681$
+
+$5*3 = 15$
+
+\vspace{20pt}
+
+(c) The theorem tells us nothing since 11 is prime, so hypotheses are not satisfied.
+
+\vspace{30pt}
+
+2. Consider the following theorem. (The theorem is correct, but we will not
+ask you to prove it here.)
+
+\textbf{Theorem}. \textit{Suppose that $b^2 > 4ac$. Then the quadratic equation $ax^2 +
+bx + c = 0$ has exactly two real solutions.}
+
+\hspace{12pt}(a) Identify the hypotheses and conclusion of the theorem.
+
+\hspace{12pt}(b) To give an instance of the theorem, you must specify values for a, b,
+and c, but not x. Why?
+
+\hspace{12pt}(c) What can you conclude from the theorem in the case a = 2, b = -5,
+c = 3? Check directly that this conclusion is correct.
+
+\hspace{12pt}(d) What can you conclude from the theorem in the case a = 2, b = 4,
+c = 3?
+
+\vspace{20pt}
+
+(a) Hypotheses: $b^2 > 4ac$
+
+Conclusion: $ax^2 + bx + c = 0$ has exactly two real solutions.
+
+\vspace{20pt}
+
+(b) Because the values of $x$ are the solutions, we need to calculate them.
+
+\vspace{20pt}
+
+(c) $2x^2 - 5x + 3 = 0$
+
+$D = b^2 - 4ac = 25 - 24 = 1$
+
+$x_1 = 1.5$ $x_2 = 1$
+
+\vspace{20pt}
+
+(d) $2x^2 + 4x + 3 = 0$
+
+The theorem tells us nothing, since hypothese is not satisfied $16 \ngtr 24$
+
+
+\vspace{30pt}
+
+3. Consider the following incorrect theorem:
+
+\textbf{Incorrect Theorem}. \textit{Suppose n is a natural number larger than 2, and
+n is not a prime number. Then $2n + 13$ is not a prime number.}
+
+What are the hypotheses and conclusion of this theorem? Show that
+the theorem is incorrect by finding a counterexample.
+
+\vspace{30pt}
+
+Hypotheses: n is a natural number larger than 2, and n is not a prime number.
+
+Conclusion: $2n + 13$ is not a prime number.
+
+Counterexample: n = 9 is a natural number larger than 2, and n is not a prime number since $3*3=9$
+
+$2 * 9 + 13 = 18 + 13 = 31$ is prime number.
+
+\vspace{30pt}
+
+∗4. Complete the following alternative proof of the theorem in Example 3.1.2.
+
+\textit{Proof}. Suppose $0 < a < b$. Then $b - a > 0$.
+Multiplying both sides by the positive number $b + a$, we get $(b+a)(b-a)>(b+a)*0$, or in other words $b^2 - a^2 > 0$.
+Since $b^2 - a^2 > 0$, it follows that $a^2 < b^2$. Therefore if $0 < a < b$ then
+$a^2 < b^2$.
+
+\vspace{20pt}
+
+5. Suppose a and b are real numbers. Prove that if $a < b < 0$ then $a^2 > b^2$.
+
+\vspace{20pt}
+
+\textit{Proof}. Suppose $a < b < 0$. Then $b - a > 0$.
+Multiplying both sides by the negative number $b + a$, we get $(b+a)(b-a)<(b+a)*0$, or in other words $b^2 - a^2 < 0$.
+Since $b^2 - a^2 < 0$, it follows that $a^2 > b^2$. Therefore if $a < b < 0$ then $a^2 > b^2$
+
+\vspace{30pt}
+
+6. Suppose a and b are real numbers. Prove that if $0 < a < b$ then $\frac{1}{b} < \frac{1}{a}$.
+
+\vspace{20pt}
+
+\textit{Proof}. Suppose $0 < a < b$. Then $b - a > 0$.
+Dividing both sides by the positive number a, we get $\frac{b}{a} - 1 > 0$.
+Then dividing both sides by the positive number b, we get $\frac{b}{a*b} - \frac{1}{b} > 0$, or in other words
+$\frac{1}{b} < \frac{1}{a}$. Therefore if $0 < a < b$ then $\frac{1}{b} < \frac{1}{a}$
+
+\vspace{30pt}
+
+7. Suppose that a is a real number. Prove that if $a^3 > a$ then $a^5 > a$. (Hint:
+One approach is to start by completing the following equation: $a^5 - a = (a^3 - a) * ?$ .)
+
+\vspace{20pt}
+
+\textit{Proof}. Suppose $a^3 > a$. Then $a^3 - a > 0$.
+Multiplying both sides by the positive number $a^2$, we get $a^5 - a^3 > 0$, or in other words $a^5 > a^3$.
+Since $a^5 > a^3$ and $a^3 > a$, it follows that $a^5 > a$. Therefore if $a^3 > a$ then $a^5 > a$.
+
+\vspace{30pt}
+
+8. Suppose $A \setminus B \subseteq C \cap D$ and $x \in A$. Prove that if $x \notin D$ then $x \in B$.
+
+\vspace{20pt}
+
+$\forall x (x \in (A \setminus B) \to x \in (C \cap D))$
+
+$\forall x (\neg (x \in A \land x \notin B) \lor (x \in C \land x \in D))$
+
+$\forall x ((x \notin A \lor x \in B) \lor (x \in C \land x \in D))$
+\vspace{20pt}
+
+\textit{Proof}. Suppose $A \setminus B \subseteq C \cap D$ and $x \in A$ and $x \notin D$.
+Then $\forall x ((x \notin A \lor x \in B) \lor (x \in C \land x \in D))$, or in other words
+$(false \lor x \in B) \lor (x \in C \land false)$ should be equal to true.
+Therefore if $A \setminus B \subseteq C \cap D$ and $x \in A$ and $x \notin D$ then $x \in B$.
+
+
+\vspace{30pt}
+
+∗9. Suppose a and b are real numbers. Prove that if $a < b$ then $\frac{a+b}{2} < b$.
+
+\vspace{20pt}
+
+\textit{Proof}. Suppose $a < b$. Adding the number $b$ to both sides, we get $a + b < b + b$, or in other words
+$a + b < 2b$. Since $a + b < 2b$, it follows that $\frac{a+b}{2} < b$. Therefore if $a < b$ then $\frac{a+b}{2} < b$
+
+\vspace{30pt}
+
+10. Suppose x is a real number and $x \neq 0$. Prove that if $\frac{\sqrt[3]{x} + 5}{x^2 + 6} = \frac{1}{x}$
+then $x \neq 8$.
+
+\vspace{20pt}
+
+\textit{Proof}. Suppose $x \neq 0$ and $\frac{\sqrt[3]{x} + 5}{x^2 + 6} = \frac{1}{x}$.
+Then $\frac{x^2 + 6}{\sqrt[3]{x} + 5} = {x}$. Let x to be equal to 8.
+$\frac{64 + 6}{2 + 5} \neq 8$, or in other words $10 \neq 8$.
+Therefore if $x \neq 0$ and $\frac{\sqrt[3]{x} + 5}{x^2 + 6} = \frac{1}{x}$ then $x \neq 8$.
+
+\vspace{30pt}
+
+∗11. Suppose a, b, c, and d are real numbers, $0 < a < b$, and $d > 0$.
+Prove that if $ac \geq bd$ then $c > d$.
+
+\vspace{20pt}
+
+\textbf{Theorem}. \textit{Suppose a, b, c, and d are real numbers, $0 < a < b$, and $d > 0$. If $ac \geq bd$ then $c > d$}
+
+\textit{Proof}. We will prove the contrapositive. Suppose $c \leq d$. Multiplying both sides of this inequality by the positive number a,
+we get $ac \leq ad$. Also, multiplying both sides of the given inequality $a < b$ by the positive number d gives us $ad < bd$.
+Combining $ac \leq ad$ and $ad < bd$, we can conclude that $ac < bd$. Thus, if $ac \geq bd$ then $c > d$.
+
+\vspace{30pt}
+
+12. Suppose x and y are real numbers, and $3x + 2y \leq 5$. Prove that if $x > 1$ then $y < 1$.
+
+\vspace{20pt}
+
+\textbf{Theorem}. \textit{Suppose x and y are real numbers, and $3x + 2y \leq 5$. If $x > 1$ then $y < 1$}.
+
+\textit{Proof}. We will prove the contrapositive. Suppose $y \geq 1$. Then $2y \geq 2$.
+By substacting 5 from the both sides and multiplying by -1, we get $5 - 2y \leq 3$.
+By moving 2y to another side of inequality and dividing by 3, we get $x \leq \frac{5 - 2y}{3}$.
+Using $5 - 2y \leq 3$ and $x \leq \frac{5 - 2y}{3}$ we can conclude that $x \leq 1$. Thus, if $x > 1$ then $y < 1$.
+
+\vspace{30pt}
+
+13. Suppose that x and y are real numbers. Prove that if $x^2 + y = -3$ and $2x - y = 2$ then $x = -1$.
+
+\vspace{20pt}
+
+\textbf{Theorem}. \textit{Suppose x and y are real numbers. If $x^2 + y = -3$ and $2x - y = 2$ then $x = -1$.}
+
+\textit{Proof}. Suppose $x^2 + y = -3$ and $2x - y = 2$. Then $y = 2x - 2$.
+Combining the given inequality $x^2 + y = -3$ and $y = 2x - 2$, we get $x^2 + 2x + 1 = 0$.
+Solving the inequality using Vieta's formula, we get $x = -1$. Therefore, if $x^2 + y = -3$ and $2x - y = 2$ then $x = -1$.
+
+\vspace{30pt}
+
+∗14. Prove the first theorem in Example 3.1.1. (Hint: You might find it useful to apply the theorem from Example 3.1.2.)
+
+\vspace{20pt}
+
+\textbf{Theorem}. \textit{Suppose $x > 3$ and $y < 2$. Then $x^2 - 2y > 5$}
+
+\textit{Proof}. We will prove the contrapositive. Suppose $x^2 - 2y \leq 5$.
+Then $y \geq \frac{x^2 - 5}{2}$. We can transform the given inequality $x > 3$ to $\frac{x^2 - 5}{2} > \frac{3x - 5}{2}$.
+Again, using the given inequality $x > 3$ we can get $\frac{3x - 5}{2} > \frac{9 - 5}{2}$.
+$2 < \frac{3x - 5}{2} < \frac{x^2 - 5}{2} \leq y$, it follows $y > 2$.
+Thus, if $x > 3$ and $y < 2$ then $x^2 - 2y > 5$.
+
+\vspace{30pt}
+
+15. Consider the following theorem.
+
+\textbf{Theorem}. \textit{Suppose x is a real number and $x \neq 4$. If $\frac{2x-5}{x-4} = 3$ then $x = 7$}.
+
+\hspace{12pt}(a) What’s wrong with the following proof of the theorem?
+
+\textit{Proof}. Suppose x = 7. Then $\frac{2x-5}{x-4} = \frac{2(7)-5}{7-4}=\frac{9}{3}=3$.
+
+Therefore if $\frac{2x-5}{x-4} = 3$ then $x = 7$
+
+
+\hspace{12pt}(b) Give a correct proof of the theorem.
+
+\vspace{20pt}
+
+(a) The proof strategy is wrong (it doesn't correspond to either $P \to Q$ or $\neg Q \to \neg P$). It may be the case that there is more than one value of x which satisfy the hypothese.
+
+\vspace{20pt}
+
+(b) Suppose $\frac{2x-5}{x-4} = 3$. Then $2x - 5 = 3x - 12$, or in other word $x = 7$.
+Therefore, if $\frac{2x-5}{x-4} = 3$ then $x = 7$
+
+\vspace{30pt}
+
+16. Consider the following incorrect theorem:
+
+\textbf{Incorrect Theorem}. \textit{Suppose that x and y are real numbers and $x \neq 3$.
+If $x^2y = 9y$ then $y = 0$.}
+
+\hspace{12pt}(a) What’s wrong with the following proof of the theorem?
+
+\textit{Proof}. Suppose that $x^2y = 9y$. Then $(x^2 - 9)y = 0$. Since $x \neq 3$,
+$x^2 \neq 9$, so $x^2 - 9 \neq 0$. Therefore we can divide both sides of the
+equation $(x^2 - 9)y = 0$ by $x^2 - 9$, which leads to the conclusion
+that $y = 0$. Thus, if $x^2y = 9y$ then $y = 0$.
+
+\hspace{12pt}(b) Show that the theorem is incorrect by finding a counterexample.
+
+\vspace{20pt}
+
+(a) It's not allowed to divide by $x^2 - 9$ since $x$ may be equal to $-3$.
+
+\vspace{20pt}
+
+(b) $x = -3$
+
+$9y = 9y$
+
+$0y = 0$
+
+$\therefore$ y has undefined value
+
+\vspace{50pt}
+
+\textbf{3.2. Proofs Involving Negations and Conditionals}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
