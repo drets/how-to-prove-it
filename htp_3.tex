@@ -1112,6 +1112,1320 @@ No, it can't. Since having only $x^2 = 9$ it's not possible to prove that $x = 3
 
 \textbf{3.3. Proofs Involving Quantifiers}
 
+Exercises
+Note: Exercises marked with the symbol $^{\textit{P}}_{\, \textit{D}}$ can be done with Proof Designer.
+\vspace{30pt}
+
+*1. In exercise 7 of Section 2.2 you used logical equivalences to show that
+$\exists x(P(x) \to Q(x))$ is equivalent to $\forall x P(x) \to \exists x Q(x)$. Now use the
+methods of this section to prove that if $\exists x(P(x) \to Q(x))$ is true, then
+$\forall x P(x) \to \exists x Q(x)$ is true. (Note: The other direction of the equivalence
+is quite a bit harder to prove. See exercise 29 of Section 3.5.)
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+2. Prove that if A and $B \setminus C$ are disjoint, then $A \cap B \subseteq C$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*3. Prove that if $A \subseteq B \setminus C$ then A and C are disjoint.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 4. Suppose $A \subseteq \mathcal{P} (A)$. Prove that $\mathcal{P} (A) \subseteq \mathcal{P} (\mathcal{P} (A))$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+5. The hypothesis of the theorem proven in exercise 4 is $A \subseteq \mathcal{P} (A)$.
+
+\hspace{12pt}(a) Can you think of a set A for which this hypothesis is true?
+
+\hspace{12pt}(b) Can you think of another?
+\vspace{30pt}
+
+(a)
+
+\vspace{20pt}
+
+(b)
+
+\vspace{30pt}
+
+6. Suppose x is a real number.
+
+\hspace{12pt}(a) Prove that if $x \neq 1$ then there is a real number y such that $\frac{y+1}{y-2} = x$.
+
+\hspace{12pt}(b) Prove that if there is a real number y such that $\frac{y+1}{y-2} = x$, then $x \neq 1$.
+\vspace{30pt}
+
+(a)
+
+\vspace{20pt}
+
+(b)
+
+\vspace{30pt}
+
+*7. Prove that for every real number x, if $x > 2$ then there is a real number
+y such that $y + \frac{1}{y} = x$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 8. Prove that if $\mathcal{F}$ is a family of sets and $A \in \mathcal{F}$, then $A \subseteq \cup \mathcal{F}$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*9. Prove that if $\mathcal{F}$ is a family of sets and $A \in \mathcal{F}$, then $\cap \mathcal{F} \subseteq A$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+10. Suppose that $\mathcal{F}$ is a nonempty family of sets, B is a set, and $\forall A \in \mathcal{F}(B \subseteq A)$. Prove that $B \subseteq \cap \mathcal{F}$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+11. Suppose that $\mathcal{F}$ is a family of sets. Prove that if $\varnothing \in \mathcal{F}$ then $\cap \mathcal{F} = \varnothing$.
+\vspace{30pt}
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *12. Suppose $\mathcal{F}$ and $\mathcal{G}$ are families of sets. Prove that if $\mathcal{F} \subseteq \mathcal{G}$ then $\cup \mathcal{F} \subseteq \cup\mathcal{G}$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+13. Suppose $\mathcal{F}$ and $\mathcal{G}$ are nonempty families of sets. Prove that if $\mathcal{F} \subseteq \mathcal{G}$ then $\cap \mathcal{G} \subseteq \cap\mathcal{F}$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*14. Suppose $\{A_i \mid i \in I\}$ is an indexed family of sets. Prove that
+$\cup_{i \in I}\mathcal{P} (A_i) \subseteq \mathcal{P} (\cup_{i \in I} A_i).$ (Hint: First make sure you know what all
+the notation means!)
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+15. Suppose $\{A_i \mid i \in I\}$ is an indexed family of sets and $I \neq \varnothing$. Prove that
+$\cap_{i \in I} A_i \in \cap_{i \in I} \mathcal{P} (A_i)$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 16. Prove the converse of the statement proven in Example 3.3.5. In other
+words, prove that if $\mathcal{F} \subseteq \mathcal{P} (B)$ then $\cup \mathcal{F} \subseteq B$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*17. Suppose $\mathcal{F}$ and $\mathcal{G}$ are nonempty families of sets, and every element of
+$\mathcal{F}$ is a subset of every element of $\mathcal{G}$. Prove that $\cup \mathcal{F} \subseteq \cap \mathcal{G}$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+18. In this problem all variables range over $\mathbb{Z}$, the set of all integers.
+
+\hspace{12pt}(a) Prove that if $a \mid b$ and $a \mid c$, then $a \mid (b + c)$.
+
+\hspace{12pt}(b) Prove that if $ac \mid bc$ and $c \neq 0$, then $a \mid b$.
+\vspace{30pt}
+
+(a)
+
+\vspace{20pt}
+
+(b)
+
+\vspace{30pt}
+
+19. (a) Prove that for all real numbers x and y there is a real number z such
+that $x + z = y - z$.
+
+\hspace{12pt}(b) Would the statement in part (a) be correct if "real number" were
+changed to "integer"? Justify your answer.
+\vspace{30pt}
+
+(a)
+
+\vspace{20pt}
+
+(b)
+
+\vspace{30pt}
+
+*20. Consider the following theorem:
+
+\textbf{Theorem.} For every real number x, $x 2 \geq 0$.
+
+What's wrong with the following proof of the theorem?
+
+\textit{Proof.} Suppose not. Then for every real number x, $x^2 < 0$. In particular,
+plugging in $x = 3$ we would get $9 < 0$, which is clearly false. This
+contradiction shows that for every number x, $x^2 \geq 0$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+21. Consider the following incorrect theorem:
+
+\textbf{Incorrect Theorem.} If $\forall x \in A(x \neq 0)$ and $A \subseteq B$ then $\forall x \in B(x
+\neq 0)$.
+
+\hspace{12pt}(a) What's wrong with the following proof of the theorem?
+
+\textit{Proof.} Let x be an arbitrary element of A. Since $\forall x \in A(x \neq 0)$,
+we can conclude that $x \neq 0$. Also, since $A \subseteq B$, $x \in B$. Since
+$x \in B$, $x \neq 0$, and x was arbitrary, we can conclude that $\forall x \in
+B(x \neq 0)$.
+
+\hspace{12pt}(b) Find a counterexample to the theorem. In other words, find an example
+of sets A and B for which the hypotheses of the theorem are
+true but the conclusion is false.
+\vspace{30pt}
+
+(a)
+
+\vspace{20pt}
+
+(b)
+
+\vspace{30pt}
+
+*22. Consider the following incorrect theorem:
+
+\textbf{Incorrect Theorem.} $\exists x \in \mathbb{R} \forall y \in \mathbb{R}(x y^2 = y - x)$.
+What's wrong with the following proof of the theorem?
+
+\textit{Proof.} Let $x = y/(y^2 + 1)$. Then
+
+$y - x = y - \frac{y}{y^2 + 1} = \frac{y^3}{y^2 + 1} = \frac{y}{y^2 + 1} * y^2 = x y^2$
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+23. Consider the following incorrect theorem:
+
+\textbf{Incorrect Theorem.} Suppose $\mathcal{F}$ and $\mathcal{G}$ are families of sets. If $\cup \mathcal{F}$ and $\cup \mathcal{G}$ are disjoint, then so are $\mathcal{F}$ and $\mathcal{G}$.
+
+\hspace{12pt}(a) What's wrong with the following proof of the theorem?
+
+\textit{Proof.} Suppose $\cup \mathcal{F}$ and $\cup \mathcal{G}$ are disjoint. Suppose $\mathcal{F}$ and $\mathcal{G}$ are not disjoint. Then we can choose some set A such that $A \in \mathcal{F}$ and $A \in \mathcal{G}$.
+Since $A \in \mathcal{F}$, by exercise 8, $A \subseteq \cup\mathcal{F}$, so every element of A is in
+$\cup \mathcal{F}$. Similarly, since $A \in \mathcal{G}$, every element of A is in $\cup \mathcal{G}$. But then every element of A is in both $\cup \mathcal{F}$ and $\cup \mathcal{G}$, and this is impossible since
+$\cup \mathcal{F}$ and $\cup \mathcal{G}$ are disjoint. Thus, we have reached a contradiction, so
+$\mathcal{F}$ and $\mathcal{G}$ must be disjoint.
+
+\hspace{12pt}(b) Find a counterexample to the theorem.
+\vspace{30pt}
+
+(a)
+
+\vspace{20pt}
+
+(b)
+
+\vspace{30pt}
+
+24. Consider the following putative theorem:
+
+\textbf{Theorem?} For all real numbers x and y, $x^2 + x y - 2y^2 = 0$.
+
+\hspace{12pt}(a) What's wrong with the following proof of the theorem?
+
+\textit{Proof.} Let x and y be equal to some arbitrary real number r. Then
+$$x^2 + x y - 2y^2 = r^2 + r * r - 2r^2 = 0$$.
+Since x and y were both arbitrary, this shows that for all real numbers
+x and y, $x^2 + x y - 2y^2 = 0$.
+
+\hspace{12pt}(b) Is the theorem correct? Justify your answer with either a proof or a
+counterexample.
+\vspace{30pt}
+
+(a)
+
+\vspace{20pt}
+
+(b)
+
+\vspace{30pt}
+
+*25. Prove that for every real number x there is a real number y such that for
+every real number $z, yz = (x + z)^2 - (x^2 + z^2)$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+26. (a) Comparing the various rules for dealing with quantifiers in proofs,
+you should see a similarity between the rules for goals of the form
+$\forall x P(x)$ and givens of the form $\exists x P(x)$. What is this similarity?
+What about the rules for goals of the form $\exists x P(x)$ and givens of the
+form $\forall x P(x)$?
+
+\hspace{12pt}(b) Can you think of a reason why these similarities might be expected?
+(Hint: Think about how proof by contradiction works when the goal
+starts with a quantifier.)
+\vspace{30pt}
+
+(a)
+
+\vspace{20pt}
+
+(b)
+
+\vspace{50pt}
+
+\textbf{3.4. Proofs Involving Conjunctions and Biconditionals}
+
+Exercises
+\vspace{30pt}
+
+*1. Use the methods of this chapter to prove that $\forall x(P(x) \land Q(x))$ is
+equivalent to $\forall x P(x) \land \forall x Q(x)$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 2. Prove that if $A \subseteq B$ and $A \subseteq C$ then $A \subseteq B \cap C$.
+\vspace{30pt}
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 3. Suppose $A \subseteq B$. Prove that for every set C, $C \setminus B \subseteq C \setminus A$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *4. Prove that if $A \subseteq B$ and $A \nsubseteq C$ then $B \nsubseteq C$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 5. Prove that if $A \subseteq B \setminus C$ and $A \neq \varnothing$ then $B \nsubseteq C$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+6. Prove that for any sets A, B, and C, $A \setminus (B \cap C) = (A \setminus B) \cup (A \setminus C)$,
+by finding a string of equivalences starting with $x \in A \setminus (B \cap C)$ and
+ending with $x \in (A \setminus B) \cup (A \setminus C)$. (See Example 3.4.4.)
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *7. Use the methods of this chapter to prove that for any sets A and B, $\mathcal{P} (A \cap B) = \mathcal{P} (A) \cap \mathcal{P} (B)$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 8. Prove that $A \subseteq B$ iff $\mathcal{P} (A) \subseteq \mathcal{P} (B)$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*9. Prove that if x and y are odd integers, then $x y$ is odd.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+10. Prove that for every integer n, $n^3$ is even iff n is even.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+11. Consider the following putative theorem:
+
+\textbf{Theorem?} Suppose m is an even integer and n is an odd integer. Then
+$n^2 - m^2 = n + m$.
+
+\hspace{12pt}(a) What's wrong with the following proof of the theorem?
+
+\textit{Proof.} Since m is even, we can choose some integer k such that
+m = 2k. Similarly, since n is odd we have n = 2k + 1. Therefore
+$$n^2 - m^2 = (2k + 1)^2 - (2k)^2 = 4k^2 + 4k + 1 - 4k^2 = 4k + 1
+= (2k + 1) + (2k) = n + m.$$
+
+\hspace{12pt}(b) Is the theorem correct? Justify your answer with either a proof or a
+counterexample.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*12. Prove that $\forall x \in \mathbb{R}[\exists y \in \mathbb{R}(x + y = x y) \leftrightarrow x \neq 1]$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+13. Prove that $\exists z \in \mathbb{R} \forall x \in \mathbb{R}^+[\exists y \in \mathbb{R}(y - x = y/x) \leftrightarrow x \neq z]$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 14. Suppose B is a set and $\mathcal{F}$ is a family of sets. Prove that $\cup\{A \setminus B \mid A \in \mathcal{F}\} \subseteq \cup(\mathcal{F} \setminus \mathcal{P} (B))$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*15. Suppose $\mathcal{F}$ and $\mathcal{G}$ are nonempty families of sets and every element of $\mathcal{F}$
+is disjoint from some element of $\mathcal{G}$. Prove that $\cup \mathcal{F}$ and $\cap \mathcal{G}$ are disjoint.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 16. Prove that for any set A, $A = \cup \mathcal{P} (A)$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *17. Suppose $\mathcal{F}$ and $\mathcal{G}$ are families of sets.
+
+
+\hspace{12pt}(a) Prove that $\cup (\mathcal{F} \cap \mathcal{G}) \subseteq (\cup\mathcal{F}) \cap (\cup\mathcal{G})$.
+
+\hspace{12pt}(b) What's wrong with the following proof that $(\cup \mathcal{F}) \cap (\cup \mathcal{G}) \subseteq
+\cup(\mathcal{F} \cap \mathcal{G})$?
+
+\textit{Proof.} Suppose $x \in (\cup\mathcal{F}) \cap (\cup\mathcal{G})$. This means that $x \in \cup \mathcal{F}$ and $x \in \cup \mathcal{G}$, so $\exists A \in \mathcal{F}(x \in A)$ and $\exists A \in \mathcal{G}(x \in A)$. Thus, we can choose a set A such that $A \in \mathcal{F}$, $A \in \mathcal{G}$, and $x \in A$. Since $A \in \mathcal{F}$ and $A \in \mathcal{G}$, $A \in \mathcal{F} \cap \mathcal{G}$. Therefore $\exists A \in \mathcal{F} \cap \mathcal{G}(x \in A)$, so $x \in \cup(\mathcal{F} \cap \mathcal{G})$. Since x was arbitrary, we can conclude that $(\cup\mathcal{F}) \cap (\cup\mathcal{G}) \subseteq \cup(\mathcal{F} \cap \mathcal{G})$.
+
+\hspace{12pt}(c) Find an example of families of sets $\mathcal{F}$ and $\mathcal{G}$ for which $\cup (\mathcal{F} \cap \mathcal{G}) \neq (\cup\mathcal{F}) \cap (\cup\mathcal{G})$.
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 18. Suppose $\mathcal{F}$ and $\mathcal{G}$ are families of sets. Prove that $(\cup\mathcal{F}) \cap (\cup\mathcal{G}) \subseteq \cup(\mathcal{F} \cap \mathcal{G})$ iff $\forall A \in \mathcal{F} \forall B \in \mathcal{G}(A \cap B \subseteq \cup(\mathcal{F} \cap \mathcal{G}))$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 19. Suppose $\mathcal{F}$ and $\mathcal{G}$ are families of sets. Prove that $\cup \mathcal{F}$ and $\cup \mathcal{G}$ are disjoint iff for all $A \in \mathcal{F}$ and $B \in \mathcal{G}$, A and B are disjoint.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 20. Suppose $\mathcal{F}$ and $\mathcal{G}$ are families of sets.
+
+\hspace{12pt}(a) Prove that $(\cup\mathcal{F}) \setminus (\cup\mathcal{G}) \subseteq \cup (\mathcal{F} \setminus \mathcal{G})$.
+
+\hspace{12pt}(b) What's wrong with the following proof that $\cup(\mathcal{F} \setminus \mathcal{G}) \subseteq (\cup\mathcal{F}) \setminus (\cup\mathcal{G})$?
+
+\textit{Proof.} Suppose $x \in \cup(\mathcal{F} \setminus \mathcal{G})$. Then we can choose some $A \in \mathcal{F} \setminus \mathcal{G}$ such that $x \in A$. Since $A \in \mathcal{F} \setminus \mathcal{G}$, $A \in \mathcal{F}$ and $A \notin \mathcal{G}$. Since $x \in A$ and $A \in \mathcal{F}$, $x \in \cup \mathcal{F}$. Since $x \in A$ and $A \notin \mathcal{G}$, $x \notin \cup \mathcal{G}$. Therefore $x \in (\cup \mathcal{F}) \setminus (\cup\mathcal{G})$.
+
+\hspace{12pt}(c) Prove that $\cup(\mathcal{F} \setminus \mathcal{G}) \subseteq (\cup\mathcal{F}) \setminus (\cup\mathcal{G})$ iff $\forall A \in (\mathcal{F} \setminus \mathcal{G})\forall B \in \mathcal{G}(A \cap
+B = \varnothing)$.
+
+\hspace{12pt}(d) Find an example of families of sets $\mathcal{F}$ and $\mathcal{G}$ for which $\cup (\mathcal{F} \setminus \mathcal{G}) \neq (\cup\mathcal{F}) \setminus (\cup\mathcal{G})$.
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{30pt}
+
+(d)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *21. Suppose $\mathcal{F}$ and $\mathcal{G}$ are families of sets. Prove that if $\cup \mathcal{F} \nsubseteq \cup\mathcal{G}$, then there is some $A \in \mathcal{F}$ such that for all $B \in \mathcal{G}$, $A \nsubseteq B$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+22. Suppose B is a set, $\{A_i \mid i \in I\}$ is an indexed family of sets, and $I \neq \varnothing$.
+
+\hspace{12pt}(a) What proof strategies are used in the following proof that $B \cap
+(\cup_{i \in I} A_i) = \cup_{i \in I} (B \cap A_i)$?
+
+\textit{Proof.} Let x be arbitrary. Suppose $x \in B \cap (\cup_{i \in I} A_i)$. Then $x \in B$
+and $x \in \cup_{i \in I} A_i$ , so we can choose some $i_0 \in I$ such that $x \in A_{i_0}$ .
+Since $x \in B$ and $x \in A_{i_0}$ , $x \in B \cap A_{i_0}$ . Therefore $x \in \cup_{i \in I} (B \cap
+A_i)$.
+
+Now suppose $x \in \cup_{i \in I} (B \cap A_i)$. Then we can choose some $i_0 \in
+I$ such that $x \in B \cap A_{i_0}$ . Therefore $x \in B$ and $x \in A_{i_0}$ . Since $x \in
+A_{i_0}$ , $x \in \cup_{i \in I} A_i$ . Since $x \in B$ and $x \in \cup_{i \in I} A_i$, $x \in B \cap (\cup_{i \in I} A_i)$.
+
+Since x was arbitrary, we have shown that $\forall x[x \in B \cap (\cup_{i \in I} A_i) \leftrightarrow x \in \cup_{i \in I} (B \cap A_i)]$, so $B \cap (\cup_{i \in I} A_i) = \cup_{i \in I} (B \cap A_i)$.
+
+\hspace{12pt}(b) Prove that $B \setminus (\cup_{i \in I} A_i) = \cap_{i \in I} (B \setminus A_i)$.
+
+\hspace{12pt}(c) Can you discover and prove a similar theorem about $B \setminus (\cap_{i \in I} A_i)$?
+(Hint: Try to guess the theorem, and then try to prove it. If you can't
+finish the proof, it might be because your guess was wrong. Change
+your guess and try again.)
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{30pt}
+
+*23. Suppose $\{A_i \mid i \in I\}$ and $\{B_i \mid i \in I\}$ are indexed families of sets and
+$I \neq \varnothing$.
+
+\hspace{12pt}(a) Prove that $\cup_{i \in I} (A_i \setminus B_i) \subseteq (\cup_{i \in I} A_i) \setminus (\cap_{i \in I} B_i)$.
+
+\hspace{12pt}(b) Find an example for which $\cup_{i \in I} (A_i \setminus B_i) \neq (\cup_{i \in I} A_i) \setminus (\cap_{i \in I} B_i)$.
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+24. Suppose $\{A_i \mid i \in I\}$ and $\{B_i \mid i \in I\}$ are indexed families of sets.
+
+\hspace{12pt}(a) Prove that $\cup_{i \in I} (A_i \cap B_i) \subseteq (\cup_{i \in I} A_i) \cap (\cup_{i \in I} B_i)$.
+
+\hspace{12pt}(b) Find an example for which $\cup_{i \in I} (A_i \cap B_i) \neq (\cup_{i \in I} A_i) \cap (\cup_{i \in I} B_i)$.
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+25. Prove that for all integers a and b there is an integer c such that $a \mid c$ and $b \mid c$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+26. (a) Prove that for every integer n, $15 \mid n$ iff $3 \mid n$ and $5 \mid n$.
+
+\hspace{12pt}(b) Prove that it is not true that for every integer n, $60 \mid n$ iff $6 \mid n$ and
+$10 \mid n$.
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{50pt}
+
+\textbf{3.5. Proofs Involving Disjunctions}
+
+Exercises:
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *1. Suppose A, B, and C are sets. Prove that $A \cap (B \cup C) \subseteq (A \cap B) \cup C$.
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 2. Suppose A, B, and C are sets. Prove that $(A \cup B) \setminus C \subseteq A \cup (B \setminus C)$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 3. Suppose A and B are sets. Prove that $A \setminus (A \setminus B) = A \cap B$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *4. Suppose $A \cap C \subseteq B \cap C$ and $A \cup C \subseteq B \cup C$. Prove that $A \subseteq B$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 5. Recall from Section 1.4 that the symmetric difference of two sets A and B
+is the set $A \Delta B = (A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B)$. Prove that
+if $A \Delta B \subseteq A$ then $B \subseteq A$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 6. Suppose A, B, and C are sets. Prove that $A \cup C \subseteq B \cup C$ iff $A \setminus C \subseteq B \setminus C$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *7. Prove that for any sets A and B, $\mathcal{P} (A) \cup \mathcal{P} (B) \subseteq \mathcal{P} (A \cup B)$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 8. Prove that for any sets A and B, if $\mathcal{P} (A) \cup \mathcal{P} (B) = \mathcal{P} (A \cup B)$ then either $A \subseteq B$ or $B \subseteq A$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+9. Suppose x and y are real numbers and $x \neq 0$. Prove that $y + 1/x =
+1 + y/x$ iff either $x = 1$ or $y = 1$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+10. Prove that for every real number x, if $|x - 3| > 3$ then $x^2 > 6x$. (Hint:
+According to the definition of $|x - 3|$, if $x - 3 \geq 0$ then $|x - 3| = x - 3$, and if $x - 3 < 0$ then $|x - 3| = 3 - x$. The easiest way to use this fact is to break your proof into cases. Assume that $x - 3 \geq 0$ in case 1, and $x - 3 < 0$ in case 2.)
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*11. Prove that for every real number x, $|2x - 6| > x$ iff $|x - 4| > 2$. (Hint: Read the hint for exercise 10.)
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+12. (a) Prove that for all real numbers a and b, $|a| \leq b$ iff $-b \leq a \leq b$.
+
+\hspace{12pt}(b) Prove that for any real number x, $-|x| \leq x \leq |x|$. (Hint: Use part (a).)
+
+\hspace{12pt}(c) Prove that for all real numbers x and y, $|x + y| \leq |x| + |y|$. (This is called the triangle inequality. One way to prove this is to combine parts (a) and (b), but you can also do it by considering a number of
+cases.)
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{30pt}
+
+13. Prove that for every integer x, $x^2 + x$ is even.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+14. Prove that for every integer x, the remainder when $x^4$ is divided by 8 is either 0 or 1.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*15. Suppose $\mathcal{F}$ and $\mathcal{G}$ are nonempty families of sets.
+
+\hspace{12pt}$^{\textit{P}}_{\, \textit{D}}$ (a) Prove that $\cup(\mathcal{F} \cup \mathcal{G}) = (\cup\mathcal{F}) \cup (\cup\mathcal{G})$.
+
+\hspace{12pt}(b) Can you discover and prove a similar theorem about $\cap(\mathcal{F} \cup \mathcal{G})$?
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+16. Suppose $\mathcal{F}$ is a nonempty family of sets and B is a set.
+
+\hspace{12pt}$^{\textit{P}}_{\, \textit{D}}$ (a) Prove that $B \cup (\cup\mathcal{F}) = \cup(\mathcal{F} \cup {B})$.
+
+\hspace{12pt}(b) Prove that $B \cup (\cap\mathcal{F}) = \cap_{A \in \mathcal{F}} (B \cup A)$.
+
+\hspace{12pt}(c) Can you discover and prove a similar theorem about $B \cap (\cap \mathcal{F} )$?
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{30pt}
+
+17. Suppose $\mathcal{F}$, $\mathcal{G}$, and $\mathcal{H}$ are nonempty families of sets and for every $A \in \mathcal{F}$ and every $B \in \mathcal{G}$, $A \cup B \in \mathcal{H}$. Prove that $\cap\mathcal{H} \subseteq (\cap\mathcal{F}) \cup (\cap\mathcal{G})$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 18. Suppose A and B are sets. Prove that $\forall x(x \in A \Delta B \leftrightarrow (x \in A \leftrightarrow x \notin B))$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *19. Suppose A, B, and C are sets. Prove that $A \Delta B$ and C are disjoint iff
+$A \cap C = B \cap C$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 20. Suppose A, B, and C are sets. Prove that $A \Delta B \subseteq C$ iff $A \cup C = B \cup C$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 21. Suppose A, B, and C are sets. Prove that $C \subseteq A \Delta B$ iff $C \subseteq A \cup B$ and $A \cap B \cap C = \varnothing$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *22. Suppose A, B, and C are sets.
+
+\hspace{12pt}(a) Prove that $A \setminus C \subseteq (A \setminus B) \cup (B \setminus C)$.
+
+\hspace{12pt}(b) Prove that $A \Delta C \subseteq (A \Delta B) \cup (B \Delta C)$.
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *23. Suppose A, B, and C are sets.
+
+\hspace{12pt}(a) Prove that $(A \cup B) \Delta C \subseteq (A \Delta C) \cup (B \Delta C)$.
+
+\hspace{12pt}(b) Find an example of sets A, B, and C such that $(A \cup B) \Delta C \neq
+(A \Delta C) \cup (B \Delta C)$
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 24. Suppose A, B, and C are sets.
+
+\hspace{12pt}(a) Prove that $(A \Delta C) \cap (B \Delta C) \subseteq (A \cap B) \Delta C$.
+
+\hspace{12pt}(b) Is it always true that $(A \cap B) \Delta C \subseteq (A \Delta C) \cap (B \Delta C)$? Give
+either a proof or a counterexample.
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 25. Suppose A, B, and C are sets. Consider the sets $(A \setminus B) \Delta C$ and
+$(A \Delta C) \setminus (B \Delta C)$. Can you prove that either is a subset of the other?
+Justify your conclusions with either proofs or counterexamples.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*26. Consider the following putative theorem.
+
+\textbf{Theorem?} For every real number x, if $|x - 3| < 3$ then $0 < x < 6$.
+
+Is the following proof correct? If so, what proof strategies does it use?
+If not, can it be fixed? Is then theorem correct?
+
+\textit{Proof.} Let x be an arbitrary real number, and suppose $|x - 3| < 3$. We
+consider two cases:
+
+\textit{Case} 1. $x - 3 \geq 0$. Then $|x - 3| = x - 3$. Plugging this into the assumption
+that $|x - 3| < 3$, we get $x - 3 < 3$, so clearly $x < 6$.
+
+\textit{Case} 2. $x - 3 < 0$. Then $|x - 3| = 3 - x$, so the assumption $|x - 3| < 3$ means that $3 - x < 3$. Therefore $3 < 3 + x$, so $0 < x$.
+
+Since we have proven both $0 < x$ and $x < 6$, we can conclude that $0 < x < 6$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+27. Consider the following putative theorem.
+
+\textbf{Theorem?} For any sets A, B, and C, if $A \setminus B \subseteq C$ and $A \nsubseteq C$ then
+$A \cap B \neq \varnothing$.
+
+Is the following proof correct? If so, what proof strategies does it use?
+If not, can it be fixed? Is the theorem correct?
+
+\textit{Proof.} Since $A \nsubseteq C$f, we can choose some x such that $x \in A$ and $x \notin C$.
+Since $x \notin C$ and $A \setminus B \subseteq C$, $x \notin A \setminus B$. Therefore either $x \notin A$ or
+$x \in B$. But we already know that $x \in A$, so it follows that $x \in B$. Since
+$x \in A$ and $x \in B$, $x \in A \cap B$. Therefore $A \cap B \neq \varnothing$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*28. Consider the following putative theorem.
+
+\textbf{Theorem?} $\forall x \in \mathbb{R} \exists y \in \mathbb{R}(x y^2 \neq y - x)$.
+
+Is the following proof correct? If so, what proof strategies does it use?
+If not, can it be fixed? Is the theorem correct?
+
+\textit{Proof.} Let x be an arbitrary real number.
+
+\textit{Case} 1. $x = 0$. Let $y = 1$. Then $x y^2 = 0$ and $y - x = 1 - 0 = 1$, so
+$x y^2 \neq y - x$.
+
+\textit{Case} 2. $x \neq 0$. Let $y = 0$. Then $x y^2 = 0$ and $y - x = -x \neq 0$, so
+$x y^2 \neq y - x$.
+
+Since these cases are exhaustive, we have shown that $\exists y \in \mathbb{R}(x y2 \neq
+y - x)$. Since x was arbitrary, this shows that $\forall x \in \mathbb{R} \exists y \in \mathbb{R}(x y^2 \neq y - x)$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+29. Prove that if $\forall x P(x) \to \exists x Q(x)$ then $\exists x(P(x) \to Q(x))$. (Hint: Remember
+that $P \to Q$ is equivalent to $\neg P \lor Q$).
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*30. Consider the following putative theorem.
+
+\textbf{Theorem?} Suppose A, B, and C are sets and $A \subseteq B \cup C$. Then either
+$A \subseteq B$ or $A \subseteq C$.
+
+Is the following proof correct? If so, what proof strategies does it use?
+If not, can it be fixed? Is the theorem correct?
+
+\textit{Proof.} Let x be an arbitrary element of A. Since $A \subseteq B \cup C$, it follows
+that either $x \in B$ or $x \in C$.
+
+\textit{Case} 1. $x \in B$. Since x was an arbitrary element of A, it follows that
+$\forall x \in A(x \in B)$, which means that $A \subseteq B$.
+
+\textit{Case} 2. $x \in C$. Similarly, since x was an arbitrary element of A, we
+can conclude that $A \subseteq C$.
+Thus, either $A \subseteq B$ or $A \subseteq C$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+31. Prove $\exists x (P(x) \to \forall y P(y))$.
+\vspace{30pt}
+
+\vspace{50pt}
+
+\textbf{3.6. Existence and Uniqueness Proofs}
+
+Exercises:
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*1. Prove that for every real number x there is a unique real number y such
+that $x^2 y = x - y$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+2. Prove that there is a unique real number x such that for every real number
+y, $x y + x - 4 = 4y$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+3. Prove that for every real number x, if $x \neq 0$ and $x \neq 1$ then there is a
+unique real number y such that $y/x = y - x$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+*4. Prove that for every real number x, if $x \neq 0$ then there is a unique real
+number y such that for every real number z, $zy = z/x$.
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+5. Recall that if $\mathcal{F}$ is a family of sets, then $\cup\mathcal{F} = \{x \mid \exists A(A \in \mathcal{F} \land x \in A)\}$.
+Suppose we define a new set $\cup!\mathcal{F}$ by the formula $\cup!\mathcal{F} = \{x \mid \exists !A(A \in
+\mathcal{F} \land x \in A)\}$.
+
+\hspace{12pt}(a) Prove that for any family of sets $\mathcal{F}$, $\cup!\mathcal{F} \subseteq \cup \mathcal{F}$.
+
+\hspace{12pt}(b) A family of sets $\mathcal{F}$ is said to be pairwise disjoint if every pair of
+distinct elements of $\mathcal{F}$ are disjoint; that is, $\forall A \in \mathcal{F} \forall B \in \mathcal{F}(A \neq B \to A \cap B = \varnothing)$. Prove that for any family of sets $\mathcal{F}$, $\cup!\mathcal{F} = \cup \mathcal{F}$ iff $\mathcal{F}$ is pairwise disjoint.
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *6. Let U be any set.
+
+\hspace{12pt}(a) Prove that there is a unique $A \in \mathcal{P} (U)$ such that for every $B \in \mathcal{P} (U)$, $A \cup B = B$.
+
+\hspace{12pt}(b) Prove that there is a unique $A \in \mathcal{P} (U)$ such that for every $B \in \mathcal{P} (U)$, $A \cup B = A$.
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 7. Let U be any set.
+
+\hspace{12pt}(a) Prove that there is a unique $A \in \mathcal{P} (U)$ such that for every $B \in \mathcal{P} (U)$, $A \cap B = B$.
+
+\hspace{12pt}(b) Prove that there is a unique $A \in \mathcal{P} (U)$ such that for every $B \in
+\mathcal{P} (U)$, $A \cap B = A$.
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 8. Let U be any set.
+
+\hspace{12pt}(a) Prove that for every $A \in \mathcal{P} (U)$ there is a unique $B \in \mathcal{P} (U)$ such
+that for every $C \in \mathcal{P} (U)$, $C \setminus A = C \cap B$.
+
+\hspace{12pt}(b) Prove that for every $A \in \mathcal{P} (U)$ there is a unique $B \in \mathcal{P} (U)$ such
+that for every $C \in \mathcal{P} (U)$, $C \cap A = C \setminus B$.
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 9. Recall that you showed in exercise 12 of Section 1.4 that symmetric
+difference is associative; in other words, for all sets A, B, and C,
+$A \Delta (B \Delta C) = (A \Delta B) \Delta C$. You may also find it useful in this problem
+to note that symmetric difference is clearly commutative; in other
+words, for all sets A and B, $A \Delta B = B \Delta A$.
+
+\hspace{12pt}(a) Prove that there is a unique identity element for symmetric difference.
+In other words, there is a unique set X such that for every set
+A, $A \Delta X = A$.
+
+\hspace{12pt}(b) Prove that every set has a unique inverse for the operation of symmetric
+difference. In other words, for every set A there is a unique set B
+such that $A \Delta B = X$, where X is the identity element from part (a).
+
+\hspace{12pt}(c) Prove that for any sets A and B there is a unique set C such that
+$A \Delta C = B$.
+
+\hspace{12pt}(d) Prove that for every set A there is a unique set $B \subseteq A$ such that for
+every set $C \subseteq A$, $B \Delta C = A \setminus C$.
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{30pt}
+
+(d)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 10. Suppose A is a set, and for every family of sets $\mathcal{F}$, if $\cup \mathcal{F} = A$ then $A \in \mathcal{F}$. Prove that A has exactly one element. (Hint: For both the existence
+and uniqueness parts of the proof, try proof by contradiction.)
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *11. Suppose $\mathcal{F}$ is a family of sets that has the property that for every $\mathcal{G} \subseteq \mathcal{F}$, $\cup \mathcal{G} \in \mathcal{F}$. Prove that there is a unique set A such that $A \in \mathcal{F}$ and $\forall B \in \mathcal{F}(B \subseteq A)$.
+
+
+\vspace{30pt}
+
+
+
+\vspace{30pt}
+
+\hspace{12pt}12. (a) Suppose P(x) is a statement with a free variable x. Find a formula,
+using the logical symbols we have studied, that means "there are
+exactly two values of x for which P(x) is true."
+
+\hspace{12pt}(b) Based on your answer to part (a), design a proof strategy for proving
+a statement of the form "there are exactly two values of x for which
+P(x) is true."
+
+\hspace{12pt}(c) Prove that there are exactly two solutions to the equation $x^3 = x^2$.
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{50pt}
+
+\textbf{3.7. More Examples of Proofs}
+
+Exercises:
+
+
+\vspace{30pt}
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ *1. Suppose $\mathcal{F}$ is a family of sets. Prove that there is a unique set A that has the following two properties:
+
+\hspace{12pt}(a) $\mathcal{F} \subseteq \mathcal{P} (A)$.
+
+\hspace{12pt}(b) $\forall B(\mathcal{F} \subseteq \mathcal{P} (B) \to A \subseteq B)$.
+(Hint: First try an example. Let $\mathcal{F} = \{\{1, 2, 3\},\{2, 3, 4\},\{3, 4, 5\}\}$. Can
+you find the set A that has properties (a) and (b)?)
+
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 2. Suppose A and B are sets.What can you prove about $\mathcal{P} (A \setminus B) \setminus (\mathcal{P} (A) \setminus \mathcal{P} (B))$? (No, it's not equal to $\varnothing$. Try some examples and see what you get.)
+
+
+\vspace{30pt}
+
+
+\vspace{30pt}
+
+$^{\textit{P}}_{\, \textit{D}}$ 3. Suppose that A, B, and C are sets. Prove that the following statements
+are equivalent:
+
+\hspace{12pt}(a) $(A \Delta C) \cap (B \Delta C) = \varnothing$.
+
+\hspace{12pt}(b) $A \cap B \subseteq C \subseteq A \cup B$.
+
+\hspace{12pt}(c) $A \Delta C \subseteq A \Delta B$.
+
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{30pt}
+
+*4. Suppose $\{A_i \mid i \in I\}$ is a family of sets. Prove that if $\mathcal{P} (\cup_{i \in I} A_i) \subseteq
+\cup_{i \in I} \mathcal{P} (A_i)$, then there is some $i \in I$ such that $\forall  j \in I (A_j \subseteq A_i)$.
+
+
+\vspace{30pt}
+
+
+\vspace{30pt}
+
+5. Suppose $\mathcal{F}$ is a nonempty family of sets. Let $I = \cup \mathcal{F}$ and $J = \cap \mathcal{F}$.
+Suppose also that $J \neq \varnothing$, and notice that it follows that for every $X \in \mathcal{F}$,
+$X \neq \varnothing$, and also that $I \neq \varnothing$. Finally, suppose that $\{A_i \mid i \in I\}$ is an
+indexed family of sets.
+
+\hspace{12pt}(a) Prove that $\cup_{i \in I} A_i = \cup_{X \in \mathcal{F}} (\cup_{i \in X} A_i)$.
+
+\hspace{12pt}(b) Prove that $\cap_{i \in I} A_i = \cap_{X \in \mathcal{F}} (\cap_{i \in X} A_i)$.
+
+\hspace{12pt}(c) Prove that $\cup_{i \in J} A_i \subseteq \cap_{X \in \mathcal{F}} (\cup_{i \in X} A_i)$. Is it always true that $\cup_{i \in J} A_i = \cap_{X \in \mathcal{F}} (\cup_{i \in X} A_i)$? Give either a proof or a counterexample to justify
+your answer.
+
+\hspace{12pt}(d) Discover and prove a theorem relating $\cap_{i \in J} A_i$ and $\cup_{X \in \mathcal{F}} (\cap_{i \in X} A_i)$.
+
+\vspace{30pt}
+
+(a)
+
+\vspace{30pt}
+
+(b)
+
+\vspace{30pt}
+
+(c)
+
+\vspace{30pt}
+
+(d)
+
+\vspace{30pt}
+
+6. Prove that $\displaystyle{\lim_{x \to 2} \frac{3x^2-12}{x-2} = 12}$.
+
+\vspace{30pt}
+
+
+\vspace{30pt}
+
+*7. Prove that if $\displaystyle{\lim_{x \to c} f (x) = L}$ and $L > 0$, then there is some number $\delta > 0$
+such that for all x, if $0 < |x - c| < \delta$ then $f (x) > 0$.
+
+
+\vspace{30pt}
+
+
+\vspace{30pt}
+
+8. Prove that if $\displaystyle{\lim_{x \to c} f (x) = L}$ then $\displaystyle{\lim_{x \to c} 7 f (x) = 7L}$.
+
+
+\vspace{30pt}
+
+
+\vspace{30pt}
+
+*9. Consider the following putative theorem.
+
+\textbf{Theorem.} There are irrational numbers a and b such that ab is rational.
+
+Is the following proof correct? If so, what proof strategies does it use?
+If not, can it be fixed? Is the theorem correct? (Note: The proof uses the
+fact that $\sqrt{2}$ is irrational, which we'll prove in Chapter 6.)
+
+\textit{Proof.} Either $\sqrt{2}^{\sqrt{2}}$ is rational or it's irrational.
+
+\textit{Case} 1. $\sqrt{2}^{\sqrt{2}}$ is rational. Let $a = b = \sqrt{2}$. Then a and b are irrational,
+and $a^b = \sqrt{2}^{\sqrt{2}}$, which we are assuming in this case is rational.
+
+\textit{Case} 2. $\sqrt{2}^{\sqrt{2}}$ is irrational. Let $a = \sqrt{2}^{\sqrt{2}}$ and $b = \sqrt{2}$. Then a is
+irrational by assumption, and we know that b is also irrational. Also,
+$a^b = \big(\sqrt{2}^{\sqrt{2}}\big)^{\sqrt{2}} = \sqrt{2}^{(\sqrt{2}*\sqrt{2})} = (\sqrt{2})^2 = 2$, which is rational.
+
 
 
 
