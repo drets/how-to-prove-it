@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PDSession>
+<Goal>(䁁∪䁂)Δ䁃⊆(䁁Δ䁃)∪(䁂Δ䁃)</Goal>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡∈(䁁∪䁂)Δ䁃→䁡∈(䁁Δ䁃)∪(䁂Δ䁃))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>䁡∈䁁Δ䁃∨䁡∈䁂Δ䁃</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>0</PDData>
+<PDData>true</PDData>
+<PDAction>Disjunction. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>(䁡∈䁁\䁃)∨(䁡∈䁃\䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>0</PDData>
+<PDData>true</PDData>
+<PDAction>Disjunction. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>䁡∈䁁∧䁡∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>䁡∉䁃∨䁡∈䁁</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>䁡∉䁂\䁃∧䁡∉䁃\䁂</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>(䁡∈(䁁∪䁂)\䁃)∨(䁡∈䁃\(䁁∪䁂))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>6</PDSelection>
+<PDData>䁡∈䁁∪䁂∧䁡∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>7</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>6</PDSelection>
+<PDSelection>7</PDSelection>
+<PDAction>Delete Selection</PDAction>
+<PDSelection>6</PDSelection>
+<PDData>䁡∈䁁∨䁡∈䁂</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDSelection>0</PDSelection>
+<PDAction>Delete Selection</PDAction>
+<PDSelection>3</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>8</PDSelection>
+<PDData>䁡∉䁂∨䁡∈䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>10</PDSelection>
+<PDData>䁡∉䁃∨䁡∈䁂</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>12</PDSelection>
+<PDSelection>6</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>13</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>9</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>12</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>13</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>5</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>14</PDSelection>
+<PDSelection>7</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>15</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>7</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>13</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>6</PDSelection>
+<PDSelection>7</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>3</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>7</PDSelection>
+<PDData>䁡∉䁂∨䁡∈䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>9</PDSelection>
+<PDData>䁡∉䁃∨䁡∈䁂</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDSelection>0</PDSelection>
+<PDAction>Delete Selection</PDAction>
+<PDSelection>1</PDSelection>
+<PDSelection>0</PDSelection>
+<PDAction>Delete Selection</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>4</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>4</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>6</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>䁡∈䁃∧䁡∉䁁∪䁂</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>11</PDSelection>
+<PDData>䁡∉䁁∧䁡∉䁂</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>12</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>10</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>9</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>3</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>10</PDSelection>
+<PDData>䁡∉䁁∧䁡∉䁂</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>11</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>12</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Finish</PDAction>
+</PDSession>

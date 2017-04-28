@@ -1,6 +1,7 @@
 *.log
 *.aux
 *.o
+*.out
 *.hi
 TAGS
 _

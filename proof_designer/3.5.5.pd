@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PDSession>
+<Premise>䁁Δ䁂⊆䁁</Premise>
+<Goal>䁂⊆䁁</Goal>
+<PDSelection>1</PDSelection>
+<PDData>∀䁡(䁡∈䁂→䁡∈䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∀䁢(䁢∈䁁Δ䁂→䁢∈䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Delete Selection</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>∃䁡(䁡∈䁁Δ䁂∧䁡∉䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∃䁡(䁡∈䁂∧䁡∉䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Existential Instantiation. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDData>true</PDData>
+<PDAction>Existence. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>(䁡∈䁁\䁂)∨(䁡∈䁂\䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>0</PDData>
+<PDData>true</PDData>
+<PDAction>Disjunction. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>䁡∈䁁∧䁡∉䁂</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>䁡∉䁂∨䁡∈䁁</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>4</PDSelection>
+<PDSelection>5</PDSelection>
+<PDAction>Disjunctive Syllogism</PDAction>
+<PDSelection>4</PDSelection>
+<PDSelection>5</PDSelection>
+<PDAction>Disjunctive Syllogism</PDAction>
+<PDSelection>4</PDSelection>
+<PDSelection>6</PDSelection>
+<PDAction>Disjunctive Syllogism</PDAction>
+<PDSelection>8</PDSelection>
+<PDSelection>7</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>9</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>6</PDSelection>
+<PDAction>Finish</PDAction>
+</PDSession>

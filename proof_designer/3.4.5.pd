@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PDSession>
+<Premise>䁁⊆䁂\䁃</Premise>
+<Premise>䁁≠∅</Premise>
+<Goal>䁂⊈䁃</Goal>
+<PDSelection>2</PDSelection>
+<PDData>∃䁡(䁡∈䁂∧䁡∉䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡∈䁁→䁡∈䁂\䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>¬∃䁡(䁡∈䁁∧䁡∉䁂\䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDData>䁁</PDData>
+<PDAction>Define. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>∃䁡(䁡∈䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡∈䁁→䁡∈䁂\䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDAction>Existential Instantiation. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDData>true</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDSelection>4</PDSelection>
+<PDAction>Modus Ponens</PDAction>
+<PDSelection>7</PDSelection>
+<PDData>∃䁡(䁡∈䁂∧䁡∉䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>6</PDSelection>
+<PDData>䁸∈䁂∧䁸∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>9</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDData>true</PDData>
+<PDAction>Existence. . .</PDAction>
+<PDSelection>7</PDSelection>
+<PDAction>Finish</PDAction>
+</PDSession>

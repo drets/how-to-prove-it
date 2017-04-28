@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PDSession>
+<Goal>(䁁∪䁂)\䁃⊆䁁∪(䁂\䁃)</Goal>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡∈(䁁∪䁂)\䁃→䁡∈䁁∪(䁂\䁃))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>䁡∈䁁∨䁡∈䁂\䁃</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>䁡∈䁁∪䁂∧䁡∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>0</PDData>
+<PDData>true</PDData>
+<PDAction>Disjunction. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>䁡∈䁁∪䁂∧䁡∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>䁡∈䁁∨䁡∈䁂</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>6</PDSelection>
+<PDData>0</PDData>
+<PDData>true</PDData>
+<PDAction>Disjunction. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDAction>Cases</PDAction>
+<PDSelection>6</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>7</PDSelection>
+<PDSelection>3</PDSelection>
+<PDAction>Disjunctive Syllogism</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>䁡∉䁂∨䁡∈䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>䁡∈䁁∪䁂∧䁡∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>0</PDData>
+<PDData>true</PDData>
+<PDAction>Disjunction. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>䁡∈䁁∨䁡∈䁂</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>䁡∉䁂∨䁡∈䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>6</PDSelection>
+<PDSelection>4</PDSelection>
+<PDAction>Disjunctive Syllogism</PDAction>
+<PDSelection>3</PDSelection>
+<PDSelection>7</PDSelection>
+<PDAction>Disjunctive Syllogism</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Finish</PDAction>
+</PDSession>

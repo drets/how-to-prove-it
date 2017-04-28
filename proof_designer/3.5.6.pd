@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PDSession>
+<Goal>䁁∪䁃⊆䁂∪䁃↔䁁\䁃⊆䁂\䁃</Goal>
+<PDSelection>0</PDSelection>
+<PDAction>Biconditional</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>∀䁡(䁡∈䁁∪䁃→䁡∈䁂∪䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>䁡∈䁂∨䁡∈䁃</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>0</PDData>
+<PDData>true</PDData>
+<PDAction>Disjunction. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>䁡∈䁁∨䁡∈䁃</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDSelection>4</PDSelection>
+<PDAction>Disjunctive Syllogism</PDAction>
+<PDSelection>3</PDSelection>
+<PDSelection>2</PDSelection>
+<PDAction>Delete Selection</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>∀䁢(䁢∈䁁∧䁢∉䁃→䁢∈䁂\䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDSelection>3</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDData>true</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>6</PDSelection>
+<PDSelection>5</PDSelection>
+<PDAction>Modus Ponens</PDAction>
+<PDSelection>7</PDSelection>
+<PDData>䁡∈䁂∧䁡∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>9</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>∀䁡(䁡∈䁁\䁃→䁡∈䁂\䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>䁡∈䁂∧䁡∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>䁡∈䁁∧䁡∉䁃</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>2</PDSelection>
+<PDSelection>1</PDSelection>
+<PDAction>Delete Selection</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∀䁢(䁢∈䁁∪䁃→䁢∈䁂∪䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Delete Selection</PDAction>
+<PDSelection>2</PDSelection>
+<PDSelection>3</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>∀䁢(䁢∈䁁∨䁢∈䁃→䁢∈䁂∨䁢∈䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>6</PDSelection>
+<PDData>∃䁢(䁢∈䁁∪䁃∧䁢∉䁂∪䁃)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>7</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDData>true</PDData>
+<PDAction>Existence. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>12</PDSelection>
+<PDData>䁡∉䁂∧䁡∉䁃</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>10</PDSelection>
+<PDSelection>9</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>12</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>䁡∈䁁∨䁡∈䁃</PDData>
+<PDData>SET</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>6</PDSelection>
+<PDData>0</PDData>
+<PDData>true</PDData>
+<PDAction>Disjunction. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Finish</PDAction>
+</PDSession>

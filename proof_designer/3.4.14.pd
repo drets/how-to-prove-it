@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PDSession>
+<Goal>∪{䁁\䁂|䁁∈䁆}⊆∪(䁆\℘(䁂))</Goal>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡∈∪{䁁\䁂|䁁∈䁆}→䁡∈∪(䁆\℘(䁂)))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∃䁁(䁁∈䁆∧䁸∈䁁\䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁁</PDData>
+<PDAction>Existential Instantiation. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>䁸∈䁁∧䁸∉䁂</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDAction>Split Up</PDAction>
+<PDSelection>8</PDSelection>
+<PDData>∃䁡(䁡∈(䁆\℘(䁂))∧䁸∈䁡)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>9</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁁</PDData>
+<PDData>true</PDData>
+<PDAction>Existence. . .</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>15</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>8</PDSelection>
+<PDData>䁁∈䁆∧䁁∉℘(䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>9</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>13</PDSelection>
+<PDData>䁸∈䁁∧䁸∉䁂</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>8</PDSelection>
+<PDData>∀䁡(䁡∈䁁→䁡∈䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>7</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>9</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDData>true</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>6</PDSelection>
+<PDSelection>10</PDSelection>
+<PDAction>Modus Ponens</PDAction>
+<PDSelection>11</PDSelection>
+<PDAction>Finish</PDAction>
+</PDSession>

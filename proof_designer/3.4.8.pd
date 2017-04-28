@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PDSession>
+<Goal>䁁⊆䁂↔℘(䁁)⊆℘(䁂)</Goal>
+<PDSelection>0</PDSelection>
+<PDAction>Biconditional</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>∀䁡(䁡∈䁁→䁡∈䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>∀䁡(䁡∈℘(䁁)→䁡∈℘(䁂))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁹</PDData>
+<PDData>false</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>∃䁡(䁡∈℘(䁁)∧䁡∉℘(䁂))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDData>true</PDData>
+<PDAction>Existence. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>8</PDSelection>
+<PDData>∀䁡(䁡∈䁸→䁡∈䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Biconditional</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡∈䁁→䁡∈䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>∀䁡(䁡∈℘(䁁)→䁡∈℘(䁂))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>∀䁡(䁡∈䁸→䁡∈䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>∀䁡(䁡∈䁸→䁡∈䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁹</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁹</PDData>
+<PDData>true</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDSelection>4</PDSelection>
+<PDAction>Modus Ponens</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁹</PDData>
+<PDData>true</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>7</PDSelection>
+<PDSelection>6</PDSelection>
+<PDAction>Modus Ponens</PDAction>
+<PDSelection>8</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>∀䁡(䁡∈䁁→䁡∈䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁺</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡∈℘(䁁)→䁡∈℘(䁂))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDAction>Contradiction</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>∃䁡(䁡∈℘(䁁)∧䁡∉℘(䁂))</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>6</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁺</PDData>
+<PDData>true</PDData>
+<PDAction>Existence. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>∀䁡(䁡∈䁺→䁡∈䁁)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁢</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>4</PDSelection>
+<PDSelection>2</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁺∈䁁</PDData>
+<PDAction>Addition. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDSelection>2</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁺∈䁁</PDData>
+<PDAction>Addition. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDSelection>4</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>4</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁺∈䁁</PDData>
+<PDAction>Addition. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDSelection>5</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>12</PDSelection>
+<PDData>¬(䁺⊆䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>13</PDSelection>
+<PDData>¬(䁺⊆䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>7</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁺</PDData>
+<PDData>true</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>10</PDSelection>
+<PDSelection>12</PDSelection>
+<PDAction>Modus Ponens</PDAction>
+<PDSelection>13</PDSelection>
+<PDData>∀䁡(䁡∈䁺→䁡∈䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>2</PDSelection>
+<PDSelection>4</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>5</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁺∈䁁</PDData>
+<PDAction>Addition. . .</PDAction>
+<PDSelection>2</PDSelection>
+<PDSelection>4</PDSelection>
+<PDAction>Conjunction</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡⊆䁁→䁡⊆䁂)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁁</PDData>
+<PDData>true</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>3</PDSelection>
+<PDSelection>2</PDSelection>
+<PDAction>Modus Ponens</PDAction>
+<PDStep>12</PDStep>
+<PDData>OK</PDData>
+<PDData>∀䁸(䁸⊆䁸)</PDData>
+<PDData>true</PDData>
+<PDData>false</PDData>
+<PDAction>Insert. . .</PDAction>
+<PDStep>9</PDStep>
+<PDAction>Make Lemma</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁸</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDData>∀䁡(䁡∈䁸→䁡∈䁸)</PDData>
+<PDData>BOOL</PDData>
+<PDAction>Reexpress. . .</PDAction>
+<PDSelection>1</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁡</PDData>
+<PDAction>Arbitrary Object. . .</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Direct</PDAction>
+<PDSelection>0</PDSelection>
+<PDAction>Finish</PDAction>
+<PDSelection>3</PDSelection>
+<PDData>OK</PDData>
+<PDData>䁁</PDData>
+<PDData>true</PDData>
+<PDAction>Universal Instantiation. . .</PDAction>
+<PDSelection>4</PDSelection>
+<PDAction>Finish</PDAction>
+<PDStep>8</PDStep>
+<PDAction>Rejustify Selection</PDAction>
+</PDSession>
